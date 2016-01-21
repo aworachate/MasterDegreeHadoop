@@ -1,0 +1,12 @@
+//System.out.println("Written/Done : " +  Math.max(0.0001,((FBW+HBW)/(double)finishedSize)));
+//Counters jobCounter = job.getAllCounters();
+//long MOMB = tempCounters.getCounterGroup(TaskCounter).getCounter("MAP_OUTPUT_MATERIALIZED_BYTES").getValue();
+//long Map_In_Rec = tempCounters.getCounterGroup(TaskCounter).getCounter("MAP_INPUT_RECORDS").getValue();
+//long Map_Out_Rec = tempCounters.getCounterGroup(TaskCounter).getCounter("MAP_OUTPUT_RECORDS").getValue();
+//long J_MOMB = jobCounter.getCounterGroup(TaskCounter).getCounter("MAP_OUTPUT_MATERIALIZED_BYTES").getValue();
+//System.out.println("Task MAP_OUTPUT_MATERIALIZED_BYTES : " + MOMB);
+//System.out.println("Task MAP_INPUT_RECORDS : " + Map_In_Rec);
+//System.out.println("Task MAP_INPUT_RECORDS/time : " + Map_In_Rec/(double)process_time);
+//System.out.println("Task MAP_OUTPUT_RECORDS : " + Map_Out_Rec);
+//System.out.println("Task MAP_OUTPUT_RECORDS/time : " + Map_Out_Rec/(double)process_time);
+//System.out.println("JOB MAP_OUTPUT_MATERIALIZED_BYTES : " + J_MOMB);

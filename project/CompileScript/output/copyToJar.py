@@ -1,0 +1,31 @@
+import os
+import subprocess
+path1 = "org/apache/hadoop/mapreduce/v2/app/speculate/"
+path2 = "org/apache/hadoop/mapreduce/v2/app/job/"
+path3 = "org/apache/hadoop/mapreduce/v2/app/job/impl/"
+flie_list = ""
+for file in os.listdir(path1):
+    if file.endswith(".class"):
+        temp = file.replace("$", "\\$")
+        flie_list = flie_list+(path1+temp+" ")
+for file in os.listdir(path2):
+    if file.endswith(".class"):
+        temp = file.replace("$", "\\$")
+        flie_list = flie_list+(path2+temp+" ")
+for file in os.listdir(path3):
+    if file.endswith(".class"):
+        temp = file.replace("$", "\\$")
+        flie_list = flie_list+(path3+temp+" ")
+print(flie_list)
+out = "$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.1.jar"
+str_command="jar -uf "+out+" "+flie_list
+#str_command = "javac -cp `hadoop classpath` -d "+out+" "+src
+
+command = str_command  # the shell command
+
+process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=None, shell=True)
+
+#Launch the shell command:
+output = process.communicate()
+
+print output[0]

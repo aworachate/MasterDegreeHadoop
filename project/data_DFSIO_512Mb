@@ -1,0 +1,52 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+Update attemptID:attempt_1451052275812_0005_m_000000_0
+timestamp >> 1451053990274 start >> 1451053979793 , status.progress >> 0.667 , estimate >> 15713
+attempt_1451052275812_0005_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 395000000
+CPU/Time : 0.24902203988169067
+Written/Time : 154125.2435836275
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 10481
+CPU Time : 2610
+========================================
+Update attemptID:attempt_1451052275812_0005_m_000000_0
+timestamp >> 1451053992704 start >> 1451053979793 , status.progress >> 0.667 , estimate >> 19356
+attempt_1451052275812_0005_m_000000_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 395000000
+CPU/Time : 0.20215320269537604
+Written/Time : 147032.06707458757
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 12911
+CPU Time : 2610
+========================================
+Update attemptID:attempt_1451052275812_0005_m_000000_0
+timestamp >> 1451053992775 start >> 1451053979793 , status.progress >> 1.0 , estimate >> 12982
+attempt_1451052275812_0005_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116559
+HBW_BYTES_WRITTEN : 536870912
+CPU/Time : 0.2488060391311046
+Written/Time : 157914.02326297952
+Total Read / Write : 0.00229068540395851
+I/O intensive
+Task Time : 12982
+CPU Time : 3230
+========================================
+Update attemptID:attempt_1451052275812_0005_m_000000_0
+Update attemptID:attempt_1451052275812_0005_r_000000_0
+timestamp >> 1451053999740 start >> 1451053995651 , status.progress >> 0.0 , estimate >> 40890000
+Update attemptID:attempt_1451052275812_0005_r_000000_0
+timestamp >> 1451053999760 start >> 1451053995651 , status.progress >> 0.0 , estimate >> 41090000
+Update attemptID:attempt_1451052275812_0005_r_000000_0
+Update attemptID:attempt_1451052275812_0005_r_000000_0
+serviceStop

@@ -1,0 +1,714 @@
+/**
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+package org.apache.hadoop.mapreduce.v2.app.speculate;
+import java.util.ArrayList;
+import java.util.List;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.mapreduce.MRJobConfig;
+import org.apache.hadoop.mapreduce.v2.api.records.JobId;
+import org.apache.hadoop.mapreduce.v2.api.records.TaskAttemptId;
+import org.apache.hadoop.mapreduce.v2.api.records.TaskAttemptState;
+import org.apache.hadoop.mapreduce.v2.api.records.TaskId;
+import org.apache.hadoop.mapreduce.v2.api.records.TaskType;
+import org.apache.hadoop.mapreduce.v2.app.AppContext;
+import org.apache.hadoop.mapreduce.v2.app.job.Job;
+import org.apache.hadoop.mapreduce.v2.app.job.Task;
+import org.apache.hadoop.mapreduce.v2.app.job.TaskAttempt;
+import org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptStatusUpdateEvent.TaskAttemptStatus;
+import org.apache.hadoop.mapreduce.v2.app.job.event.TaskEvent;
+import org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType;
+import org.apache.hadoop.service.AbstractService;
+import org.apache.hadoop.yarn.event.EventHandler;
+import org.apache.hadoop.yarn.exceptions.YarnRuntimeException;
+import org.apache.hadoop.yarn.util.Clock;
+
+import com.google.common.annotations.VisibleForTesting;
+
+
+//**Project
+//import org.apache.hadoop.mapred.Counters
+//import org.apache.hadoop.mapreduce.Counters;
+import  org.apache.hadoop.mapreduce.v2.api.records.Counters;
+//import org.apache.hadoop.mapreduce.TaskCounter;
+
+public class DefaultSpeculator extends AbstractService implements
+    Speculator {
+
+  private static final long ON_SCHEDULE = Long.MIN_VALUE;
+  private static final long ALREADY_SPECULATING = Long.MIN_VALUE + 1;
+  private static final long TOO_NEW = Long.MIN_VALUE + 2;
+  private static final long PROGRESS_IS_GOOD = Long.MIN_VALUE + 3;
+  private static final long NOT_RUNNING = Long.MIN_VALUE + 4;
+  private static final long TOO_LATE_TO_SPECULATE = Long.MIN_VALUE + 5;
+
+  private long soonestRetryAfterNoSpeculate;
+  private long soonestRetryAfterSpeculate;
+  private double proportionRunningTasksSpeculatable;
+  private double proportionTotalTasksSpeculatable;
+  private int  minimumAllowedSpeculativeTasks;
+
+  private static final Log LOG = LogFactory.getLog(DefaultSpeculator.class);
+
+  private final ConcurrentMap<TaskId, Boolean> runningTasks
+      = new ConcurrentHashMap<TaskId, Boolean>();
+
+  // Used to track any TaskAttempts that aren't heart-beating for a while, so
+  // that we can aggressively speculate instead of waiting for task-timeout.
+  private final ConcurrentMap<TaskAttemptId, TaskAttemptHistoryStatistics>
+      runningTaskAttemptStatistics = new ConcurrentHashMap<TaskAttemptId,
+          TaskAttemptHistoryStatistics>();
+  // Regular heartbeat from tasks is every 3 secs. So if we don't get a
+  // heartbeat in 9 secs (3 heartbeats), we simulate a heartbeat with no change
+  // in progress.
+  private static final long MAX_WAITTING_TIME_FOR_HEARTBEAT = 9 * 1000;
+
+  // These are the current needs, not the initial needs.  For each job, these
+  //  record the number of attempts that exist and that are actively
+  //  waiting for a container [as opposed to running or finished]
+  private final ConcurrentMap<JobId, AtomicInteger> mapContainerNeeds
+      = new ConcurrentHashMap<JobId, AtomicInteger>();
+  private final ConcurrentMap<JobId, AtomicInteger> reduceContainerNeeds
+      = new ConcurrentHashMap<JobId, AtomicInteger>();
+
+  private final Set<TaskId> mayHaveSpeculated = new HashSet<TaskId>();
+
+  private final Configuration conf;
+  private AppContext context;
+  private Thread speculationBackgroundThread = null;
+  private volatile boolean stopped = false;
+  private BlockingQueue<SpeculatorEvent> eventQueue
+      = new LinkedBlockingQueue<SpeculatorEvent>();
+  private TaskRuntimeEstimator estimator;
+
+  private BlockingQueue<Object> scanControl = new LinkedBlockingQueue<Object>();
+
+  private final Clock clock;
+
+  private final EventHandler<TaskEvent> eventHandler;
+
+  public DefaultSpeculator(Configuration conf, AppContext context) {
+    this(conf, context, context.getClock());
+  }
+
+  public DefaultSpeculator(Configuration conf, AppContext context, Clock clock) {
+    this(conf, context, getEstimator(conf, context), clock);
+  }
+ //** Taskestimator algorithm
+  static private TaskRuntimeEstimator getEstimator
+      (Configuration conf, AppContext context) {
+    TaskRuntimeEstimator estimator;
+    //LOG.info("xxx_test ");
+    try {
+      // "yarn.mapreduce.job.task.runtime.estimator.class"
+      //** can use this property to change estimator class
+      Class<? extends TaskRuntimeEstimator> estimatorClass
+          = conf.getClass(MRJobConfig.MR_AM_TASK_ESTIMATOR,
+                          LegacyTaskRuntimeEstimator.class,
+                          TaskRuntimeEstimator.class);
+
+      Constructor<? extends TaskRuntimeEstimator> estimatorConstructor
+          = estimatorClass.getConstructor();
+
+      estimator = estimatorConstructor.newInstance();
+      estimator.contextualize(conf, context);
+      //** Project
+      String EstimatorClassName  = estimator.getClass().getName();
+      System.out.println("Now Use estimatorClass : "+EstimatorClassName);
+    } catch (InstantiationException ex) {
+      LOG.error("Can't make a speculation runtime estimator", ex);
+      throw new YarnRuntimeException(ex);
+    } catch (IllegalAccessException ex) {
+      LOG.error("Can't make a speculation runtime estimator", ex);
+      throw new YarnRuntimeException(ex);
+    } catch (InvocationTargetException ex) {
+      LOG.error("Can't make a speculation runtime estimator", ex);
+      throw new YarnRuntimeException(ex);
+    } catch (NoSuchMethodException ex) {
+      LOG.error("Can't make a speculation runtime estimator", ex);
+      throw new YarnRuntimeException(ex);
+    }
+
+  return estimator;
+  }
+
+  // This constructor is designed to be called by other constructors.
+  //  However, it's public because we do use it in the test cases.
+  // Normally we figure out our own estimator.
+  public DefaultSpeculator
+      (Configuration conf, AppContext context,
+       TaskRuntimeEstimator estimator, Clock clock) {
+    super(DefaultSpeculator.class.getName());
+
+    this.conf = conf;
+    this.context = context;
+    this.estimator = estimator;
+    this.clock = clock;
+    this.eventHandler = context.getEventHandler();
+    //**Project
+    //** The waiting time(ms) to do next round of speculation if there is no task speculated in this round.
+    this.soonestRetryAfterNoSpeculate =
+        conf.getLong(MRJobConfig.SPECULATIVE_RETRY_AFTER_NO_SPECULATE,
+                MRJobConfig.DEFAULT_SPECULATIVE_RETRY_AFTER_NO_SPECULATE);
+    //**Project
+    //** The waiting time(ms) to do next round of speculation if there are tasks speculated in this round.
+    this.soonestRetryAfterSpeculate =
+        conf.getLong(MRJobConfig.SPECULATIVE_RETRY_AFTER_SPECULATE,
+                MRJobConfig.DEFAULT_SPECULATIVE_RETRY_AFTER_SPECULATE);
+    //**Project
+    //** The max percent (0-1) of running tasks that can be speculatively re-executed at any time.
+    this.proportionRunningTasksSpeculatable =
+        conf.getDouble(MRJobConfig.SPECULATIVECAP_RUNNING_TASKS,
+                MRJobConfig.DEFAULT_SPECULATIVECAP_RUNNING_TASKS);
+    //**Project
+    //** The max percent (0-1) of all tasks that can be speculatively re-executed at any time.
+    this.proportionTotalTasksSpeculatable =
+        conf.getDouble(MRJobConfig.SPECULATIVECAP_TOTAL_TASKS,
+                MRJobConfig.DEFAULT_SPECULATIVECAP_TOTAL_TASKS);
+
+    //**Project
+    //** The minimum allowed tasks that can be speculatively re-executed at any time.
+    this.minimumAllowedSpeculativeTasks =
+        conf.getInt(MRJobConfig.SPECULATIVE_MINIMUM_ALLOWED_TASKS,
+                MRJobConfig.DEFAULT_SPECULATIVE_MINIMUM_ALLOWED_TASKS);
+  }
+
+/*   *************************************************************    */
+
+  // This is the task-mongering that creates the two new threads -- one for
+  //  processing events from the event queue and one for periodically
+  //  looking for speculation opportunities
+
+  @Override
+  protected void serviceStart() throws Exception {
+    //** Project
+    System.out.println("serviceStart");
+    Runnable speculationBackgroundCore
+        = new Runnable() {
+            @Override
+            public void run() {
+              while (!stopped && !Thread.currentThread().isInterrupted()) {
+                long backgroundRunStartTime = clock.getTime();
+                try {
+
+                  int speculations = computeSpeculations();
+                  //**Project find possible speculative task.
+                  //System.out.println("speculations: "+speculations);
+                  //** Project mininumRecomp depend on is there any speculative task running ?
+                  //** if there is a sepculative task it will set to retryafterspeculate to dealy of
+                  //** find next speculative task. other wiase it set to retryafternospec
+                  long mininumRecomp
+                      = speculations > 0 ? soonestRetryAfterSpeculate
+                                         : soonestRetryAfterNoSpeculate;
+
+                  long wait = Math.max(mininumRecomp,
+                        clock.getTime() - backgroundRunStartTime);
+                  //**Project find possible speculative task.
+                  //System.out.println("wait time: "+wait);
+                  if (speculations > 0) {
+                    LOG.info("We launched " + speculations
+                        + " speculations.  Sleeping " + wait + " milliseconds.");
+                  }
+
+                  //** use BlockingQueue scanControl for waiting max time is wait
+                  //** poll(dequeue) and wait.
+                  //System.out.println("scanControl size: "+scanControl.size());
+                  Object pollResult
+                      = scanControl.poll(wait, TimeUnit.MILLISECONDS);
+                } catch (InterruptedException e) {
+                  if (!stopped) {
+                    LOG.error("Background thread returning, interrupted", e);
+                  }
+                  return;
+                }
+              }
+            }
+          };
+    speculationBackgroundThread = new Thread
+        (speculationBackgroundCore, "DefaultSpeculator background processing");
+    speculationBackgroundThread.start();
+
+    super.serviceStart();
+  }
+
+  @Override
+  protected void serviceStop()throws Exception {
+    //** Project
+    System.out.println("serviceStop");
+      stopped = true;
+    // this could be called before background thread is established
+    if (speculationBackgroundThread != null) {
+      speculationBackgroundThread.interrupt();
+    }
+    super.serviceStop();
+  }
+
+  @Override
+  public void handleAttempt(TaskAttemptStatus status) {
+    long timestamp = clock.getTime();
+    statusUpdate(status, timestamp);
+  }
+
+  // This section is not part of the Speculator interface; it's used only for
+  //  testing
+  public boolean eventQueueEmpty() {
+    return eventQueue.isEmpty();
+  }
+
+  // This interface is intended to be used only for test cases.
+  public void scanForSpeculations() {
+    LOG.info("We got asked to run a debug speculation scan.");
+    // debug
+    System.out.println("We got asked to run a debug speculation scan.");
+    System.out.println("There are " + scanControl.size()
+        + " events stacked already.");
+    scanControl.add(new Object());
+    Thread.yield();
+  }
+
+
+/*   *************************************************************    */
+
+  // This section contains the code that gets run for a SpeculatorEvent
+
+  private AtomicInteger containerNeed(TaskId taskID) {
+    JobId jobID = taskID.getJobId();
+    TaskType taskType = taskID.getTaskType();
+
+    ConcurrentMap<JobId, AtomicInteger> relevantMap
+        = taskType == TaskType.MAP ? mapContainerNeeds : reduceContainerNeeds;
+
+    AtomicInteger result = relevantMap.get(jobID);
+
+    if (result == null) {
+      relevantMap.putIfAbsent(jobID, new AtomicInteger(0));
+      result = relevantMap.get(jobID);
+    }
+
+    return result;
+  }
+
+  private synchronized void processSpeculatorEvent(SpeculatorEvent event) {
+
+    switch (event.getType()) {
+      case ATTEMPT_STATUS_UPDATE:
+        statusUpdate(event.getReportedStatus(), event.getTimestamp());
+        break;
+
+      case TASK_CONTAINER_NEED_UPDATE:
+      {
+        AtomicInteger need = containerNeed(event.getTaskID());
+        need.addAndGet(event.containersNeededChange());
+        break;
+      }
+
+      case ATTEMPT_START:
+      {
+
+	      LOG.info("ATTEMPT_START " + event.getTaskID());
+        estimator.enrollAttempt
+            (event.getReportedStatus(), event.getTimestamp());
+        break;
+      }
+
+      case JOB_CREATE:
+      {
+        LOG.info("JOB_CREATE " + event.getJobID());
+        estimator.contextualize(getConfig(), context);
+        break;
+      }
+    }
+  }
+
+  /**
+   * Absorbs one TaskAttemptStatus
+   *
+   * @param reportedStatus the status report that we got from a task attempt
+   *        that we want to fold into the speculation data for this job
+   * @param timestamp the time this status corresponds to.  This matters
+   *        because statuses contain progress.
+   */
+  protected void statusUpdate(TaskAttemptStatus reportedStatus, long timestamp) {
+
+    String stateString = reportedStatus.taskState.toString();
+
+    TaskAttemptId attemptID = reportedStatus.id;
+    TaskId taskID = attemptID.getTaskId();
+    Job job = context.getJob(taskID.getJobId());
+
+    if (job == null) {
+      return;
+    }
+
+    Task task = job.getTask(taskID);
+
+    if (task == null) {
+      return;
+    }
+    //** Project
+    //System.out.println("Call Default Speculator");
+    estimator.updateAttempt(reportedStatus, timestamp);
+
+    if (stateString.equals(TaskAttemptState.RUNNING.name())) {
+      runningTasks.putIfAbsent(taskID, Boolean.TRUE);
+    } else {
+      runningTasks.remove(taskID, Boolean.TRUE);
+      if (!stateString.equals(TaskAttemptState.STARTING.name())) {
+        runningTaskAttemptStatistics.remove(attemptID);
+      }
+    }
+  }
+
+/*   *************************************************************    */
+
+// This is the code section that runs periodically and adds speculations for
+//  those jobs that need them.
+
+
+  // This can return a few magic values for tasks that shouldn't speculate:
+  //  returns ON_SCHEDULE if thresholdRuntime(taskID) says that we should not
+  //     considering speculating this task
+  //  returns ALREADY_SPECULATING if that is true.  This has priority.
+  //  returns TOO_NEW if our companion task hasn't gotten any information
+  //  returns PROGRESS_IS_GOOD if the task is sailing through
+  //  returns NOT_RUNNING if the task is not running
+  //
+  // All of these values are negative.  Any value that should be allowed to
+  //  speculate is 0 or positive.
+  private long speculationValue(TaskId taskID, long now) {
+
+    Job job = context.getJob(taskID.getJobId());
+    Task task = job.getTask(taskID);
+    Map<TaskAttemptId, TaskAttempt> attempts = task.getAttempts();
+    long acceptableRuntime = Long.MIN_VALUE;
+    long result = Long.MIN_VALUE;
+
+    if (!mayHaveSpeculated.contains(taskID)) {
+      //** Project thresholdRuntime method in SartEndTimesBase.java
+      acceptableRuntime = estimator.thresholdRuntime(taskID);
+      if (acceptableRuntime == Long.MAX_VALUE) {
+        //** Project
+        //System.out.println(taskID+" : is on_schedule");
+        return ON_SCHEDULE;
+      }
+    }
+
+    TaskAttemptId runningTaskAttemptID = null;
+
+    int numberRunningAttempts = 0;
+
+    for (TaskAttempt taskAttempt : attempts.values()) {
+      if (taskAttempt.getState() == TaskAttemptState.RUNNING
+          || taskAttempt.getState() == TaskAttemptState.STARTING) {
+        if (++numberRunningAttempts > 1) {
+          //** Project : this task have more than one attemp
+          //System.out.println(taskID+" : is already_speculating");
+          return ALREADY_SPECULATING;
+        }
+        runningTaskAttemptID = taskAttempt.getID();
+
+        //**Project Call esitmator to get estimateRuntime
+        long estimatedRunTime = estimator.estimatedRuntime(runningTaskAttemptID);
+        //System.out.println("ID : "+ runningTaskAttemptID+" estRuntime "+estimatedRunTime);
+
+        long taskAttemptStartTime
+            = estimator.attemptEnrolledTime(runningTaskAttemptID);
+        if (taskAttemptStartTime > now) {
+          // This background process ran before we could process the task
+          //  attempt status change that chronicles the attempt start
+          //** Project
+          //System.out.println(taskID+" : is too_new");
+          return TOO_NEW;
+        }
+
+        long estimatedEndTime = estimatedRunTime + taskAttemptStartTime;
+        //** Project
+        //System.out.println(taskID+" : will end in " + estimatedEndTime);
+        System.out.println("Task ID >> " + taskID + " , runningTaskAttemptID >> " + runningTaskAttemptID);
+        System.out.println("Now >> "+ now +
+                           " taskAttemptStartTime >> " + taskAttemptStartTime +
+                           " , estimatedRunTime >> " + estimatedRunTime +
+                           " , estimatedEndTime >> " + estimatedEndTime);
+
+        // Check if run back up task estimate time to end of back up tasl by historical mean
+        long estimatedReplacementEndTime
+            = now + estimator.estimatedNewAttemptRuntime(taskID);
+
+        //** Project
+        //System.out.println("Backup will end >>" + estimatedReplacementEndTime);
+
+        //** Project find progress of each attemp
+        float progress = taskAttempt.getProgress();
+
+        //** Project find historical data of each attemp  and update attmp history progress, state
+        TaskAttemptHistoryStatistics data =
+            runningTaskAttemptStatistics.get(runningTaskAttemptID);
+        if (data == null) {
+          //** Project
+          // Set Historical data class
+          runningTaskAttemptStatistics.put(runningTaskAttemptID,
+            new TaskAttemptHistoryStatistics(estimatedRunTime, progress, now));
+        } else {
+          if (estimatedRunTime == data.getEstimatedRunTime()
+              && progress == data.getProgress()) {
+            // Previous stats are same as same stats
+            if (data.notHeartbeatedInAWhile(now)) {
+              // Stats have stop for a while, simulate heart-beat [Send request to checkup].
+              TaskAttemptStatus taskAttemptStatus = new TaskAttemptStatus();
+              taskAttemptStatus.id = runningTaskAttemptID;
+              taskAttemptStatus.progress = progress;
+              taskAttemptStatus.taskState = taskAttempt.getState();
+              // Now simulate the heart-beat and send request statusupdate to LegacyTaskRuntimeEstimator
+              handleAttempt(taskAttemptStatus);
+            }
+          } else {
+            // Stats have changed - update our data structure
+            data.setEstimatedRunTime(estimatedRunTime);
+            data.setProgress(progress);
+            data.resetHeartBeatTime(now);
+          }
+        }
+
+        if (estimatedEndTime < now) {
+          //** Project
+          //System.out.println(taskID + " still good !");
+          return PROGRESS_IS_GOOD;
+        }
+
+        if (estimatedReplacementEndTime >= estimatedEndTime) {
+          //** Project
+          //System.out.println(taskID + " back up task will end after original task");
+          //Counters tempCounters = taskAttempt.getReport().getCounters();
+          //System.out.println(tempCounters.findCounter(TaskCounter.CPU_MILLISECONDS));
+          //String TaskCounter = "org.apache.hadoop.mapreduce.TaskCounter";
+          //System.out.println("Test Get Counter ### "+ tempCounters.getCounterGroup(TaskCounter).getCounter("MAP_OUTPUT_RECORDS") + " : " + tempCounters.getCounterGroup(TaskCounter).getCounter("MAP_OUTPUT_RECORDS").getValue());
+          //System.out.println("Test Get Counter >>> "+ tempCounters.getCounterGroup("org.apache.hadoop.mapreduce.FileSystemCounter"));
+          return TOO_LATE_TO_SPECULATE;
+        }
+        //** Project : result = end time of origin job - end time of speculative job >=0
+        // if value is much mean if run speculate task can save a lot of time
+        result = estimatedEndTime - estimatedReplacementEndTime;
+        //** Project
+        System.out.println(taskID + "is not so good, if run backup for this task will save " + result);
+      }
+    }
+
+    // If we are here, there's at most one task attempt.
+    if (numberRunningAttempts == 0) {
+      return NOT_RUNNING;
+    }
+
+
+
+    if (acceptableRuntime == Long.MIN_VALUE) {
+      acceptableRuntime = estimator.thresholdRuntime(taskID);
+      if (acceptableRuntime == Long.MAX_VALUE) {
+        return ON_SCHEDULE;
+      }
+    }
+
+    return result;
+  }
+
+  //Add attempt to a given Task.
+  protected void addSpeculativeAttempt(TaskId taskID) {
+    //** Porject Add Speculative task
+    System.out.println("Add speculative task" + taskID);
+    LOG.info
+        ("DefaultSpeculator.addSpeculativeAttempt -- we are speculating " + taskID);
+    //** Porject add task to eventHandler.
+    eventHandler.handle(new TaskEvent(taskID, TaskEventType.T_ADD_SPEC_ATTEMPT));
+    mayHaveSpeculated.add(taskID);
+  }
+
+  @Override
+  public void handle(SpeculatorEvent event) {
+    processSpeculatorEvent(event);
+  }
+
+  //**Project : this method return number of map speculation task
+  private int maybeScheduleAMapSpeculation() {
+    return maybeScheduleASpeculation(TaskType.MAP);
+  }
+  //**Project : this method return number of reduce speculation task
+  private int maybeScheduleAReduceSpeculation() {
+    return maybeScheduleASpeculation(TaskType.REDUCE);
+  }
+  //**Project : this method return number of speculation task
+  private int maybeScheduleASpeculation(TaskType type) {
+    int successes = 0;
+
+    long now = clock.getTime();
+
+    ConcurrentMap<JobId, AtomicInteger> containerNeeds
+        = type == TaskType.MAP ? mapContainerNeeds : reduceContainerNeeds;
+    //** Project
+    //List<String> keyList = new ArrayList<String>(containerNeeds.keySet());
+    //System.out.println("Task Type: "+type+"KeyList: "+ containerNeeds.entrySet());
+    for (ConcurrentMap.Entry<JobId, AtomicInteger> jobEntry : containerNeeds.entrySet()) {
+      // This race conditon is okay.  If we skip a speculation attempt we
+      //  should have tried because the event that lowers the number of
+      //  containers needed to zero hasn't come through, it will next time.
+      // Also, if we miss the fact that the number of containers needed was
+      //  zero but increased due to a failure it's not too bad to launch one
+      //  container prematurely.
+      //** Project
+      //System.out.println("Task Type: "+type+"jobEntry.getValue():"+jobEntry.getValue().get());
+      //** Project : If there are any Hold job, speculative will be suspended
+      if (jobEntry.getValue().get() > 0) {
+        continue;
+      }
+
+      int numberSpeculationsAlready = 0;
+      int numberRunningTasks = 0;
+
+      // loop through the tasks of the kind
+      Job job = context.getJob(jobEntry.getKey());
+
+      Map<TaskId, Task> tasks = job.getTasks(type);
+
+      int numberAllowedSpeculativeTasks
+          = (int) Math.max(minimumAllowedSpeculativeTasks,
+              proportionTotalTasksSpeculatable * tasks.size());
+
+      TaskId bestTaskID = null;
+      long bestSpeculationValue = -1L;
+
+      // this loop is potentially pricey.
+      // TODO track the tasks that are potentially worth looking at
+      //** Project check all task in task type which task should run backup task
+      for (Map.Entry<TaskId, Task> taskEntry : tasks.entrySet()) {
+        long mySpeculationValue = speculationValue(taskEntry.getKey(), now);
+      //** Project :
+      //  System.out.print(taskEntry.getKey()+":"+mySpeculationValue);
+        if (mySpeculationValue == ALREADY_SPECULATING) {
+          ++numberSpeculationsAlready;
+        }
+
+        if (mySpeculationValue != NOT_RUNNING) {
+          ++numberRunningTasks;
+        }
+        //**Project : bestSpeculationValue mean can save most time if run backup task
+        if (mySpeculationValue > bestSpeculationValue) {
+          bestTaskID = taskEntry.getKey();
+          bestSpeculationValue = mySpeculationValue;
+        }
+      }
+      numberAllowedSpeculativeTasks
+          = (int) Math.max(numberAllowedSpeculativeTasks,
+              proportionRunningTasksSpeculatable * numberRunningTasks);
+
+      // If we found a speculation target, fire it off
+      //** Project launch speculative task of taskID from the bestTaskID
+      if (bestTaskID != null
+          && numberAllowedSpeculativeTasks > numberSpeculationsAlready) {
+        addSpeculativeAttempt(bestTaskID);
+        ++successes;
+      }
+    }
+    // Project : retun number of speculative task which were executed this round.
+    return successes;
+  }
+
+  private int computeSpeculations() {
+    // We'll try to issue one map and one reduce speculation per job per run
+    return maybeScheduleAMapSpeculation() + maybeScheduleAReduceSpeculation();
+  }
+
+  static class TaskAttemptHistoryStatistics {
+
+    private long estimatedRunTime;
+    private float progress;
+    private long lastHeartBeatTime;
+
+    public TaskAttemptHistoryStatistics(long estimatedRunTime, float progress,
+        long nonProgressStartTime) {
+      this.estimatedRunTime = estimatedRunTime;
+      this.progress = progress;
+      resetHeartBeatTime(nonProgressStartTime);
+    }
+
+    public long getEstimatedRunTime() {
+      return this.estimatedRunTime;
+    }
+
+    public float getProgress() {
+      return this.progress;
+    }
+
+    public void setEstimatedRunTime(long estimatedRunTime) {
+      this.estimatedRunTime = estimatedRunTime;
+    }
+
+    public void setProgress(float progress) {
+      this.progress = progress;
+    }
+
+    public boolean notHeartbeatedInAWhile(long now) {
+      if (now - lastHeartBeatTime <= MAX_WAITTING_TIME_FOR_HEARTBEAT) {
+        return false;
+      } else {
+        resetHeartBeatTime(now);
+        return true;
+      }
+    }
+
+    public void resetHeartBeatTime(long lastHeartBeatTime) {
+      this.lastHeartBeatTime = lastHeartBeatTime;
+    }
+  }
+
+  @VisibleForTesting
+  public long getSoonestRetryAfterNoSpeculate() {
+    return soonestRetryAfterNoSpeculate;
+  }
+
+  @VisibleForTesting
+  public long getSoonestRetryAfterSpeculate() {
+    return soonestRetryAfterSpeculate;
+  }
+
+  @VisibleForTesting
+  public double getProportionRunningTasksSpeculatable() {
+    return proportionRunningTasksSpeculatable;
+  }
+
+  @VisibleForTesting
+  public double getProportionTotalTasksSpeculatable() {
+    return proportionTotalTasksSpeculatable;
+  }
+
+  @VisibleForTesting
+  public int getMinimumAllowedSpeculativeTasks() {
+    return minimumAllowedSpeculativeTasks;
+  }
+}

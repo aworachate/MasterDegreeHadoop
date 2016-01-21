@@ -1,0 +1,927 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136816656 start >> 1451136802902 , status.progress >> 0.44160348 , estimate >> 31145
+attempt_1451134060989_0002_m_000000_0:MAP:MAP:0.44160348
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.21230187581794388
+Written/Time : 8.514104987639959
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 13754
+CPU Time : 2920
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136816762 start >> 1451136802900 , status.progress >> 0.4416039 , estimate >> 31390
+attempt_1451134060989_0002_m_000001_0:MAP:MAP:0.4416039
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2019910546818641
+Written/Time : 8.447770884432261
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 13862
+CPU Time : 2800
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136818532 start >> 1451136802902 , status.progress >> 0.44160348 , estimate >> 35393
+attempt_1451134060989_0002_m_000000_0:MAP:SORT:0.44160348
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.18682021753039027
+Written/Time : 7.492194497760717
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 15630
+CPU Time : 2920
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136818695 start >> 1451136802900 , status.progress >> 0.4416039 , estimate >> 35767
+attempt_1451134060989_0002_m_000001_0:MAP:SORT:0.4416039
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1772712883823995
+Written/Time : 7.413928458372903
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 15795
+CPU Time : 2800
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136819747 start >> 1451136802902 , status.progress >> 0.667 , estimate >> 25254
+attempt_1451134060989_0002_m_000000_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 74050605
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.26061145740575836
+Written/Time : 4395.99910952805
+Total Read / Write : 1.8125167242050217
+CPU intensive
+Task Time : 16845
+CPU Time : 4390
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136819763 start >> 1451136802900 , status.progress >> 0.667 , estimate >> 25281
+attempt_1451134060989_0002_m_000001_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 74050605
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2520310739488822
+Written/Time : 4391.306706991639
+Total Read / Write : 1.8125153737771622
+CPU intensive
+Task Time : 16863
+CPU Time : 4250
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136822811 start >> 1451136802902 , status.progress >> 0.7472491 , estimate >> 26643
+attempt_1451134060989_0002_m_000000_0:MAP:SORT:0.7472491
+FILE_BYTES_READ : 32702464
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 172399056
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.29484152895675325
+Written/Time : 8659.35285549249
+Total Read / Write : 0.9682212181022616
+I/O intensive
+Task Time : 19909
+CPU Time : 5870
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136822825 start >> 1451136802900 , status.progress >> 0.7337019 , estimate >> 27156
+attempt_1451134060989_0002_m_000001_0:MAP:SORT:0.7337019
+FILE_BYTES_READ : 27029504
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 166729483
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2875784190715182
+Written/Time : 8367.853601003764
+Total Read / Write : 0.9671196785274023
+I/O intensive
+Task Time : 19925
+CPU Time : 5730
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136825862 start >> 1451136802900 , status.progress >> 1.0 , estimate >> 22962
+attempt_1451134060989_0002_m_000001_0:MAP:SORT:1.0
+FILE_BYTES_READ : 139586420
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 279289937
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.30528699590627995
+Written/Time : 12163.136355718143
+Total Read / Write : 0.9803585583536438
+I/O intensive
+Task Time : 22962
+CPU Time : 7010
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136825895 start >> 1451136802902 , status.progress >> 1.0 , estimate >> 22993
+attempt_1451134060989_0002_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 139586524
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 279290145
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.3079198016787718
+Written/Time : 12146.746618536075
+Total Read / Write : 0.9803585586594901
+I/O intensive
+Task Time : 22993
+CPU Time : 7080
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+timestamp >> 1451136826045 start >> 1451136802902 , status.progress >> 1.0 , estimate >> 23143
+attempt_1451134060989_0002_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 139586524
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 279290177
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.3080845179968025
+Written/Time : 12068.019573953246
+Total Read / Write : 0.980358446333757
+I/O intensive
+Task Time : 23143
+CPU Time : 7130
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+timestamp >> 1451136826072 start >> 1451136802900 , status.progress >> 1.0 , estimate >> 23172
+attempt_1451134060989_0002_m_000001_0:MAP:SORT:1.0
+FILE_BYTES_READ : 139586420
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 279289969
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.3042465044018643
+Written/Time : 12052.907345071639
+Total Read / Write : 0.9803584460278271
+I/O intensive
+Task Time : 23172
+CPU Time : 7050
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000000_0
+Update attemptID:attempt_1451134060989_0002_m_000001_0
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136826326 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136827328 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136828329 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136829330 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136830332 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802901 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802900
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802917 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802916
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_0
+Now >> 1451136831333 taskAttemptStartTime >> 1451136802902 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136802901
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136837335 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136838337 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136839191 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 125759
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136839340 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136840341 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136841342 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136842292 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 162971
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136842343 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136843345 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136844346 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Task ID >> task_1451134060989_0002_m_000005 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000005_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136833750 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136833749
+Task ID >> task_1451134060989_0002_m_000004 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000004_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136836794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136836793
+Task ID >> task_1451134060989_0002_m_000003 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000003_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136835830 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835829
+Task ID >> task_1451134060989_0002_m_000002 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000002_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136835794 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136835793
+Task ID >> task_1451134060989_0002_m_000006 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000006_1
+Now >> 1451136845347 taskAttemptStartTime >> 1451136834771 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834770
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136845372 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 199931
+Task ID >> task_1451134060989_0002_m_000007 , runningTaskAttemptID >> attempt_1451134060989_0002_m_000007_1
+Now >> 1451136846348 taskAttemptStartTime >> 1451136834779 , estimatedRunTime >> -1 , estimatedEndTime >> 1451136834778
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136846348 start >> 1451136834779 , status.progress >> 0.0 , estimate >> 115690000
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136848418 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 236483
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136850316 start >> 1451136833750 , status.progress >> 0.44160348 , estimate >> 37513
+attempt_1451134060989_0002_m_000005_1:MAP:MAP:0.44160348
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.13461306289991548
+Written/Time : 7.068876011107087
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 16566
+CPU Time : 2230
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136850691 start >> 1451136834779 , status.progress >> 0.6088646 , estimate >> 26133
+attempt_1451134060989_0002_m_000007_1:MAP:MAP:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.12066365007541478
+Written/Time : 7.359414278531926
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 15912
+CPU Time : 1920
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136851478 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 273203
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136852452 start >> 1451136835830 , status.progress >> 0.44160372 , estimate >> 37640
+attempt_1451134060989_0002_m_000003_1:MAP:MAP:0.44160372
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.11370472867284322
+Written/Time : 7.045060762844423
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 16622
+CPU Time : 1890
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136852957 start >> 1451136834771 , status.progress >> 0.6088646 , estimate >> 29868
+attempt_1451134060989_0002_m_000006_1:MAP:MAP:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.12647091169031122
+Written/Time : 6.439183987682833
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 18186
+CPU Time : 2300
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136853457 start >> 1451136833750 , status.progress >> 0.44160348 , estimate >> 44626
+attempt_1451134060989_0002_m_000005_1:MAP:MAP:0.44160348
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 54346033
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.16796062312883747
+Written/Time : 2757.7019840665753
+Total Read / Write : 1.635119531171668
+CPU intensive
+Task Time : 19707
+CPU Time : 3310
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136853806 start >> 1451136834779 , status.progress >> 0.6088646 , estimate >> 31249
+attempt_1451134060989_0002_m_000007_1:MAP:MAP:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 26419536
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.15346612708256688
+Written/Time : 1388.5287223419352
+Total Read / Write : 3.3635057027496624
+CPU intensive
+Task Time : 19027
+CPU Time : 2920
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136853986 start >> 1451136836794 , status.progress >> 0.4416039 , estimate >> 38930
+attempt_1451134060989_0002_m_000004_1:MAP:MAP:0.4416039
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 117103
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.11051651931130758
+Written/Time : 6.811482084690554
+Total Read / Write : 758.8384584511072
+CPU intensive
+Task Time : 17192
+CPU Time : 1900
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136854523 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 309743
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136854782 start >> 1451136833750 , status.progress >> 0.44160348 , estimate >> 47626
+attempt_1451134060989_0002_m_000005_1:MAP:SORT:0.44160348
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 54346033
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.15737923164701406
+Written/Time : 2583.9688569798404
+Total Read / Write : 1.635119531171668
+CPU intensive
+Task Time : 21032
+CPU Time : 3310
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136854853 start >> 1451136834779 , status.progress >> 0.6088646 , estimate >> 32969
+attempt_1451134060989_0002_m_000007_1:MAP:SORT:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 26419536
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1454617913719239
+Written/Time : 1316.107203347614
+Total Read / Write : 3.3635057027496624
+CPU intensive
+Task Time : 20074
+CPU Time : 2920
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136855570 start >> 1451136835830 , status.progress >> 0.44160372 , estimate >> 44700
+attempt_1451134060989_0002_m_000003_1:MAP:MAP:0.44160372
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 44149052
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1469098277608916
+Written/Time : 2236.5274569402227
+Total Read / Write : 2.0127784397273127
+CPU intensive
+Task Time : 19740
+CPU Time : 2900
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136856143 start >> 1451136834771 , status.progress >> 0.6088646 , estimate >> 35101
+attempt_1451134060989_0002_m_000006_1:MAP:MAP:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 40660892
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.15393973423170504
+Written/Time : 1902.5309751076175
+Total Read / Write : 2.185447874581797
+CPU intensive
+Task Time : 21372
+CPU Time : 3290
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136856571 start >> 1451136833750 , status.progress >> 0.667 , estimate >> 34214
+attempt_1451134060989_0002_m_000005_1:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 74050605
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.18710836510231804
+Written/Time : 3244.844879716051
+Total Read / Write : 1.8125167242050217
+CPU intensive
+Task Time : 22821
+CPU Time : 4270
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136856983 start >> 1451136834779 , status.progress >> 0.6682678 , estimate >> 33226
+attempt_1451134060989_0002_m_000007_1:MAP:SORT:0.6682678
+FILE_BYTES_READ : 286720
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 101640771
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.17609439740587282
+Written/Time : 4577.5883174202845
+Total Read / Write : 0.9605759484055861
+I/O intensive
+Task Time : 22204
+CPU Time : 3910
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136857041 start >> 1451136834771 , status.progress >> 0.6088646 , estimate >> 36576
+attempt_1451134060989_0002_m_000006_1:MAP:SORT:0.6088646
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 40660892
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.14773237539290526
+Written/Time : 1825.8146385271666
+Total Read / Write : 2.185447874581797
+CPU intensive
+Task Time : 22270
+CPU Time : 3290
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136857080 start >> 1451136835830 , status.progress >> 0.44160372 , estimate >> 48120
+attempt_1451134060989_0002_m_000003_1:MAP:SORT:0.44160372
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 44149052
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.13647058823529412
+Written/Time : 2077.6024470588236
+Total Read / Write : 2.0127784397273127
+CPU intensive
+Task Time : 21250
+CPU Time : 2900
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136857122 start >> 1451136836794 , status.progress >> 0.4416039 , estimate >> 46032
+attempt_1451134060989_0002_m_000004_1:MAP:MAP:0.4416039
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 13491921
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.14167650531286896
+Written/Time : 663.711186540732
+Total Read / Write : 6.586331182935329
+CPU intensive
+Task Time : 20328
+CPU Time : 2880
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136857598 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 346643
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136858684 start >> 1451136835830 , status.progress >> 0.667 , estimate >> 34263
+attempt_1451134060989_0002_m_000003_1:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 74050605
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.16977334383477727
+Written/Time : 3240.1594906799687
+Total Read / Write : 1.8125153737771622
+CPU intensive
+Task Time : 22854
+CPU Time : 3880
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136859222 start >> 1451136836794 , status.progress >> 0.4416039 , estimate >> 50787
+attempt_1451134060989_0002_m_000004_1:MAP:SORT:0.4416039
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 13491921
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.12841091492776885
+Written/Time : 601.5659443552702
+Total Read / Write : 6.586331182935329
+CPU intensive
+Task Time : 22428
+CPU Time : 2880
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136859264 start >> 1451136834771 , status.progress >> 0.66772664 , estimate >> 36681
+attempt_1451134060989_0002_m_000006_1:MAP:SORT:0.66772664
+FILE_BYTES_READ : 131072
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 101482171
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1751520842689748
+Written/Time : 4143.3132323521
+Total Read / Write : 0.9605434239281302
+I/O intensive
+Task Time : 24493
+CPU Time : 4290
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136859653 start >> 1451136833750 , status.progress >> 0.667 , estimate >> 38835
+attempt_1451134060989_0002_m_000005_1:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 112008527
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.20306528201366636
+Written/Time : 4324.1526850171795
+Total Read / Write : 1.198283412833382
+CPU intensive
+Task Time : 25903
+CPU Time : 5260
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136860083 start >> 1451136834779 , status.progress >> 0.92844665 , estimate >> 27254
+attempt_1451134060989_0002_m_000007_1:MAP:SORT:0.92844665
+FILE_BYTES_READ : 78495744
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 179851683
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.19483085678153653
+Written/Time : 7107.638436610812
+Total Read / Write : 0.9777095274665848
+I/O intensive
+Task Time : 25304
+CPU Time : 4930
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136860223 start >> 1451136836794 , status.progress >> 0.667 , estimate >> 35125
+attempt_1451134060989_0002_m_000004_1:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 74050605
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.16603354816680183
+Written/Time : 3160.6387383157626
+Total Read / Write : 1.8125153737771622
+CPU intensive
+Task Time : 23429
+CPU Time : 3890
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136860667 start >> 1451136828711 , status.progress >> 0.083333336 , estimate >> 383471
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+timestamp >> 1451136861042 start >> 1451136834779 , status.progress >> 1.0 , estimate >> 26263
+attempt_1451134060989_0002_m_000007_1:MAP:SORT:1.0
+FILE_BYTES_READ : 101240684
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 202598497
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.19837794615999696
+Written/Time : 7714.217606518677
+Total Read / Write : 0.980202947902422
+I/O intensive
+Task Time : 26263
+CPU Time : 5210
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000007_1
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136861769 start >> 1451136835830 , status.progress >> 0.6681951 , estimate >> 38819
+attempt_1451134060989_0002_m_000003_1:MAP:SORT:0.6681951
+FILE_BYTES_READ : 352256
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 140050051
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.19160337715409229
+Written/Time : 5399.207795211843
+Total Read / Write : 0.9608715958268377
+I/O intensive
+Task Time : 25939
+CPU Time : 4970
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136862465 start >> 1451136834771 , status.progress >> 0.8475436 , estimate >> 32675
+attempt_1451134060989_0002_m_000006_1:MAP:SORT:0.8475436
+FILE_BYTES_READ : 53256192
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 154610155
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.18415541272477792
+Written/Time : 5582.803314797429
+Total Read / Write : 0.9740831836045957
+I/O intensive
+Task Time : 27694
+CPU Time : 5100
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136862699 start >> 1451136833750 , status.progress >> 0.7307171 , estimate >> 39617
+attempt_1451134060989_0002_m_000005_1:MAP:SORT:0.7307171
+FILE_BYTES_READ : 26120192
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 165817507
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.20587930498462814
+Written/Time : 5727.918304604649
+Total Read / Write : 0.9669555097098402
+I/O intensive
+Task Time : 28949
+CPU Time : 5960
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136863342 start >> 1451136836794 , status.progress >> 0.67132574 , estimate >> 39545
+attempt_1451134060989_0002_m_000004_1:MAP:SORT:0.67132574
+FILE_BYTES_READ : 1167360
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 140866659
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.19775500979358143
+Written/Time : 5306.111910501732
+Total Read / Write : 0.9610877475272556
+I/O intensive
+Task Time : 26548
+CPU Time : 5250
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136863789 start >> 1451136828711 , status.progress >> 0.125 , estimate >> 280624
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136864905 start >> 1451136835830 , status.progress >> 0.96716887 , estimate >> 30061
+attempt_1451134060989_0002_m_000003_1:MAP:SORT:0.96716887
+FILE_BYTES_READ : 125177856
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 264881251
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2225279449699054
+Written/Time : 9110.275184866725
+Total Read / Write : 0.9792905878415683
+I/O intensive
+Task Time : 29075
+CPU Time : 6470
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+timestamp >> 1451136865340 start >> 1451136833750 , status.progress >> 1.0 , estimate >> 31590
+attempt_1451134060989_0002_m_000005_1:MAP:SORT:1.0
+FILE_BYTES_READ : 139586524
+HDFS_BYTES_READ : 134217960
+FILE_BYTES_WRITTEN : 279290177
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.23045267489711935
+Written/Time : 8841.094555239
+Total Read / Write : 0.980358446333757
+I/O intensive
+Task Time : 31590
+CPU Time : 7280
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000005_1
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136865451 start >> 1451136834771 , status.progress >> 0.96649396 , estimate >> 31743
+attempt_1451134060989_0002_m_000006_1:MAP:SORT:0.96649396
+FILE_BYTES_READ : 89980928
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 191333699
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1802477183833116
+Written/Time : 6236.430867014342
+Total Read / Write : 0.9790637455872319
+I/O intensive
+Task Time : 30680
+CPU Time : 5530
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+timestamp >> 1451136865853 start >> 1451136834771 , status.progress >> 1.0 , estimate >> 31082
+attempt_1451134060989_0002_m_000006_1:MAP:SORT:1.0
+FILE_BYTES_READ : 101240684
+HDFS_BYTES_READ : 97346960
+FILE_BYTES_WRITTEN : 202598497
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.18370761212277203
+Written/Time : 6518.193713403256
+Total Read / Write : 0.980202947902422
+I/O intensive
+Task Time : 31082
+CPU Time : 5710
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000006_1
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+timestamp >> 1451136866247 start >> 1451136835830 , status.progress >> 1.0 , estimate >> 30417
+attempt_1451134060989_0002_m_000003_1:MAP:SORT:1.0
+FILE_BYTES_READ : 139586420
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 279289969
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2189565045862511
+Written/Time : 9182.035342078443
+Total Read / Write : 0.9803584460278271
+I/O intensive
+Task Time : 30417
+CPU Time : 6660
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+timestamp >> 1451136866254 start >> 1451136836794 , status.progress >> 1.0 , estimate >> 29460
+attempt_1451134060989_0002_m_000004_1:MAP:SORT:1.0
+FILE_BYTES_READ : 139586420
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 279289969
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.2318397827562797
+Written/Time : 9480.31123557366
+Total Read / Write : 0.9803584460278271
+I/O intensive
+Task Time : 29460
+CPU Time : 6830
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000004_1
+Update attemptID:attempt_1451134060989_0002_m_000003_1
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136866803 start >> 1451136828711 , status.progress >> 0.125 , estimate >> 304736
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136869871 start >> 1451136828711 , status.progress >> 0.16666667 , estimate >> 246959
+Update attemptID:attempt_1451134060989_0002_m_000002_2
+timestamp >> 1451136872819 start >> 1451136850844 , status.progress >> 0.44160372 , estimate >> 49761
+attempt_1451134060989_0002_m_000002_2:MAP:MAP:0.44160372
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 54495908
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.14926052332195677
+Written/Time : 2479.9048009101252
+Total Read / Write : 1.6306226148209146
+CPU intensive
+Task Time : 21975
+CPU Time : 3280
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136872902 start >> 1451136828711 , status.progress >> 0.25 , estimate >> 176764
+Update attemptID:attempt_1451134060989_0002_m_000002_2
+timestamp >> 1451136873256 start >> 1451136850844 , status.progress >> 0.44160372 , estimate >> 50751
+attempt_1451134060989_0002_m_000002_2:MAP:SORT:0.44160372
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 88862260
+FILE_BYTES_WRITTEN : 54495908
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.1463501695520257
+Written/Time : 2431.550419418169
+Total Read / Write : 1.6306226148209146
+CPU intensive
+Task Time : 22412
+CPU Time : 3280
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000002_2
+timestamp >> 1451136875867 start >> 1451136850844 , status.progress >> 0.69858444 , estimate >> 35819
+attempt_1451134060989_0002_m_000002_2:MAP:SORT:0.69858444
+FILE_BYTES_READ : 12005376
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 151701691
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.22739080046357352
+Written/Time : 6062.490149062862
+Total Read / Write : 0.9638866583234066
+I/O intensive
+Task Time : 25023
+CPU Time : 5690
+========================================
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136875925 start >> 1451136828711 , status.progress >> 0.2916667 , estimate >> 161876
+Update attemptID:attempt_1451134060989_0002_m_000002_2
+timestamp >> 1451136877836 start >> 1451136850844 , status.progress >> 1.0 , estimate >> 26992
+attempt_1451134060989_0002_m_000002_2:MAP:SORT:1.0
+FILE_BYTES_READ : 139586420
+HDFS_BYTES_READ : 134217860
+FILE_BYTES_WRITTEN : 279289969
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.26526378186129224
+Written/Time : 10347.138744813277
+Total Read / Write : 0.9803584460278271
+I/O intensive
+Task Time : 26992
+CPU Time : 7160
+========================================
+Update attemptID:attempt_1451134060989_0002_m_000002_2
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136878962 start >> 1451136828711 , status.progress >> 0.2916667 , estimate >> 172289
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136879090 start >> 1451136828711 , status.progress >> 0.2916667 , estimate >> 172727
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136879607 start >> 1451136828711 , status.progress >> 0.2916667 , estimate >> 174500
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136882004 start >> 1451136828711 , status.progress >> 0.68369514 , estimate >> 77948
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136885059 start >> 1451136828711 , status.progress >> 0.7315781 , estimate >> 77022
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136888090 start >> 1451136828711 , status.progress >> 0.7869187 , estimate >> 75457
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136891118 start >> 1451136828711 , status.progress >> 0.8463104 , estimate >> 73740
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136894152 start >> 1451136828711 , status.progress >> 0.90728736 , estimate >> 72128
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+timestamp >> 1451136897386 start >> 1451136828711 , status.progress >> 0.9782736 , estimate >> 70200
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+Update attemptID:attempt_1451134060989_0002_r_000000_0
+serviceStop

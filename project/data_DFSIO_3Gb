@@ -1,0 +1,462 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053469862 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 31025
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 139000000
+CPU/Time : 0.07635063303372959
+Written/Time : 123154.92277954963
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 20694
+CPU Time : 1580
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053469928 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 31124
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 139000000
+CPU/Time : 0.07610789980732177
+Written/Time : 123133.56840077072
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 20760
+CPU Time : 1580
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053472997 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 35725
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 283000000
+CPU/Time : 0.09945864283016492
+Written/Time : 128314.28519870745
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 23829
+CPU Time : 2370
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053472997 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 35725
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 275000000
+CPU/Time : 0.09610138906374585
+Written/Time : 127978.55982206555
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 23829
+CPU Time : 2290
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053476071 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 40334
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 401000000
+CPU/Time : 0.1066795524662677
+Written/Time : 131343.4008846597
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 26903
+CPU Time : 2870
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053476076 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 40341
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 346000000
+CPU/Time : 0.09811208562509291
+Written/Time : 129296.62940389475
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 26908
+CPU Time : 2640
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053479146 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 44944
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 407000000
+CPU/Time : 0.10107412102208287
+Written/Time : 130014.62285676162
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 29978
+CPU Time : 3030
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053479180 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 44995
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 466000000
+CPU/Time : 0.10629081700653072
+Written/Time : 131965.1224843396
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 30012
+CPU Time : 3190
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053482239 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 49581
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 522000000
+CPU/Time : 0.10492576577666234
+Written/Time : 132222.2218257688
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 33071
+CPU Time : 3470
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053482241 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 49584
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 581000000
+CPU/Time : 0.11096664953285157
+Written/Time : 134005.1998306776
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 33073
+CPU Time : 3670
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053485293 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 54160
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 615000000
+CPU/Time : 0.10546712802768166
+Written/Time : 133462.2214532872
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 36125
+CPU Time : 3810
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053485295 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 54163
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 678000000
+CPU/Time : 0.11348852658676337
+Written/Time : 135205.12707946965
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 36127
+CPU Time : 4100
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053488328 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 58710
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 704000000
+CPU/Time : 0.10597548518896834
+Written/Time : 134415.52808988764
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 39160
+CPU Time : 4150
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053488328 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 58710
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 767000000
+CPU/Time : 0.10980592441266598
+Written/Time : 136024.31256384065
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 39160
+CPU Time : 4300
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053491385 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 63293
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 866000000
+CPU/Time : 0.10706587393703958
+Written/Time : 136951.06345784874
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 42217
+CPU Time : 4520
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053491388 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 63298
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 799000000
+CPU/Time : 0.10516342965419233
+Written/Time : 135362.68024632876
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 42220
+CPU Time : 4440
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053494448 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 67886
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 954000000
+CPU/Time : 0.10512367491166077
+Written/Time : 137506.90459363957
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 45280
+CPU Time : 4760
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053494451 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 67890
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 890000000
+CPU/Time : 0.1024667093611289
+Written/Time : 136092.1748559062
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 45283
+CPU Time : 4640
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053497483 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 72436
+attempt_1451052275812_0003_m_000002_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 989000000
+CPU/Time : 0.10121080409810618
+Written/Time : 136907.8333850771
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 48315
+CPU Time : 4890
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053497483 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 72436
+attempt_1451052275812_0003_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 1048576000
+CPU/Time : 0.10265962951464348
+Written/Time : 138140.90799958605
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 48315
+CPU Time : 4960
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053498131 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 73407
+attempt_1451052275812_0003_m_000000_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 1048576000
+CPU/Time : 0.10130098237444601
+Written/Time : 137853.6812286829
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 48963
+CPU Time : 4960
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+timestamp >> 1451053498871 start >> 1451053449168 , status.progress >> 1.0 , estimate >> 49703
+attempt_1451052275812_0003_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116563
+HBW_BYTES_WRITTEN : 1048576000
+CPU/Time : 0.10120113474035773
+Written/Time : 137659.8352010945
+Total Read / Write : 0.002290606796324734
+I/O intensive
+Task Time : 49703
+CPU Time : 5030
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000000_0
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053499038 start >> 1451053449168 , status.progress >> 0.667 , estimate >> 74767
+attempt_1451052275812_0003_m_000002_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 989000000
+CPU/Time : 0.09805494285141368
+Written/Time : 136269.56206135952
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 49870
+CPU Time : 4890
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+timestamp >> 1451053499136 start >> 1451053449168 , status.progress >> 1.0 , estimate >> 49968
+attempt_1451052275812_0003_m_000002_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116563
+HBW_BYTES_WRITTEN : 1048576000
+CPU/Time : 0.10126480947806596
+Written/Time : 137547.95036823567
+Total Read / Write : 0.002290606796324734
+I/O intensive
+Task Time : 49968
+CPU Time : 5060
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000002_0
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053499671 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053500672 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053501673 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053502674 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053503674 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053504675 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053505676 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053506676 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053507677 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Task ID >> task_1451052275812_0003_m_000001 , runningTaskAttemptID >> attempt_1451052275812_0003_m_000001_1
+Now >> 1451053508677 taskAttemptStartTime >> 1451053471010 , estimatedRunTime >> -1 , estimatedEndTime >> 1451053471009
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053508678 start >> 1451053471010 , status.progress >> 0.0 , estimate >> 376680000
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053512539 start >> 1451053471010 , status.progress >> 0.667 , estimate >> 62262
+attempt_1451052275812_0003_m_000001_1:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 339000000
+CPU/Time : 0.05923571480170483
+Written/Time : 124600.97045438127
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 41529
+CPU Time : 2460
+========================================
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053514616 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 60718
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053515595 start >> 1451053471010 , status.progress >> 0.667 , estimate >> 66844
+attempt_1451052275812_0003_m_000001_1:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 528000000
+CPU/Time : 0.07244588987327577
+Written/Time : 128280.54794213301
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 44585
+CPU Time : 3230
+========================================
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053517684 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 74524
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053518625 start >> 1451053471010 , status.progress >> 0.667 , estimate >> 71386
+attempt_1451052275812_0003_m_000001_1:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 708000000
+CPU/Time : 0.08463719416150373
+Written/Time : 131307.26388743042
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 47615
+CPU Time : 4030
+========================================
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053520728 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 88222
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053521658 start >> 1451053471010 , status.progress >> 0.667 , estimate >> 75934
+attempt_1451052275812_0003_m_000001_1:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 906000000
+CPU/Time : 0.08845364081503712
+Written/Time : 134326.16932554098
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 50648
+CPU Time : 4480
+========================================
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053523778 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 101947
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053524086 start >> 1451053471010 , status.progress >> 0.667 , estimate >> 79574
+attempt_1451052275812_0003_m_000001_1:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116438
+HBW_BYTES_WRITTEN : 906000000
+CPU/Time : 0.08440726505388499
+Written/Time : 133507.862084558
+Total Read / Write : 0.0022930658376131502
+I/O intensive
+Task Time : 53076
+CPU Time : 4480
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+timestamp >> 1451053524144 start >> 1451053471010 , status.progress >> 1.0 , estimate >> 53134
+attempt_1451052275812_0003_m_000001_1:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 267
+FILE_BYTES_WRITTEN : 116563
+HBW_BYTES_WRITTEN : 1048576000
+CPU/Time : 0.09165506078970151
+Written/Time : 136297.55791018932
+Total Read / Write : 0.002290606796324734
+I/O intensive
+Task Time : 53134
+CPU Time : 4870
+========================================
+Update attemptID:attempt_1451052275812_0003_m_000001_1
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053524882 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 106915
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+timestamp >> 1451053524929 start >> 1451053501123 , status.progress >> 0.22222224 , estimate >> 107126
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+Update attemptID:attempt_1451052275812_0003_r_000000_0
+serviceStop

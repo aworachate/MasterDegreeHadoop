@@ -1,0 +1,50 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+Task Size >> {0=2748291}
+Update attemptID:attempt_1453169138423_0020_m_000000_0
+attempt_1453169138423_0020_m_000000_0:MAP:MAP:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 2748425
+FILE_BYTES_WRITTEN : 117672
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.20754549094630068
+Written/Time : 2.617609111536237
+FinishedSize : 1833110.0852056146
+TETS
+Total Read / Write : 23.356660887891767
+CPU intensive
+Task Time : 44954
+CPU Time : 9330
+========================================
+Task Size >> {0=2748291}
+Update attemptID:attempt_1453169138423_0020_m_000000_0
+attempt_1453169138423_0020_m_000000_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 2748425
+FILE_BYTES_WRITTEN : 117672
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.20591026461565623
+Written/Time : 2.596985279512701
+FinishedSize : 1833110.0852056146
+TETS
+Total Read / Write : 23.356660887891767
+CPU intensive
+Task Time : 45311
+CPU Time : 9330
+========================================
+Task Size >> {0=2748291}
+Update attemptID:attempt_1453169138423_0020_m_000000_0
+attempt_1453169138423_0020_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 2748425
+FILE_BYTES_WRITTEN : 563064
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.25505273330812217
+Written/Time : 11.829572671120635
+FinishedSize : 2748291.0
+TETS
+Total Read / Write : 4.881194677692056
+CPU intensive
+Task Time : 47598
+CPU Time : 12140
+========================================

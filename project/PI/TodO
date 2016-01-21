@@ -1,0 +1,23 @@
+PI Block size = 128 mb
+
+File location of HDFS default block site
+Change block size and job type
+
+Micro-Benchmark
+	Sort
+	WordCount
+	TeraSort
+	EnhancedDFSIO
+Search Indexing
+	Nutch Indexing
+	Page Rank
+	*Grep
+Machine Learning
+	Bayesian Classification
+	K-Means Clustering
+
+
+
+Analytical Query
+	Hive Join
+	Hive Aggregation

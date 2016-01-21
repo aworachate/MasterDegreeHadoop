@@ -1,0 +1,38 @@
+#!/usr/bin/python
+import os
+import matplotlib.pyplot as plt
+import numpy as np
+#from bs4 import BeautifulSoup
+#from lxml.html import parse
+infile = open("terasort1gb.log", "r")
+cpu_per_time = []
+write_per_time = []
+	#infile_temp = infile.read()
+	#Taskid[num] = num
+	#ydata = []
+	#print outtxt
+for line in infile.readlines():
+		#print line
+	if line.find("CPU/Time") >= 0:
+			#print line.split(":")[1].strip()
+			#print num
+			cpu_per_time.append(line.split(":")[1].strip())
+	elif line.find("Written/Time") >= 0:
+			#print line.split(":")[1].strip()
+			write_per_time.append(line.split(":")[1].strip())
+	else:
+		continue
+infile.close()
+print (cpu_per_time)
+print (write_per_time)
+
+#print FILE_BYTES_WRITTEN
+#print FILE_BYTES_READ
+#print HDFS_BYTES_READ
+#print len(FILE_BYTES_WRITTEN)
+#print len(Taskid)
+
+#plt.plot(cpu_per_time,'ro')
+plt.plot(write_per_time,'go')
+#plt.axis([0, 6, 0, 20])
+plt.show()
