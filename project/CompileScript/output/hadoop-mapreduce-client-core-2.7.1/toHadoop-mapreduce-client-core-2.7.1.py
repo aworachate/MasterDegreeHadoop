@@ -7,7 +7,7 @@ for file in os.listdir(path1):
         temp = file.replace("$", "\\$")
         flie_list = flie_list+(path1+temp+" ")
 print(flie_list)
-out = "$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.1.jar"
+out = "/Users/worachate-a/Desktop/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.1.jar"
 str_command="jar -uf "+out+" "+flie_list
 #str_command = "javac -cp `hadoop classpath` -d "+out+" "+src
 
