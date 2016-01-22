@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt5
 import numpy as np
 #from bs4 import BeautifulSoup
 #from lxml.html import parse
-infile = open("PI/mahout_kmean1.log", "r")
+infile = open("PI/bay1.log", "r")
 progress_t0 = [[]for x in xrange(21)]
 cpu_per_time_t0 = [[]for x in xrange(21)]
 write_per_time_t0 = [[]for x in xrange(21)]
