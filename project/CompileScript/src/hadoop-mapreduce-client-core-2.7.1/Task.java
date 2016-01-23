@@ -676,7 +676,7 @@ abstract public class Task implements Writable, Configurable {
       // set current phase progress.
       // This method assumes that task has phases.
       //Project Who set ?
-      System.out.println(taskId+" setProgress >> " + progress + " : " + taskProgress.phase().toString());
+      //System.out.println(taskId+" setProgress >> " + progress + " : " + taskProgress.phase().toString());
       taskProgress.phase().set(progress);
       // indicate that progress update needs to be sent
       setProgressFlag();
@@ -743,6 +743,8 @@ abstract public class Task implements Writable, Configurable {
       int remainingRetries = MAX_RETRIES;
       // get current flag value and reset it as well
       boolean sendProgress = resetProgressFlag();
+      //Project
+      System.out.println("sendProgress" + sendProgress);
       while (!taskDone.get()) {
         synchronized (lock) {
           done = false;

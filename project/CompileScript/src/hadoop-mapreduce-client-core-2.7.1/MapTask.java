@@ -311,7 +311,11 @@ public class MapTask extends Task {
     if (isMapTask()) {
       // If there are no reducers then there won't be any sort. Hence the map
       // phase will govern the entire attempt's progress.
+      //Project
+      System.out.println("Run Map Task");
       if (conf.getNumReduceTasks() == 0) {
+        //Project
+        System.out.println("No Reduce Task");
         mapPhase = getProgress().addPhase("map", 1.0f);
       } else {
         // If there are reducers then the entire attempt's progress will be
@@ -1876,6 +1880,8 @@ public class MapTask extends Task {
         return;
       }
       {
+        //Project
+        SYstem.out.println("add sort partition due to number spill = "+numSpills);
         sortPhase.addPhases(partitions); // Divide sort phase into sub-phases
 
         IndexRecord rec = new IndexRecord();

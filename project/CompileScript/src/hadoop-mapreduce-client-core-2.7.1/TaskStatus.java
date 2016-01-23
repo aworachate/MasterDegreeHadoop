@@ -476,7 +476,9 @@ public abstract class TaskStatus implements Writable, Cloneable {
   public void readFields(DataInput in) throws IOException {
     this.taskid.readFields(in);
     setProgress(in.readFloat());
-    //Project this command write progress whcih counter getProgress get.
+    //Project
+    //this command write progress whcih counter getProgress get.
+    //System.out.println(in.readFolat());
     System.out.println("TaskStatusClass : >> " + getProgress());
     this.numSlots = in.readInt();
     this.runState = WritableUtils.readEnum(in, State.class);

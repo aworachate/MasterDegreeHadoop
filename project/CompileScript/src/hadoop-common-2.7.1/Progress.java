@@ -219,6 +219,9 @@ public class Progress {
         subProgress = phase().getInternal();
         progressFromCurrentPhase =
           getProgressWeightage(currentPhase) * subProgress;
+        //Project
+        System.out.println("weight " + getProgressWeightage(currentPhase) + " , Subprogress : " +subProgress);
+        System.out.println("Prgoress from current pahse : " + progressFromCurrentPhase);
       }
 
       float progressFromCompletedPhases = 0.0f;
@@ -233,8 +236,13 @@ public class Progress {
           progressFromCompletedPhases += getProgressWeightage(i);
         }
       }
+      System.out.println("progressFromCompletedPhases : " + progressFromCompletedPhases);
+      System.out.println("progressFromCurrentPhase : " + progressFromCurrentPhase);
       return  progressFromCompletedPhases + progressFromCurrentPhase;
     } else {
+      // Project
+      // This should be Sorted 67%
+      System.out.println("it sould be sort");
       return progress;
     }
   }
