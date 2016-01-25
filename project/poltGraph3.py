@@ -8,13 +8,18 @@ import matplotlib.pyplot as plt5
 import numpy as np
 #from bs4 import BeautifulSoup
 #from lxml.html import parse
-infile = open("PI/bay1.log", "r")
+
+def float_eq(a, b, epsilon=0.00000001):
+    return abs(a - b) < epsilon
+
+infile = open("PI/DFSIO2.log", "r")
 progress_t0 = [[]for x in xrange(21)]
 cpu_per_time_t0 = [[]for x in xrange(21)]
 write_per_time_t0 = [[]for x in xrange(21)]
 finishedSize_t0 =[[]for x in xrange(21)]
 write_per_done_t0 = [[]for x in xrange(21)]
 task_time_t0 = [[]for x in xrange(21)]
+fin_map_time_t0 = [[]for x in xrange(21)]
 # progress_t1 = []
 # cpu_per_time_t1 = []
 # write_per_time_t1 = []
@@ -25,13 +30,24 @@ task_time_t0 = [[]for x in xrange(21)]
 	#Taskid[num] = num
 	#ydata = []
 	#print outtxt
-flag = -1;
+flag = -1
+mapFin = -1
 for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
-		print (temp)
+		#print (temp)
 		flag = temp
-		progress_t0[flag].append(line.split(":")[3].strip())
+		progress_t0[flag].append(float(line.split(":")[3].strip()))
+		print float(line.split(":")[3].strip())
+		if float_eq(float(line.split(":")[3].strip()),0.667):
+			mapFin = 1
+		else:
+			mapFin = -1
+		#if float(line.split(":")[3].strip() < 0.667):
+		#	progress_t0[flag].append(float(line.split(":")[3].strip())/0.667)
+		#else:
+		#	tempPro = ((float(line.split(":")[3].strip()) - 0.667)/0.333 ) + 1
+		#	progress_t0[flag].append(tempPro)
 	elif line.find("CPU/Time") >= 0:
 		cpu_per_time_t0[flag].append(line.split(":")[1].strip())
 	elif line.find("Written/Time") >= 0:
@@ -42,11 +58,13 @@ for line in infile.readlines():
 		write_per_done_t0[flag].append(line.split(":")[1].strip())
 	elif line.find("Task Time") >= 0:
 		task_time_t0[flag].append(line.split(":")[1].strip())
+		if mapFin == 1:
+			fin_map_time_t0[flag].append(line.split(":")[1].strip())
 	else:
 		continue
 
 infile.close()
-
+print fin_map_time_t0
 #print (progress_t0)
 #print (cpu_per_time_t0[0])
 #print (write_per_time_t0)

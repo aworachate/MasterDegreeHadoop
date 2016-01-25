@@ -676,7 +676,7 @@ abstract public class Task implements Writable, Configurable {
       // set current phase progress.
       // This method assumes that task has phases.
       //Project Who set ?
-      //System.out.println(taskId+" setProgress >> " + progress + " : " + taskProgress.phase().toString());
+      System.out.println(taskId+" setProgress >> " + progress + " : " + taskProgress.phase().toString());
       taskProgress.phase().set(progress);
       // indicate that progress update needs to be sent
       setProgressFlag();

@@ -1881,7 +1881,7 @@ public class MapTask extends Task {
       }
       {
         //Project
-        SYstem.out.println("add sort partition due to number spill = "+numSpills);
+        System.out.println("add sort partition due to number spill = "+numSpills);
         sortPhase.addPhases(partitions); // Divide sort phase into sub-phases
 
         IndexRecord rec = new IndexRecord();

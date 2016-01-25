@@ -1,0 +1,27 @@
+export HADOOP_HOME=/home/zilliconbaby/Desktop/hadoop-2.7.1/
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+
+
+Hadoop command line compile Java
+
+Step1 Make Class
+
+ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.7.1.jar:
+		 $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.1.jar:
+		 $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.1.jar
+		  => Hadoop Lib use in compile time
+      -d /home/zilliconbaby/Desktop/temp_classes/   => Destination classs file
+      /home/zilliconbaby/Desktop/compile/MaxTemperature.java /home/zilliconbaby/Desktop/compile/MaxTemperatureMapper.java /home/	zilliconbaby/Desktop/compile/MaxTemperatureReducer.java => Java File for compile to class
+
+Ex. javac -classpath /home/zilliconbaby/Desktop/hadoop-2.7.1//share/hadoop/common/hadoop-common-2.7.1.jar:/home/zilliconbaby/Desktop/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.1.jar:/home/zilliconbaby/Desktop/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.1.jar -d /home/zilliconbaby/Desktop/temp_classes/ /home/zilliconbaby/Desktop/compile/MaxTemperature.java /home/zilliconbaby/Desktop/compile/MaxTemperatureMapper.java /home/zilliconbaby/Desktop/compile/MaxTemperatureReducer.java 
+Or
+	javac -cp `hadoop classpath` -d /home/zilliconbaby/Desktop/temp_classes/ Hadoop_test/ch09-mr-features/src/main/java/MaxTemperatureWithCounters.java compile/MaxTemperatureReducer.java
+Step2 make .jar file
+ jar -cvf /home/zilliconbaby/Desktop/t.jar -C /home/zilliconbaby/Desktop/temp_classes/ .
+		[target jar file name]			[classes sources]
+
+How to run
+ hadoop jar /home/zilliconbaby/Desktop/t.jar MaxTemperature Sample2.txt out3
+
+		[MapReduce jar file program]   [Main class] [input file in HDFS] [Outputfile in HDFS]
