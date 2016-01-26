@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("PI/DFSIO2.log", "r")
+infile = open("PI/DFSIO3.log", "r")
 progress_t0 = [[]for x in xrange(21)]
 cpu_per_time_t0 = [[]for x in xrange(21)]
 write_per_time_t0 = [[]for x in xrange(21)]
