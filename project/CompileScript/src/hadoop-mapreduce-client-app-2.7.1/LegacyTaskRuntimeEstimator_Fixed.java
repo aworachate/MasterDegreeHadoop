@@ -34,6 +34,7 @@ import org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptStatusUpdateEvent
 //** Project
 import  org.apache.hadoop.mapreduce.v2.api.records.Counters;
 import  org.apache.hadoop.mapreduce.split.JobSplit.TaskSplitMetaInfo;
+//import org.apache.hadoop.mapreduce.v2.app.job.GraphData;
 //import org.apache.hadoop.mapreduce.Counters;
 
 
@@ -43,6 +44,8 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       = new ConcurrentHashMap<TaskAttempt, AtomicLong>();
   private final ConcurrentHashMap<TaskAttempt, AtomicLong> attemptRuntimeEstimateVariances
       = new ConcurrentHashMap<TaskAttempt, AtomicLong>();
+
+  private Map<TaskAttempt, GraphData> allAttemtGraphData = new ConcurrentHashMap<TaskAttempt,GraphData>();
 
   @Override
   public void updateAttempt(TaskAttemptStatus status, long timestamp) {
@@ -95,6 +98,17 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       AtomicLong estimateVarianceContainer
           = attemptRuntimeEstimateVariances.get(taskAttempt);
 
+      //GraphData
+      GraphData attemptGraphData = allAttemtGraphData.get(taskAttempt);
+      if (attemptGraphData == null)
+        {
+          if (allAttemtGraphData.get(taskAttempt) == null)
+            {
+                allAttemtGraphData.put(taskAttempt,new GraphData());
+                attemptGraphData = allAttemtGraphData.get(taskAttempt);
+            }
+        }
+
       if (estimateContainer == null) {
         if (attemptRuntimeEstimates.get(taskAttempt) == null) {
           attemptRuntimeEstimates.put(taskAttempt, new AtomicLong());
@@ -109,6 +123,8 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       }
 
 
+
+
       long estimate = -1;
       long varianceEstimate = -1;
 
@@ -117,6 +133,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       if (start > 0 && timestamp > start) {
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
         varianceEstimate = (long) (estimate * status.progress / 10);
+        //System.out.println("Esitmate Time from LATE-Algo : " + estimate);
       /*  System.out.println("timestamp >> "+ timestamp +
                            " start >> " + start +
                            " , status.progress >> " + status.progress+
@@ -127,53 +144,46 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         //System.out.println("esitmateTime:"+estimate+"varianceEstimate:"+varianceEstimate);
         if((task.getType().toString()).equals("MAP") && status.progress > 0)
           {
-        //MapTaskImpl tempTask = (MapTaskImpl)task;
-        //System.out.println("Info >> " +tempTask.getTaskSplitMetaInfo);
-        System.out.println("Update attemptID:"+attemptID);
-        Counters tempCounters = taskAttempt.getReport().getCounters();
-        String FileSystemCounter = "org.apache.hadoop.mapreduce.FileSystemCounter";
-        String TaskCounter = "org.apache.hadoop.mapreduce.TaskCounter";
-        Long FBR = tempCounters.getCounterGroup(FileSystemCounter).getCounter("FILE_BYTES_READ").getValue();
-        Long HBR = tempCounters.getCounterGroup(FileSystemCounter).getCounter("HDFS_BYTES_READ").getValue();
-        Long FBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("FILE_BYTES_WRITTEN").getValue();
-        Long HBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("HDFS_BYTES_WRITTEN").getValue();
-        System.out.println(taskAttempt.getID()+":"+task.getType() +":"+taskAttempt.getPhase()+":"+taskAttempt.getProgress());
-        System.out.println("FILE_BYTES_READ : "+FBR);
-        System.out.println("HDFS_BYTES_READ : "+HBR);
-        System.out.println("FILE_BYTES_WRITTEN : "+FBW);
-        System.out.println("HBW_BYTES_WRITTEN : "+HBW);
-        //System.out.println(tempCounters.getCounterGroup(TaskCounter));
-        long process_time = timestamp - start;
-        long CPU_Time = tempCounters.getCounterGroup(TaskCounter).getCounter("CPU_MILLISECONDS").getValue();
-        System.out.println("CPU/Time : " + (CPU_Time/(double)process_time));
-        System.out.println("Written/Time : " + ((FBW+HBW)/(double)process_time));
-        long tempSize = Long.parseLong(allTaskInputLenght.get(0));
-        Double finishedSize = (double)status.progress * (double)tempSize;
-        System.out.println("FinishedSize : " + finishedSize);
-        System.out.println("TETS");
+            //MapTaskImpl tempTask = (MapTaskImpl)task;
+            //System.out.println("Info >> " +tempTask.getTaskSplitMetaInfo);
+            System.out.println("Update attemptID:"+attemptID);
+            Counters tempCounters = taskAttempt.getReport().getCounters();
+            String FileSystemCounter = "org.apache.hadoop.mapreduce.FileSystemCounter";
+            String TaskCounter = "org.apache.hadoop.mapreduce.TaskCounter";
+            Long FBR = tempCounters.getCounterGroup(FileSystemCounter).getCounter("FILE_BYTES_READ").getValue();
+            Long HBR = tempCounters.getCounterGroup(FileSystemCounter).getCounter("HDFS_BYTES_READ").getValue();
+            Long FBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("FILE_BYTES_WRITTEN").getValue();
+            Long HBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("HDFS_BYTES_WRITTEN").getValue();
+            System.out.println(taskAttempt.getID()+":"+task.getType() +":"+taskAttempt.getPhase()+":"+taskAttempt.getProgress());
+            System.out.println("FILE_BYTES_READ : "+FBR);
+            System.out.println("HDFS_BYTES_READ : "+HBR);
+            System.out.println("FILE_BYTES_WRITTEN : "+FBW);
+            System.out.println("HBW_BYTES_WRITTEN : "+HBW);
+            //System.out.println(tempCounters.getCounterGroup(TaskCounter));
+            long process_time = timestamp - start;
+            long CPU_Time = tempCounters.getCounterGroup(TaskCounter).getCounter("CPU_MILLISECONDS").getValue();
+            System.out.println("CPU/Time : " + (CPU_Time/(double)process_time));
+            System.out.println("Written/Time : " + ((FBW+HBW)/(double)process_time));
+            long tempSize = Long.parseLong(allTaskInputLenght.get(0));
+            Double finishedSize = (double)status.progress * (double)tempSize;
+            System.out.println("FinishedSize : " + finishedSize);
+            System.out.println("Add graph Data" + status.progress + " <> " +(CPU_Time/(double)process_time));
+            attemptGraphData.addData(status.progress,(CPU_Time/(double)process_time));
 
-
-        // Decision algorithm
-        // Call method classifyType()
-        // TaskIntensive 0 : I/O intensive
-        // TaskIntensive 1 : CPU intensive
-            int taskIntensive = 0;
-            Double temp_cal = (FBR + HBR) / (double)FBW ;
-            //Double temp_cal = (HBR) / (double)MOMB;
-            System.out.println("Total Read / Write : " + temp_cal);
-            if (temp_cal > 1.0)
-                taskIntensive = 1;
+            // Decision algorithm
+            // Call method classifyType()
+            // TaskIntensive 0 : I/O intensive
+            // TaskIntensive 1 : CPU intensive
+            if (Double.compare(attemptGraphData.getSlope(), 0.5) >= 0)
+              {
+                System.out.println("CPU Intensive");
+                // Calculate estimated time  for CPU Intensive Task
+                //long estimate_total_time = estimateCurr() + estimateNext();
+              }
             else
-                taskIntensive = 0;
-            switch(taskIntensive){
-                case 0 : {
-                System.out.println("I/O intensive");
-                break;
-                }
-                case 1 : {
-                System.out.println("CPU intensive");
-                break;
-                }
+              {
+                System.out.println("I/O Intensive");
+                // Calculate estimated time  for CPU Intensive Task
               }
 
             //long now = clock.getTime();
@@ -190,12 +200,6 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         estimateVarianceContainer.set(varianceEstimate);
       }
     }
-  }
-
-//Project
-  private int classifyType(){
-    int jobType = -1; //{ 0 = CPU Intensive , 1 = I/O Intensive}
-    return jobType;
   }
 
   private long storedPerAttemptValue
