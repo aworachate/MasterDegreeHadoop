@@ -1,0 +1,88 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+attempt_1454305919848_0043_m_000000_0 : spilledRecord org.apache.hadoop.mapred.Counters$Counter@c553d160
+TaskStatusClass : >> 0.19470607
+Task Size >> {0=17544939}
+Update attemptID:attempt_1454305919848_0043_m_000000_0
+attempt_1454305919848_0043_m_000000_0:MAP:MAP:0.19470607
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 4961252
+FILE_BYTES_WRITTEN : 116624
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.5185883620689655
+Written/Time : 3.9272629310344827
+FinishedSize : 3416106.076215461
+Add graph Data0.19470607 <> 0.5185883620689655
+-1.0
+I/O Intensive
+Task Time : 29696
+CPU Time : 15400
+========================================
+TaskStatusClass : >> 0.39606726
+Task Size >> {0=17544939}
+Update attemptID:attempt_1454305919848_0043_m_000000_0
+attempt_1454305919848_0043_m_000000_0:MAP:MAP:0.39606726
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 10229504
+FILE_BYTES_WRITTEN : 116624
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.636380244808477
+Written/Time : 3.5510626636623837
+FinishedSize : 6948975.946350932
+Add graph Data0.39606726 <> 0.636380244808477
+-1.0
+I/O Intensive
+Task Time : 32842
+CPU Time : 20900
+========================================
+TaskStatusClass : >> 0.649408
+Task Size >> {0=17544939}
+Update attemptID:attempt_1454305919848_0043_m_000000_0
+attempt_1454305919848_0043_m_000000_0:MAP:MAP:0.649408
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 16889679
+FILE_BYTES_WRITTEN : 116624
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.6859747623547724
+Written/Time : 3.2415364945244316
+FinishedSize : 1.1393823444799304E7
+Add graph Data0.649408 <> 0.6859747623547724
+-1.0
+I/O Intensive
+Task Time : 35978
+CPU Time : 24680
+========================================
+TaskStatusClass : >> 0.649408
+Task Size >> {0=17544939}
+Update attemptID:attempt_1454305919848_0043_m_000000_0
+attempt_1454305919848_0043_m_000000_0:MAP:SORT:0.649408
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 16889679
+FILE_BYTES_WRITTEN : 116624
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.6772405466220295
+Written/Time : 3.200263432303386
+FinishedSize : 1.1393823444799304E7
+Add graph Data0.649408 <> 0.6772405466220295
+-1.0
+I/O Intensive
+Task Time : 36442
+CPU Time : 24680
+========================================
+TaskStatusClass : >> 1.0
+Task Size >> {0=17544939}
+Update attemptID:attempt_1454305919848_0043_m_000000_0
+attempt_1454305919848_0043_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 17589655
+FILE_BYTES_WRITTEN : 1078744
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.7058503401360544
+Written/Time : 29.353578231292516
+FinishedSize : 1.7544939E7
+Add graph Data1.0 <> 0.7058503401360544
+-1.0
+I/O Intensive
+Task Time : 36750
+CPU Time : 25940
+========================================

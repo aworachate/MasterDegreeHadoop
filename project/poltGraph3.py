@@ -12,7 +12,8 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("PI/PageRank7.log", "r")
+infile = open("HP_Moonshot/wordcount1gb.log", "r")
+#infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(21)]
 cpu_per_time_t0 = [[]for x in xrange(21)]
 write_per_time_t0 = [[]for x in xrange(21)]
@@ -87,6 +88,9 @@ print fin_map_time_t0
 #print len(cpu_per_time_t0[0])
 
 #plt1.plot(progress_t0,'ro')
+plt2.xlim([0,1.0])
+plt2.ylim([0,1.5])
+
 plt2.plot(progress_t0[0],cpu_per_time_t0[0],'bo')
 plt2.plot(progress_t0[1],cpu_per_time_t0[1],'ro')
 plt2.plot(progress_t0[2],cpu_per_time_t0[2],'go')

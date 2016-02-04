@@ -46,6 +46,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       = new ConcurrentHashMap<TaskAttempt, AtomicLong>();
 
   private Map<TaskAttempt, GraphData> allAttemtGraphData = new ConcurrentHashMap<TaskAttempt,GraphData>();
+  private GraphData singleGraphData = new GraphData();
 
   @Override
   public void updateAttempt(TaskAttemptStatus status, long timestamp) {
@@ -164,17 +165,17 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             long CPU_Time = tempCounters.getCounterGroup(TaskCounter).getCounter("CPU_MILLISECONDS").getValue();
             System.out.println("CPU/Time : " + (CPU_Time/(double)process_time));
             System.out.println("Written/Time : " + ((FBW+HBW)/(double)process_time));
-            long tempSize = Long.parseLong(allTaskInputLenght.get(0));
-            Double finishedSize = (double)status.progress * (double)tempSize;
-            System.out.println("FinishedSize : " + finishedSize);
+            //long tempSize = Long.parseLong(allTaskInputLenght.get(0));
+            //Double finishedSize = (double)status.progress * (double)tempSize;
+            //System.out.println("FinishedSize : " + finishedSize);
             System.out.println("Add graph Data" + status.progress + " <> " +(CPU_Time/(double)process_time));
             attemptGraphData.addData(status.progress,(CPU_Time/(double)process_time));
-
+            singleGraphData.addData(status.progress,(CPU_Time/(double)process_time)));
             // Decision algorithm
             // Call method classifyType()
             // TaskIntensive 0 : I/O intensive
             // TaskIntensive 1 : CPU intensive
-            if (Double.compare(attemptGraphData.getSlope(), 0.5) >= 0)
+            if (Double.compare(attemptGraphData.getSlope(), 3.0) >= 0)
               {
                 System.out.println("CPU Intensive");
                 // Calculate estimated time  for CPU Intensive Task

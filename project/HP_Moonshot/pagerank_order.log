@@ -1,0 +1,39 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+attempt_1454305919848_0065_m_000000_0 : spilledRecord org.apache.hadoop.mapred.Counters$Counter@c553d160
+TaskStatusClass : >> 0.0
+Task Size >> {0=60441165}
+TaskStatusClass : >> 0.667
+Task Size >> {0=60441165}
+Update attemptID:attempt_1454305919848_0065_m_000000_0
+attempt_1454305919848_0065_m_000000_0:MAP:SORT:0.667
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 60441294
+FILE_BYTES_WRITTEN : 283538
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.560459377372817
+Written/Time : 13.455675778283979
+FinishedSize : 4.031425679561466E7
+Add graph Data0.667 <> 0.560459377372817
+-1.0
+I/O Intensive
+Task Time : 21072
+CPU Time : 11810
+========================================
+TaskStatusClass : >> 1.0
+Task Size >> {0=60441165}
+Update attemptID:attempt_1454305919848_0065_m_000000_0
+attempt_1454305919848_0065_m_000000_0:MAP:SORT:1.0
+FILE_BYTES_READ : 0
+HDFS_BYTES_READ : 60441294
+FILE_BYTES_WRITTEN : 2271955
+HBW_BYTES_WRITTEN : 0
+CPU/Time : 0.5849776619508563
+Written/Time : 105.73133842144453
+FinishedSize : 6.0441165E7
+Add graph Data1.0 <> 0.5849776619508563
+-1.0
+I/O Intensive
+Task Time : 21488
+CPU Time : 12570
+========================================
