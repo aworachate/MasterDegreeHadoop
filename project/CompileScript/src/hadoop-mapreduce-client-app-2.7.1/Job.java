@@ -103,4 +103,6 @@ public interface Job {
 
   //Porject
   Map<Integer,String> getAllTaskInputLenght();
+  Map<Integer,String> getAllTaskInputLocation();
+  Map<Integer,String> getAllTaskInputSplitLocation();
 }

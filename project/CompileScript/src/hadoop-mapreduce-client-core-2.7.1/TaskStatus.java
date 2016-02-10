@@ -479,7 +479,7 @@ public abstract class TaskStatus implements Writable, Cloneable {
     //Project
     //this command write progress whcih counter getProgress get.
     //System.out.println(in.readFolat());
-    System.out.println("TaskStatusClass : >> " + getProgress());
+    //System.out.println("TaskStatusClass : >> " + getProgress());
     this.numSlots = in.readInt();
     this.runState = WritableUtils.readEnum(in, State.class);
     setDiagnosticInfo(StringInterner.weakIntern(Text.readString(in)));

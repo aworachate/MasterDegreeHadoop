@@ -655,6 +655,8 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
 
   //Project
   private static Map<Integer ,String> allTaskInputLenght = new HashMap<Integer, String>();
+  private static Map<Integer ,String> allTaskInputLocation = new HashMap<Integer, String>();
+  private static Map<Integer ,String> allTaskInputSplitLocation = new HashMap<Integer, String>();
 
   public JobImpl(JobId jobId, ApplicationAttemptId applicationAttemptId,
       Configuration conf, EventHandler eventHandler,
@@ -1540,13 +1542,15 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
         job.addTask(task);
         //Project
         allTaskInputLenght.put(i,(splits[i].getInputDataLength()+""));
+        //allTaskInputLocation.put(job.applicationAttemptId.getAttemptId(),(splits[i].getLocations()+""));
+        //allTaskInputSplitLocation.put(job.applicationAttemptId.getAttemptId(),(splits[i].getSplitLocation()+""));
       }
       LOG.info("Input size for job " + job.jobId + " = " + inputLength
           + ". Number of splits = " + splits.length);
       //Project
-      for(int i=0; i < job.numMapTasks; ++i) {
-      LOG.info("Edited jobliml "+splits[i].getInputDataLength());
-      }
+      //for(int i=0; i < job.numMapTasks; ++i) {
+      //  LOG.info("Edited jobliml "+splits[i].getInputDataLength());
+      //}
     }
 
     private void createReduceTasks(JobImpl job) {
@@ -2214,5 +2218,11 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   //Project
   public Map<Integer,String> getAllTaskInputLenght(){
       return allTaskInputLenght;
+  }
+  public Map<Integer,String> getAllTaskInputLocation(){
+      return allTaskInputLocation;
+  }  
+  public Map<Integer,String> getAllTaskInputSplitLocation(){
+      return allTaskInputSplitLocation;
   }
 }

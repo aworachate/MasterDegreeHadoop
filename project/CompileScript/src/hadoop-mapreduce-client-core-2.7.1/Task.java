@@ -230,7 +230,8 @@ abstract public class Task implements Writable, Configurable {
       counters.findCounter(TaskCounter.MERGED_MAP_OUTPUTS);
     gcUpdater = new GcTimeUpdater();
     //Project
-    System.out.println(taskId + " : spilledRecord " + spilledRecordsCounter );
+    //System.out.println("JobFile " + jobFile);
+    //System.out.println(taskId + " : spilledRecord " + spilledRecordsCounter );
 
   }
 
@@ -744,7 +745,7 @@ abstract public class Task implements Writable, Configurable {
       // get current flag value and reset it as well
       boolean sendProgress = resetProgressFlag();
       //Project
-      System.out.println("sendProgress" + sendProgress);
+      //System.out.println("sendProgress" + sendProgress);
       while (!taskDone.get()) {
         synchronized (lock) {
           done = false;
@@ -766,7 +767,7 @@ abstract public class Task implements Writable, Configurable {
             // we need to send progress update
             updateCounters();
             //Project
-            System.out.println("Update Progress >>> "+ taskProgress.get());
+            //System.out.println("Update Progress >>> "+ taskProgress.get());
             taskStatus.statusUpdate(taskProgress.get(),
                                     taskProgress.toString(),
                                     counters);

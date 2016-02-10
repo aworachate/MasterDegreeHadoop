@@ -211,7 +211,7 @@ public class Progress {
   private synchronized float getInternal() {
     int phaseCount = phases.size();
     //Project
-    System.out.println("Status : "+status + " Phasecount : " + phaseCount + "Current Phase : "+ currentPhase);
+    //System.out.println("Status : "+status + " Phasecount : " + phaseCount + "Current Phase : "+ currentPhase);
     if (phaseCount != 0) {
       float subProgress = 0.0f;
       float progressFromCurrentPhase = 0.0f;
@@ -220,8 +220,8 @@ public class Progress {
         progressFromCurrentPhase =
           getProgressWeightage(currentPhase) * subProgress;
         //Project
-        System.out.println("weight " + getProgressWeightage(currentPhase) + " , Subprogress : " +subProgress);
-        System.out.println("Prgoress from current pahse : " + progressFromCurrentPhase);
+        //System.out.println("weight " + getProgressWeightage(currentPhase) + " , Subprogress : " +subProgress);
+        //System.out.println("Prgoress from current pahse : " + progressFromCurrentPhase);
       }
 
       float progressFromCompletedPhases = 0.0f;
@@ -232,17 +232,17 @@ public class Progress {
         for (int i = 0; i < currentPhase; i++) {
           // progress weightages of phases could be different. Add them
           //Project
-          System.out.println("not equal weight");
+          //System.out.println("not equal weight");
           progressFromCompletedPhases += getProgressWeightage(i);
         }
       }
-      System.out.println("progressFromCompletedPhases : " + progressFromCompletedPhases);
-      System.out.println("progressFromCurrentPhase : " + progressFromCurrentPhase);
+      //System.out.println("progressFromCompletedPhases : " + progressFromCompletedPhases);
+      //System.out.println("progressFromCurrentPhase : " + progressFromCurrentPhase);
       return  progressFromCompletedPhases + progressFromCurrentPhase;
     } else {
       // Project
       // This should be Sorted 67%
-      System.out.println("it sould be sort");
+      //System.out.println("it sould be sort");
       return progress;
     }
   }

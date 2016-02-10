@@ -116,6 +116,10 @@ public class DefaultSpeculator extends AbstractService implements
 
   private final EventHandler<TaskEvent> eventHandler;
 
+
+  //Project
+  private Map<TaskId, Integer> suspectToBackup = new ConcurrentHashMap<TaskId, Integer>();
+
   public DefaultSpeculator(Configuration conf, AppContext context) {
     this(conf, context, context.getClock());
   }
@@ -127,7 +131,7 @@ public class DefaultSpeculator extends AbstractService implements
   static private TaskRuntimeEstimator getEstimator
       (Configuration conf, AppContext context) {
     TaskRuntimeEstimator estimator;
-    //LOG.info("xxx_test ");
+    //LOG.info("conf " + conf);
     try {
       // "yarn.mapreduce.job.task.runtime.estimator.class"
       //** can use this property to change estimator class
@@ -459,7 +463,7 @@ public class DefaultSpeculator extends AbstractService implements
                            " , estimatedRunTime >> " + estimatedRunTime +
                            " , estimatedEndTime >> " + estimatedEndTime);
 
-        // Check if run back up task estimate time to end of back up tasl by historical mean
+        // Check if run back up task estimate time to end of back up tasl by historical mean in class StartEndTimeBase Class
         long estimatedReplacementEndTime
             = now + estimator.estimatedNewAttemptRuntime(taskID);
 
@@ -514,9 +518,20 @@ public class DefaultSpeculator extends AbstractService implements
           //System.out.println("Test Get Counter >>> "+ tempCounters.getCounterGroup("org.apache.hadoop.mapreduce.FileSystemCounter"));
           return TOO_LATE_TO_SPECULATE;
         }
+
+        // Project worthly of speculate
+        // if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
+        // {
+        //   //** Project
+        //   System.out.println("Can save little time !");
+        //   return TOO_LATE_TO_SPECULATE;
+        // }
+
         //** Project : result = end time of origin job - end time of speculative job >=0
         // if value is much mean if run speculate task can save a lot of time
         result = estimatedEndTime - estimatedReplacementEndTime;
+        System.out.println(taskID + " will end in " + estimatedEndTime);
+        System.out.println("But back up task will end in " + estimatedReplacementEndTime);
         //** Project
         System.out.println(taskID + "is not so good, if run backup for this task will save " + result);
       }
@@ -535,7 +550,6 @@ public class DefaultSpeculator extends AbstractService implements
         return ON_SCHEDULE;
       }
     }
-
     return result;
   }
 
@@ -629,10 +643,35 @@ public class DefaultSpeculator extends AbstractService implements
 
       // If we found a speculation target, fire it off
       //** Project launch speculative task of taskID from the bestTaskID
-      if (bestTaskID != null
-          && numberAllowedSpeculativeTasks > numberSpeculationsAlready) {
-        addSpeculativeAttempt(bestTaskID);
-        ++successes;
+      if (bestTaskID != null && numberAllowedSpeculativeTasks > numberSpeculationsAlready) 
+      {
+          // Project give them a second chance
+          // if(suspectToBackup.get(bestTaskID) == null || suspectToBackup.get(bestTaskID) < 2)
+          //   {
+          //     // Give a chance
+          //     if (suspectToBackup.get(bestTaskID) == null)
+          //       {
+          //         suspectToBackup.put(bestTaskID,1);
+          //       }
+          //     else
+          //       {
+          //         int temp_suspect = suspectToBackup.get(bestTaskID);
+          //         suspectToBackup.remove(bestTaskID);
+          //         suspectToBackup.put(bestTaskID,temp_suspect+1);
+          //       }
+          //     System.out.println("Give more chance to " + bestTaskID + " , " + suspectToBackup.get(bestTaskID));  
+          //   }
+          // else
+          //   {
+          //     System.out.println("Best Id of this round is " + bestTaskID);
+          //     addSpeculativeAttempt(bestTaskID);
+          //     ++successes;
+          //   }
+
+              System.out.println("Best Id of this round is " + bestTaskID);
+              addSpeculativeAttempt(bestTaskID);
+              ++successes;
+        
       }
     }
     // Project : retun number of speculative task which were executed this round.

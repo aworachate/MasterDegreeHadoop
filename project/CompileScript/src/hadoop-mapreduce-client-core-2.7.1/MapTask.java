@@ -75,6 +75,10 @@ import org.apache.hadoop.util.ReflectionUtils;
 import org.apache.hadoop.util.StringInterner;
 import org.apache.hadoop.util.StringUtils;
 
+//Project
+import java.util.Arrays;
+
+
 /** A Map task. */
 @InterfaceAudience.LimitedPrivate({"MapReduce"})
 @InterfaceStability.Unstable
@@ -214,7 +218,7 @@ public class MapTask extends Task {
 
     public float getProgress() throws IOException {
       //Project
-      System.out.println("MAP Taskk Class : "+rawIn.getProgress());
+      //System.out.println("MAP Taskk Class : "+rawIn.getProgress());
       return rawIn.getProgress();
     }
     TaskReporter getTaskReporter() {
@@ -312,10 +316,10 @@ public class MapTask extends Task {
       // If there are no reducers then there won't be any sort. Hence the map
       // phase will govern the entire attempt's progress.
       //Project
-      System.out.println("Run Map Task");
+      //System.out.println("Run Map Task");
       if (conf.getNumReduceTasks() == 0) {
         //Project
-        System.out.println("No Reduce Task");
+        //System.out.println("No Reduce Task");
         mapPhase = getProgress().addPhase("map", 1.0f);
       } else {
         // If there are reducers then the entire attempt's progress will be
@@ -323,10 +327,10 @@ public class MapTask extends Task {
         mapPhase = getProgress().addPhase("map", 0.667f);
         sortPhase  = getProgress().addPhase("sort", 0.333f);
         //Project
-        System.out.println("Add Map Phase");
-        System.out.println(getProgress());
-        System.out.println(mapPhase.getProgress()+ " " );
-        System.out.println(sortPhase.getProgress()+ " ");
+        // System.out.println("Add Map Phase");
+        // System.out.println(getProgress());
+        // System.out.println(mapPhase.getProgress()+ " " );
+        // System.out.println(sortPhase.getProgress()+ " ");
       }
     }
     TaskReporter reporter = startReporter(umbilical);
@@ -364,6 +368,8 @@ public class MapTask extends Task {
  private <T> T getSplitDetails(Path file, long offset)
   throws IOException {
    FileSystem fs = file.getFileSystem(conf);
+   //Project
+   //System.out.println(fs.getFileBlockLocations(file,offset,));
    FSDataInputStream inFile = fs.open(file);
    inFile.seek(offset);
    String className = StringInterner.weakIntern(Text.readString(inFile));
@@ -765,6 +771,9 @@ public class MapTask extends Task {
     split = getSplitDetails(new Path(splitIndex.getSplitLocation()),
         splitIndex.getStartOffset());
     LOG.info("Processing split: " + split);
+    //LOG.info("Processing location 1: " + Arrays.toString(split.getLocations()));
+    //LOG.info("Processing location 1: " + split.getLocations());
+    //LOG.info("Processing location 2: " + split.getLocations()getLocationInfo().);
 
     org.apache.hadoop.mapreduce.RecordReader<INKEY,INVALUE> input =
       new NewTrackingRecordReader<INKEY,INVALUE>
@@ -1881,7 +1890,7 @@ public class MapTask extends Task {
       }
       {
         //Project
-        System.out.println("add sort partition due to number spill = "+numSpills);
+        //System.out.println("add sort partition due to number spill = "+numSpills);
         sortPhase.addPhases(partitions); // Divide sort phase into sub-phases
 
         IndexRecord rec = new IndexRecord();

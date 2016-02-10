@@ -62,6 +62,10 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
     int numReduce = job.getTotalReduces();
     Map<Integer ,String> allTaskInputLenght = job.getAllTaskInputLenght();
     System.out.println("Task Size >> "+allTaskInputLenght.toString());
+    //Map<Integer ,String> allTaskInputLocation = job.getAllTaskInputLocation();
+    //System.out.println("Task Location 1 >> "+allTaskInputLocation.toString());
+    //Map<Integer ,String> allTaskInputSplitLocation = job.getAllTaskInputSplitLocation();
+    //System.out.println("Task Location 2 >> "+allTaskInputSplitLocation.toString());    
 
     if (job == null) {
       return;
@@ -132,9 +136,42 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       // This code assumes that we'll never consider starting a third
       //  speculative task attempt if two are already running for this task
       if (start > 0 && timestamp > start) {
+
+        // // Progject dynamic weight
+        // float reverse_progress = 0.0f;
+        // float new_progress = 0.0f;
+        // //float word_count_weight = 0.995f;
+        // float word_count_weight = 0.85f;
+        // if (status.progress < 0.667)
+        //     {
+        //       reverse_progress = status.progress * 1.5f;
+        //       System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+        //       new_progress = word_count_weight * reverse_progress;
+        //     } 
+        // else if (status.progress == 0.667)
+        //     {
+        //       reverse_progress = 1.0f;
+        //       System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+        //       new_progress = word_count_weight * reverse_progress;
+        //     }
+        // else if (status.progress > 0.667)
+        //      {
+        //       reverse_progress = (status.progress - 0.667f)*3.0f ;
+        //       System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+        //       new_progress = word_count_weight + (1.0f - word_count_weight)*(reverse_progress);
+        //     }         
+
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
         varianceEstimate = (long) (estimate * status.progress / 10);
-        //System.out.println("Esitmate Time from LATE-Algo : " + estimate);
+
+        // long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
+        // long varianceEstimate_new = (long) (estimate * new_progress / 10);
+        // System.out.println("Esitmate Time from LATE-Algo : " + estimate);
+        // System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
+        // estimate = estimate_new;
+        // varianceEstimate = varianceEstimate_new;    
+
+
       /*  System.out.println("timestamp >> "+ timestamp +
                            " start >> " + start +
                            " , status.progress >> " + status.progress+
@@ -156,10 +193,10 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             Long FBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("FILE_BYTES_WRITTEN").getValue();
             Long HBW = tempCounters.getCounterGroup(FileSystemCounter).getCounter("HDFS_BYTES_WRITTEN").getValue();
             System.out.println(taskAttempt.getID()+":"+task.getType() +":"+taskAttempt.getPhase()+":"+taskAttempt.getProgress());
-            System.out.println("FILE_BYTES_READ : "+FBR);
-            System.out.println("HDFS_BYTES_READ : "+HBR);
-            System.out.println("FILE_BYTES_WRITTEN : "+FBW);
-            System.out.println("HBW_BYTES_WRITTEN : "+HBW);
+            //System.out.println("FILE_BYTES_READ : "+FBR);
+            //System.out.println("HDFS_BYTES_READ : "+HBR);
+            //System.out.println("FILE_BYTES_WRITTEN : "+FBW);
+            //System.out.println("HBW_BYTES_WRITTEN : "+HBW);
             //System.out.println(tempCounters.getCounterGroup(TaskCounter));
             long process_time = timestamp - start;
             long CPU_Time = tempCounters.getCounterGroup(TaskCounter).getCounter("CPU_MILLISECONDS").getValue();
@@ -170,7 +207,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             //System.out.println("FinishedSize : " + finishedSize);
             System.out.println("Add graph Data" + status.progress + " <> " +(CPU_Time/(double)process_time));
             attemptGraphData.addData(status.progress,(CPU_Time/(double)process_time));
-            singleGraphData.addData(status.progress,(CPU_Time/(double)process_time)));
+            //singleGraphData.addData(status.progress,(CPU_Time/(double)process_time));
             // Decision algorithm
             // Call method classifyType()
             // TaskIntensive 0 : I/O intensive
