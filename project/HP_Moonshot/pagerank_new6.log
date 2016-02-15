@@ -1,0 +1,172 @@
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000000_0
+attempt_1455066125625_0079_m_000000_0:MAP:MAP:0.27455094
+CPU/Time : 0.5270457697642164
+Written/Time : 5.7231523677432135
+Add graph Data0.27455094 <> 0.5270457697642164
+0.5270457697642164
+I/O Intensive
+Task Time : 20188
+CPU Time : 10640
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000001_0
+attempt_1455066125625_0079_m_000001_0:MAP:MAP:0.32434964
+CPU/Time : 0.528983367778762
+Written/Time : 5.685414821375849
+Add graph Data0.32434964 <> 0.528983367778762
+-1.0
+I/O Intensive
+Task Time : 20322
+CPU Time : 10750
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000002_0
+attempt_1455066125625_0079_m_000002_0:MAP:MAP:0.42251617
+CPU/Time : 0.5278174037089871
+Written/Time : 5.683457130208077
+Add graph Data0.42251617 <> 0.5278174037089871
+-1.0
+I/O Intensive
+Task Time : 20329
+CPU Time : 10730
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000002_0
+attempt_1455066125625_0079_m_000002_0:MAP:SORT:0.42251617
+CPU/Time : 0.49761164958493714
+Written/Time : 5.358206186523211
+Add graph Data0.42251617 <> 0.49761164958493714
+-1.0
+I/O Intensive
+Task Time : 21563
+CPU Time : 10730
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000001_0
+attempt_1455066125625_0079_m_000001_0:MAP:MAP:0.6378723
+CPU/Time : 0.6165381319622965
+Written/Time : 4.950257069408741
+Add graph Data0.6378723 <> 0.6165381319622965
+-1.0
+I/O Intensive
+Task Time : 23340
+CPU Time : 14390
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000000_0
+attempt_1455066125625_0079_m_000000_0:MAP:MAP:0.6194499
+CPU/Time : 0.6152331206918696
+Written/Time : 4.946654107976196
+Add graph Data0.6194499 <> 0.6152331206918696
+0.5270457697642164
+I/O Intensive
+Task Time : 23357
+CPU Time : 14370
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000002_0
+attempt_1455066125625_0079_m_000002_0:MAP:SORT:0.667
+CPU/Time : 0.645973870719836
+Written/Time : 32.95440184441978
+Add graph Data0.667 <> 0.645973870719836
+-1.0
+I/O Intensive
+Task Time : 23422
+CPU Time : 15130
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000001_0
+attempt_1455066125625_0079_m_000001_0:MAP:SORT:0.6378723
+CPU/Time : 0.6080966869506423
+Written/Time : 4.882479716024341
+Add graph Data0.6378723 <> 0.6080966869506423
+-1.0
+I/O Intensive
+Task Time : 23664
+CPU Time : 14390
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000000_0
+attempt_1455066125625_0079_m_000000_0:MAP:SORT:0.6194499
+CPU/Time : 0.6030720161154943
+Written/Time : 4.848875272788316
+Add graph Data0.6194499 <> 0.6030720161154943
+0.5270457697642164
+I/O Intensive
+Task Time : 23828
+CPU Time : 14370
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000002_0
+attempt_1455066125625_0079_m_000002_0:MAP:SORT:1.0
+CPU/Time : 0.6766765960872716
+Written/Time : 441.97174140568393
+Add graph Data1.0 <> 0.6766765960872716
+-1.0
+I/O Intensive
+Task Time : 24842
+CPU Time : 16810
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Task ID >> task_1455066125625_0079_m_000000 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000000_0
+Now >> 1455276471979 taskAttemptStartTime >> 1455276446641 , estimatedRunTime >> 38466 , estimatedEndTime >> 1455276485107
+Task ID >> task_1455066125625_0079_m_000001 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000001_0
+Now >> 1455276471979 taskAttemptStartTime >> 1455276446643 , estimatedRunTime >> 37098 , estimatedEndTime >> 1455276483741
+Task ID >> task_1455066125625_0079_m_000000 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000000_0
+Now >> 1455276472994 taskAttemptStartTime >> 1455276446641 , estimatedRunTime >> 38466 , estimatedEndTime >> 1455276485107
+Task ID >> task_1455066125625_0079_m_000001 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000001_0
+Now >> 1455276472994 taskAttemptStartTime >> 1455276446643 , estimatedRunTime >> 37098 , estimatedEndTime >> 1455276483741
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000001_0
+attempt_1455066125625_0079_m_000001_0:MAP:SORT:0.667
+CPU/Time : 0.715580394230043
+Written/Time : 134.782418246356
+Add graph Data0.667 <> 0.715580394230043
+-1.0
+I/O Intensive
+Task Time : 26482
+CPU Time : 18950
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000000_0
+attempt_1455066125625_0079_m_000000_0:MAP:SORT:0.667
+CPU/Time : 0.7015758124104652
+Written/Time : 28.913971198069817
+Add graph Data0.667 <> 0.7015758124104652
+0.5270457697642164
+I/O Intensive
+Task Time : 26526
+CPU Time : 18610
+========================================
+Task ID >> task_1455066125625_0079_m_000000 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000000_0
+Now >> 1455276474000 taskAttemptStartTime >> 1455276446641 , estimatedRunTime >> 39769 , estimatedEndTime >> 1455276486410
+Task ID >> task_1455066125625_0079_m_000001 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000001_0
+Now >> 1455276474000 taskAttemptStartTime >> 1455276446643 , estimatedRunTime >> 39703 , estimatedEndTime >> 1455276486346
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000001_0
+attempt_1455066125625_0079_m_000001_0:MAP:SORT:1.0
+CPU/Time : 0.7380479500638388
+Written/Time : 585.8194779401333
+Add graph Data1.0 <> 0.7380479500638388
+-1.0
+I/O Intensive
+Task Time : 28196
+CPU Time : 20810
+========================================
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Task ID >> task_1455066125625_0079_m_000000 , runningTaskAttemptID >> attempt_1455066125625_0079_m_000000_0
+Now >> 1455276475007 taskAttemptStartTime >> 1455276446641 , estimatedRunTime >> 39769 , estimatedEndTime >> 1455276486410
+Task Size >> {0=134217728, 1=134217728, 2=86823291}
+Update attemptID:attempt_1455066125625_0079_m_000000_0
+attempt_1455066125625_0079_m_000000_0:MAP:SORT:1.0
+CPU/Time : 0.7338278419872348
+Written/Time : 647.0973952044161
+Add graph Data1.0 <> 0.7338278419872348
+0.5270457697642164
+I/O Intensive
+Task Time : 28985
+CPU Time : 21270
+========================================

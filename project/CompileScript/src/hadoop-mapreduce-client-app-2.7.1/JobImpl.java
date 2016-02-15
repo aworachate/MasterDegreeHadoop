@@ -657,6 +657,8 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   private static Map<Integer ,String> allTaskInputLenght = new HashMap<Integer, String>();
   private static Map<Integer ,String> allTaskInputLocation = new HashMap<Integer, String>();
   private static Map<Integer ,String> allTaskInputSplitLocation = new HashMap<Integer, String>();
+  private static Map<Integer ,MapTaskTime> allFinishedMapTime = new HashMap<Integer, MapTaskTime>();
+
 
   public JobImpl(JobId jobId, ApplicationAttemptId applicationAttemptId,
       Configuration conf, EventHandler eventHandler,
@@ -2019,6 +2021,14 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
     private void taskSucceeded(JobImpl job, Task task) {
       if (task.getType() == TaskType.MAP) {
         job.succeededMapTaskCount++;
+        //Project
+        TaskId temp_Task_Id = task.getID();
+        long temp_Task_Start_Time = task.getReport().getStartTime();
+        long temp_Task_Finish_Time = task.getReport().getFinishTime();
+        //long temp_Task_Map_Finish_Time = task.getMapFinishTime(task.getReport().getSuccessfulAttempt());
+        long temp_Task_Map_Finish_Time = task.getMapFinishedTime(task.getReport().getSuccessfulAttempt());
+        //System.out.println("temp_Task_Map_Finish_Time " + temp_Task_Map_Finish_Time);
+        allFinishedMapTime.put(job.succeededMapTaskCount,new MapTaskTime(temp_Task_Id,temp_Task_Start_Time,temp_Task_Map_Finish_Time,temp_Task_Finish_Time));
       } else {
         job.succeededReduceTaskCount++;
       }
@@ -2224,5 +2234,8 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   }  
   public Map<Integer,String> getAllTaskInputSplitLocation(){
       return allTaskInputSplitLocation;
+  }
+  public Map<Integer,MapTaskTime> getAllFinishedMapTime(){
+      return allFinishedMapTime;
   }
 }

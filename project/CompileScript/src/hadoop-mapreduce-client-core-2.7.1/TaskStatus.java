@@ -73,6 +73,9 @@ public abstract class TaskStatus implements Writable, Cloneable {
   // max task-status string size
   static final int MAX_STRING_SIZE = 1024;
 
+  //Project
+  private long mapFinishTime;
+
   /**
    * Testcases can override {@link #getMaxStringSize()} to control the max-size
    * of strings in {@link TaskStatus}. Note that the {@link TaskStatus} is never
@@ -225,14 +228,19 @@ public abstract class TaskStatus implements Writable, Cloneable {
    * it returns approximate map finish time.
    */
   public long getMapFinishTime() {
-    return 0;
+    //Project
+    return this.mapFinishTime;
+    //return 0;
   }
 
   /**
    * Set map phase finish time.
    * @param mapFinishTime
    */
-  void setMapFinishTime(long mapFinishTime) {}
+  void setMapFinishTime(long mapFinishTime) {
+    //Project
+    this.mapFinishTime = mapFinishTime;
+  }
 
   /**
    * Get sort finish time for the task,. If sort finish time was not set
@@ -294,6 +302,8 @@ public abstract class TaskStatus implements Writable, Cloneable {
       // sort phase started
       if (phase == TaskStatus.Phase.SORT){
         if (oldPhase == TaskStatus.Phase.MAP) {
+          //Project
+          System.out.println("TaskStatus Class " + System.currentTimeMillis());
           setMapFinishTime(System.currentTimeMillis());
         }
         else {

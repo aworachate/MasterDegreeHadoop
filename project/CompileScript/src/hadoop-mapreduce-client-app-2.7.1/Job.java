@@ -37,6 +37,8 @@ import org.apache.hadoop.mapreduce.v2.api.records.TaskType;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.security.authorize.AccessControlList;
 
+//Project
+import org.apache.hadoop.mapreduce.v2.app.job.impl.MapTaskTime;
 
 /**
  * Main interface to interact with the job.
@@ -105,4 +107,5 @@ public interface Job {
   Map<Integer,String> getAllTaskInputLenght();
   Map<Integer,String> getAllTaskInputLocation();
   Map<Integer,String> getAllTaskInputSplitLocation();
+  Map<Integer,MapTaskTime> getAllFinishedMapTime();
 }

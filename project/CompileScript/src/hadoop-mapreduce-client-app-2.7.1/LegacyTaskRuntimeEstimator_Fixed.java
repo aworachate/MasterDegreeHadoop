@@ -34,6 +34,7 @@ import org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptStatusUpdateEvent
 //** Project
 import  org.apache.hadoop.mapreduce.v2.api.records.Counters;
 import  org.apache.hadoop.mapreduce.split.JobSplit.TaskSplitMetaInfo;
+import org.apache.hadoop.mapreduce.v2.app.job.impl.MapTaskTime;
 //import org.apache.hadoop.mapreduce.v2.app.job.GraphData;
 //import org.apache.hadoop.mapreduce.Counters;
 
@@ -136,40 +137,74 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       // This code assumes that we'll never consider starting a third
       //  speculative task attempt if two are already running for this task
       if (start > 0 && timestamp > start) {
+        System.out.println("Number of complete Map Task! " + job.getCompletedMaps());
+        //If Complete Map Task = 0
+          // Use  
+        //If Complete Map Task > 0
+          // Use wieght from finished task
+          //
+        boolean isDynamicEnable = false;
+        float dynamic_weight = 0.0f;
+        if (job.getCompletedMaps() > 0)
+          {
+              long temp_sum_totaltime = 0L;
+              long temp_sum_mapFinishedtime = 0L;
+              float avg_runtime = 0.0f;
+              float avg_mapfinishedtime = 0.0f;
+              Map<Integer,MapTaskTime> temp_AllFinishedMapTime = job.getAllFinishedMapTime();
+              for (Map.Entry<Integer, MapTaskTime> e : temp_AllFinishedMapTime.entrySet())
+                  {
+                   // System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + "Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
+                    temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
+                    temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                  }
 
-        // // Progject dynamic weight
-        // float reverse_progress = 0.0f;
-        // float new_progress = 0.0f;
-        // //float word_count_weight = 0.995f;
-        // float word_count_weight = 0.85f;
-        // if (status.progress < 0.667)
-        //     {
-        //       reverse_progress = status.progress * 1.5f;
-        //       System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-        //       new_progress = word_count_weight * reverse_progress;
-        //     } 
-        // else if (status.progress == 0.667)
-        //     {
-        //       reverse_progress = 1.0f;
-        //       System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-        //       new_progress = word_count_weight * reverse_progress;
-        //     }
-        // else if (status.progress > 0.667)
-        //      {
-        //       reverse_progress = (status.progress - 0.667f)*3.0f ;
-        //       System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-        //       new_progress = word_count_weight + (1.0f - word_count_weight)*(reverse_progress);
-        //     }         
+              avg_runtime = temp_sum_totaltime / (float)job.getCompletedMaps();
+              avg_mapfinishedtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
+              dynamic_weight = avg_mapfinishedtime / avg_runtime;
+              System.out.println("Average runtime = " + avg_runtime + " Average MapPhasetime = " + avg_mapfinishedtime + " Dybamice Weight = " + dynamic_weight + ":" + ((avg_runtime - avg_mapfinishedtime)/avg_runtime));   
+              isDynamicEnable = true;
+          }
+        // Progject dynamic weight
+        float reverse_progress = 0.0f;
+        float new_progress = 0.0f;
+        //float word_count_weight = 0.995f;
+        //float word_count_weight = 0.97f;
+        //float word_count_weight = 0.99f;
+        float word_count_weight = 0.85f;
+        if (isDynamicEnable)
+            {
+              word_count_weight = dynamic_weight;
+            }
+        if (status.progress < 0.667f)
+            {
+              reverse_progress = status.progress * 1.5f;
+              System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = word_count_weight * reverse_progress;
+            } 
+        else if (status.progress == 0.667f)
+            {
+              reverse_progress = 1.0f;
+              System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = word_count_weight * reverse_progress;
+            }
+        else if (status.progress > 0.667f)
+             {
+              reverse_progress = (status.progress - 0.667f)*3.0f ;
+              System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = word_count_weight + (1.0f - word_count_weight)*(reverse_progress);
+            }         
 
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
         varianceEstimate = (long) (estimate * status.progress / 10);
 
-        // long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
-        // long varianceEstimate_new = (long) (estimate * new_progress / 10);
-        // System.out.println("Esitmate Time from LATE-Algo : " + estimate);
-        // System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
-        // estimate = estimate_new;
-        // varianceEstimate = varianceEstimate_new;    
+        // Progject dynamic weight
+        long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
+        long varianceEstimate_new = (long) (estimate * new_progress / 10);
+        System.out.println("Esitmate Time from LATE-Algo : " + estimate);
+        System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
+        estimate = estimate_new;
+        varianceEstimate = varianceEstimate_new;    
 
 
       /*  System.out.println("timestamp >> "+ timestamp +

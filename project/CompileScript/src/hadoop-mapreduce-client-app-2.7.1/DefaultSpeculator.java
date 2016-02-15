@@ -215,7 +215,7 @@ public class DefaultSpeculator extends AbstractService implements
   @Override
   protected void serviceStart() throws Exception {
     //** Project
-    System.out.println("serviceStart");
+    System.out.println("serviceStart" + clock.getTime());
     Runnable speculationBackgroundCore
         = new Runnable() {
             @Override
@@ -246,6 +246,7 @@ public class DefaultSpeculator extends AbstractService implements
                   //** use BlockingQueue scanControl for waiting max time is wait
                   //** poll(dequeue) and wait.
                   //System.out.println("scanControl size: "+scanControl.size());
+                  System.out.println("Wait : "+wait);
                   Object pollResult
                       = scanControl.poll(wait, TimeUnit.MILLISECONDS);
                 } catch (InterruptedException e) {
@@ -450,7 +451,7 @@ public class DefaultSpeculator extends AbstractService implements
           // This background process ran before we could process the task
           //  attempt status change that chronicles the attempt start
           //** Project
-          //System.out.println(taskID+" : is too_new");
+          System.out.println(taskID+" : is too_new");
           return TOO_NEW;
         }
 
@@ -519,13 +520,13 @@ public class DefaultSpeculator extends AbstractService implements
           return TOO_LATE_TO_SPECULATE;
         }
 
-        // Project worthly of speculate
-        // if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
-        // {
-        //   //** Project
-        //   System.out.println("Can save little time !");
-        //   return TOO_LATE_TO_SPECULATE;
-        // }
+        //Project worthly of speculate
+        if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
+        {
+          //** Project
+          System.out.println("Can save little time !");
+          return TOO_LATE_TO_SPECULATE;
+        }
 
         //** Project : result = end time of origin job - end time of speculative job >=0
         // if value is much mean if run speculate task can save a lot of time
@@ -556,6 +557,9 @@ public class DefaultSpeculator extends AbstractService implements
   //Add attempt to a given Task.
   protected void addSpeculativeAttempt(TaskId taskID) {
     //** Porject Add Speculative task
+    JobId tmep_jobID = taskID.getJobId();
+    Job temp_job = context.getJob(tmep_jobID);
+    //System.out.println("Number of complete Map Task " + temp_job.getCompletedMaps());
     System.out.println("Add speculative task" + taskID);
     LOG.info
         ("DefaultSpeculator.addSpeculativeAttempt -- we are speculating " + taskID);
