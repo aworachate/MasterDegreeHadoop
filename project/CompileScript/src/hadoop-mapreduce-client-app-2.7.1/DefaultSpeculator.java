@@ -119,6 +119,14 @@ public class DefaultSpeculator extends AbstractService implements
 
   //Project
   private Map<TaskId, Integer> suspectToBackup = new ConcurrentHashMap<TaskId, Integer>();
+  private int numberOfSpeculativeTask = 0;
+  private int numberOfFailSpeculativeTask = 0;
+  private float min_ramda = 0.1f;
+  private float max_ramda = 0.9f;
+  private float now_ramda = 0.5f;
+  private int lastNumberOfSpeculativeTask = 0;
+  private int lastNumberOfSuccessSpeculativeTask = 0;
+  private int lastNumberOfFailSpeculativeTask = 0;  
 
   public DefaultSpeculator(Configuration conf, AppContext context) {
     this(conf, context, context.getClock());
@@ -220,8 +228,11 @@ public class DefaultSpeculator extends AbstractService implements
         = new Runnable() {
             @Override
             public void run() {
+              // Project
+              long spec_round = 0L;
               while (!stopped && !Thread.currentThread().isInterrupted()) {
                 long backgroundRunStartTime = clock.getTime();
+                //System.out.println ("Spec # : " + spec_round + " Time : "+backgroundRunStartTime);
                 try {
 
                   int speculations = computeSpeculations();
@@ -231,12 +242,13 @@ public class DefaultSpeculator extends AbstractService implements
                   //** if there is a sepculative task it will set to retryafterspeculate to dealy of
                   //** find next speculative task. other wiase it set to retryafternospec
                   long mininumRecomp
-                      = speculations > 0 ? soonestRetryAfterSpeculate
-                                         : soonestRetryAfterNoSpeculate;
+                      = speculations > 0 ? soonestRetryAfterSpeculate //15000ms = 15 sec
+                                         : soonestRetryAfterNoSpeculate; // 1000 ms = 1 sec
 
                   long wait = Math.max(mininumRecomp,
                         clock.getTime() - backgroundRunStartTime);
                   //**Project find possible speculative task.
+                  //System.out.println("Overhead cal: "+ (clock.getTime() - backgroundRunStartTime));
                   //System.out.println("wait time: "+wait);
                   if (speculations > 0) {
                     LOG.info("We launched " + speculations
@@ -246,9 +258,11 @@ public class DefaultSpeculator extends AbstractService implements
                   //** use BlockingQueue scanControl for waiting max time is wait
                   //** poll(dequeue) and wait.
                   //System.out.println("scanControl size: "+scanControl.size());
-                  System.out.println("Wait : "+wait);
+                  //System.out.println("Wait : "+wait);
                   Object pollResult
                       = scanControl.poll(wait, TimeUnit.MILLISECONDS);
+                  //Project     
+                  spec_round++;
                 } catch (InterruptedException e) {
                   if (!stopped) {
                     LOG.error("Background thread returning, interrupted", e);
@@ -422,7 +436,7 @@ public class DefaultSpeculator extends AbstractService implements
       acceptableRuntime = estimator.thresholdRuntime(taskID);
       if (acceptableRuntime == Long.MAX_VALUE) {
         //** Project
-        //System.out.println(taskID+" : is on_schedule");
+        //System.out.println(taskID+" : is on_schedule 1");
         return ON_SCHEDULE;
       }
     }
@@ -451,7 +465,7 @@ public class DefaultSpeculator extends AbstractService implements
           // This background process ran before we could process the task
           //  attempt status change that chronicles the attempt start
           //** Project
-          System.out.println(taskID+" : is too_new");
+          //System.out.println(taskID+" : is too_new");
           return TOO_NEW;
         }
 
@@ -465,6 +479,7 @@ public class DefaultSpeculator extends AbstractService implements
                            " , estimatedEndTime >> " + estimatedEndTime);
 
         // Check if run back up task estimate time to end of back up tasl by historical mean in class StartEndTimeBase Class
+        //System.out.println(" Backup Task Estimate runtime " + estimator.estimatedNewAttemptRuntime(taskID));
         long estimatedReplacementEndTime
             = now + estimator.estimatedNewAttemptRuntime(taskID);
 
@@ -504,7 +519,8 @@ public class DefaultSpeculator extends AbstractService implements
         }
 
         if (estimatedEndTime < now) {
-          //** Project
+          //** Projectbut not have progress
+          // Task not start 
           //System.out.println(taskID + " still good !");
           return PROGRESS_IS_GOOD;
         }
@@ -521,25 +537,58 @@ public class DefaultSpeculator extends AbstractService implements
         }
 
         //Project worthly of speculate
-        if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
+        long temp_result = estimatedEndTime - estimatedReplacementEndTime; //Save time
+        long temp_left_exe_time = estimatedEndTime - now;
+        //if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
+        if(temp_result > 0L)
         {
           //** Project
-          System.out.println("Can save little time !");
-          return TOO_LATE_TO_SPECULATE;
+          if(numberOfSpeculativeTask > 0)
+            {
+               int diff_numberOfSpeculativeTask = numberOfSpeculativeTask - lastNumberOfSpeculativeTask;
+               int diff_numberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask()) - lastNumberOfSuccessSpeculativeTask;
+               int diff_numberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask() - lastNumberOfFailSpeculativeTask;
+               now_ramda = now_ramda * (float)(Math.pow(1.75,(diff_numberOfFailSpeculativeTask))) * (float)(Math.pow(0.5,(diff_numberOfSuccessSpeculativeTask)));
+               lastNumberOfSpeculativeTask = numberOfSpeculativeTask;
+               lastNumberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask());
+               lastNumberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask();
+               if (now_ramda > max_ramda)
+                  {
+                      now_ramda = max_ramda;
+                  }  
+               else if (now_ramda < min_ramda)
+                  {
+                      now_ramda = min_ramda;
+                  }                   
+            }
+          //System.out.println("Number of Speculative Task : " + numberOfSpeculativeTask);
+          //System.out.println("Number of Fail Spec Task : " + job.getNumberOfFailSpeculativeTask());
+          System.out.println("Ramda : " + now_ramda + " Save Time : " + temp_result + " Target Bound Time : " + (now_ramda * temp_left_exe_time));
+          if(temp_result < (now_ramda * temp_left_exe_time))
+            {
+              System.out.println("Can save little time !");
+              return TOO_LATE_TO_SPECULATE;
+            }
+          else 
+            {
+              result = temp_result;
+            }
         }
 
         //** Project : result = end time of origin job - end time of speculative job >=0
         // if value is much mean if run speculate task can save a lot of time
-        result = estimatedEndTime - estimatedReplacementEndTime;
+        //result = estimatedEndTime - estimatedReplacementEndTime;
+        //** Project
         System.out.println(taskID + " will end in " + estimatedEndTime);
         System.out.println("But back up task will end in " + estimatedReplacementEndTime);
-        //** Project
         System.out.println(taskID + "is not so good, if run backup for this task will save " + result);
       }
     }
 
     // If we are here, there's at most one task attempt.
     if (numberRunningAttempts == 0) {
+      //Project
+      //System.out.println(taskID+"not running");
       return NOT_RUNNING;
     }
 
@@ -548,6 +597,8 @@ public class DefaultSpeculator extends AbstractService implements
     if (acceptableRuntime == Long.MIN_VALUE) {
       acceptableRuntime = estimator.thresholdRuntime(taskID);
       if (acceptableRuntime == Long.MAX_VALUE) {
+        //Project
+        //System.out.println(taskID+"on_schedule 2 ");
         return ON_SCHEDULE;
       }
     }
@@ -560,6 +611,7 @@ public class DefaultSpeculator extends AbstractService implements
     JobId tmep_jobID = taskID.getJobId();
     Job temp_job = context.getJob(tmep_jobID);
     //System.out.println("Number of complete Map Task " + temp_job.getCompletedMaps());
+    this.numberOfSpeculativeTask++;
     System.out.println("Add speculative task" + taskID);
     LOG.info
         ("DefaultSpeculator.addSpeculativeAttempt -- we are speculating " + taskID);
@@ -605,7 +657,7 @@ public class DefaultSpeculator extends AbstractService implements
       if (jobEntry.getValue().get() > 0) {
         continue;
       }
-
+      //System.out.println("Job Enrty: "+ jobEntry.getKey() + "Job entry length " + jobEntry.toString());
       int numberSpeculationsAlready = 0;
       int numberRunningTasks = 0;
 
@@ -627,7 +679,7 @@ public class DefaultSpeculator extends AbstractService implements
       for (Map.Entry<TaskId, Task> taskEntry : tasks.entrySet()) {
         long mySpeculationValue = speculationValue(taskEntry.getKey(), now);
       //** Project :
-      //  System.out.print(taskEntry.getKey()+":"+mySpeculationValue);
+       // System.out.print(taskEntry.getKey()+" : "+mySpeculationValue);
         if (mySpeculationValue == ALREADY_SPECULATING) {
           ++numberSpeculationsAlready;
         }
@@ -647,6 +699,8 @@ public class DefaultSpeculator extends AbstractService implements
 
       // If we found a speculation target, fire it off
       //** Project launch speculative task of taskID from the bestTaskID
+      // always return min value if no task finish or propotion of all task is not finished
+      //System.out.println("bestTaskID : " + bestTaskID);
       if (bestTaskID != null && numberAllowedSpeculativeTasks > numberSpeculationsAlready) 
       {
           // Project give them a second chance

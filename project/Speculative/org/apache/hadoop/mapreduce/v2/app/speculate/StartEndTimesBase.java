@@ -147,6 +147,7 @@ abstract class StartEndTimesBase implements TaskRuntimeEstimator {
 
   @Override
   public long estimatedNewAttemptRuntime(TaskId id) {
+    //get dataStatisticForTask call getMapArrat ( map or reduce type) from job, use taksid to get task type Map or Reduce
     DataStatistics statistics = dataStatisticsForTask(id);
 
     if (statistics == null) {

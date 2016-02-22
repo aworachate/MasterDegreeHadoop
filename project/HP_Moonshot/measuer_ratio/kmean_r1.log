@@ -1,0 +1,1254 @@
+
+Application
+About
+Jobs
+Tools
+Log Type: stdout
+Log Upload Time: Mon Feb 22 18:02:32 +0900 2016
+Log Length: 63110
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart1456131607459
+Esitmate Time from LATE-Algo : 65690
+Esitmate Time from New-Algo : 65657
+Update attemptID:attempt_1456037496260_0063_m_000016_0
+attempt_1456037496260_0063_m_000016_0:MAP:MAP:0.32004666
+-1.0
+I/O Intensive
+Task Time : 21024
+========================================
+Esitmate Time from LATE-Algo : 60693
+Esitmate Time from New-Algo : 60662
+Update attemptID:attempt_1456037496260_0063_m_000007_0
+attempt_1456037496260_0063_m_000007_0:MAP:MAP:0.3487045
+-1.0
+I/O Intensive
+Task Time : 21164
+========================================
+Esitmate Time from LATE-Algo : 69367
+Esitmate Time from New-Algo : 69332
+Update attemptID:attempt_1456037496260_0063_m_000011_0
+attempt_1456037496260_0063_m_000011_0:MAP:MAP:0.30569166
+-1.0
+I/O Intensive
+Task Time : 21205
+========================================
+Esitmate Time from LATE-Algo : 58865
+Esitmate Time from New-Algo : 58836
+Update attemptID:attempt_1456037496260_0063_m_000022_0
+attempt_1456037496260_0063_m_000022_0:MAP:MAP:0.35961524
+-1.0
+I/O Intensive
+Task Time : 21169
+========================================
+Esitmate Time from LATE-Algo : 62031
+Esitmate Time from New-Algo : 62000
+Update attemptID:attempt_1456037496260_0063_m_000006_0
+attempt_1456037496260_0063_m_000006_0:MAP:MAP:0.34469458
+-1.0
+I/O Intensive
+Task Time : 21382
+========================================
+Esitmate Time from LATE-Algo : 61834
+Esitmate Time from New-Algo : 61803
+Update attemptID:attempt_1456037496260_0063_m_000021_0
+attempt_1456037496260_0063_m_000021_0:MAP:MAP:0.3440651
+-1.0
+I/O Intensive
+Task Time : 21275
+========================================
+Esitmate Time from LATE-Algo : 67078
+Esitmate Time from New-Algo : 67045
+Update attemptID:attempt_1456037496260_0063_m_000018_0
+attempt_1456037496260_0063_m_000018_0:MAP:MAP:0.31923634
+-1.0
+I/O Intensive
+Task Time : 21414
+========================================
+Esitmate Time from LATE-Algo : 58410
+Esitmate Time from New-Algo : 58380
+Update attemptID:attempt_1456037496260_0063_m_000015_0
+attempt_1456037496260_0063_m_000015_0:MAP:MAP:0.36635786
+-1.0
+I/O Intensive
+Task Time : 21399
+========================================
+Esitmate Time from LATE-Algo : 72237
+Esitmate Time from New-Algo : 72201
+Update attemptID:attempt_1456037496260_0063_m_000020_0
+attempt_1456037496260_0063_m_000020_0:MAP:MAP:0.2963711
+0.5035265542528843
+I/O Intensive
+Task Time : 21409
+========================================
+Esitmate Time from LATE-Algo : 60155
+Esitmate Time from New-Algo : 60125
+Update attemptID:attempt_1456037496260_0063_m_000008_0
+attempt_1456037496260_0063_m_000008_0:MAP:MAP:0.35760728
+-1.0
+I/O Intensive
+Task Time : 21512
+========================================
+Esitmate Time from LATE-Algo : 59769
+Esitmate Time from New-Algo : 59739
+Update attemptID:attempt_1456037496260_0063_m_000010_0
+attempt_1456037496260_0063_m_000010_0:MAP:MAP:0.36083403
+-1.0
+I/O Intensive
+Task Time : 21567
+========================================
+Esitmate Time from LATE-Algo : 57787
+Esitmate Time from New-Algo : 57758
+Update attemptID:attempt_1456037496260_0063_m_000012_0
+attempt_1456037496260_0063_m_000012_0:MAP:MAP:0.3736809
+-1.0
+I/O Intensive
+Task Time : 21594
+========================================
+Esitmate Time from LATE-Algo : 63848
+Esitmate Time from New-Algo : 63816
+Update attemptID:attempt_1456037496260_0063_m_000017_0
+attempt_1456037496260_0063_m_000017_0:MAP:MAP:0.33827204
+-1.0
+I/O Intensive
+Task Time : 21598
+========================================
+Esitmate Time from LATE-Algo : 59737
+Esitmate Time from New-Algo : 59707
+Update attemptID:attempt_1456037496260_0063_m_000014_0
+attempt_1456037496260_0063_m_000014_0:MAP:MAP:0.36432984
+-1.0
+I/O Intensive
+Task Time : 21764
+========================================
+Esitmate Time from LATE-Algo : 65209
+Esitmate Time from New-Algo : 65176
+Update attemptID:attempt_1456037496260_0063_m_000009_0
+attempt_1456037496260_0063_m_000009_0:MAP:MAP:0.336868
+-1.0
+I/O Intensive
+Task Time : 21967
+========================================
+Esitmate Time from LATE-Algo : 70246
+Esitmate Time from New-Algo : 70211
+Update attemptID:attempt_1456037496260_0063_m_000019_0
+attempt_1456037496260_0063_m_000019_0:MAP:MAP:0.3156595
+-1.0
+I/O Intensive
+Task Time : 22174
+========================================
+Esitmate Time from LATE-Algo : 37754
+Esitmate Time from New-Algo : 37735
+Update attemptID:attempt_1456037496260_0063_m_000016_0
+attempt_1456037496260_0063_m_000016_0:MAP:MAP:0.6403494
+-1.0
+I/O Intensive
+Task Time : 24176
+========================================
+Esitmate Time from LATE-Algo : 41224
+Esitmate Time from New-Algo : 41203
+Update attemptID:attempt_1456037496260_0063_m_000011_0
+attempt_1456037496260_0063_m_000011_0:MAP:MAP:0.59108055
+-1.0
+I/O Intensive
+Task Time : 24367
+========================================
+Esitmate Time from LATE-Algo : 66571
+Esitmate Time from New-Algo : 66538
+Update attemptID:attempt_1456037496260_0063_m_000015_0
+attempt_1456037496260_0063_m_000015_0:MAP:SORT:0.36635786
+-1.0
+I/O Intensive
+Task Time : 24389
+========================================
+Esitmate Time from LATE-Algo : 36523
+Esitmate Time from New-Algo : 36523
+Update attemptID:attempt_1456037496260_0063_m_000022_0
+attempt_1456037496260_0063_m_000022_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 24361
+========================================
+Esitmate Time from LATE-Algo : 37392
+Esitmate Time from New-Algo : 37373
+Update attemptID:attempt_1456037496260_0063_m_000006_0
+attempt_1456037496260_0063_m_000006_0:MAP:MAP:0.65610266
+-1.0
+I/O Intensive
+Task Time : 24533
+========================================
+Esitmate Time from LATE-Algo : 36596
+Esitmate Time from New-Algo : 36596
+Update attemptID:attempt_1456037496260_0063_m_000021_0
+attempt_1456037496260_0063_m_000021_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 24410
+========================================
+Esitmate Time from LATE-Algo : 39403
+Esitmate Time from New-Algo : 39383
+Update attemptID:attempt_1456037496260_0063_m_000018_0
+attempt_1456037496260_0063_m_000018_0:MAP:MAP:0.6230218
+-1.0
+I/O Intensive
+Task Time : 24549
+========================================
+Esitmate Time from LATE-Algo : 39578
+Esitmate Time from New-Algo : 39558
+Update attemptID:attempt_1456037496260_0063_m_000020_0
+attempt_1456037496260_0063_m_000020_0:MAP:MAP:0.6206204
+0.5035265542528843
+I/O Intensive
+Task Time : 24563
+========================================
+Esitmate Time from LATE-Algo : 24563
+Esitmate Time from New-Algo : 24571
+Update attemptID:attempt_1456037496260_0063_m_000015_0
+attempt_1456037496260_0063_m_000015_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 24563
+========================================
+Esitmate Time from LATE-Algo : 36671
+Esitmate Time from New-Algo : 36671
+Update attemptID:attempt_1456037496260_0063_m_000022_0
+attempt_1456037496260_0063_m_000022_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 24460
+========================================
+Esitmate Time from LATE-Algo : 37050
+Esitmate Time from New-Algo : 37050
+Update attemptID:attempt_1456037496260_0063_m_000010_0
+attempt_1456037496260_0063_m_000010_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 24713
+========================================
+Esitmate Time from LATE-Algo : 37106
+Esitmate Time from New-Algo : 37106
+Update attemptID:attempt_1456037496260_0063_m_000012_0
+attempt_1456037496260_0063_m_000012_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 24750
+========================================
+Esitmate Time from LATE-Algo : 37154
+Esitmate Time from New-Algo : 37154
+Update attemptID:attempt_1456037496260_0063_m_000008_0
+attempt_1456037496260_0063_m_000008_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 24782
+========================================
+Esitmate Time from LATE-Algo : 38064
+Esitmate Time from New-Algo : 38045
+Update attemptID:attempt_1456037496260_0063_m_000017_0
+attempt_1456037496260_0063_m_000017_0:MAP:MAP:0.65131444
+-1.0
+I/O Intensive
+Task Time : 24792
+========================================
+Esitmate Time from LATE-Algo : 37151
+Esitmate Time from New-Algo : 37151
+Update attemptID:attempt_1456037496260_0063_m_000007_0
+attempt_1456037496260_0063_m_000007_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 24780
+========================================
+Esitmate Time from LATE-Algo : 37184
+Esitmate Time from New-Algo : 37184
+Update attemptID:attempt_1456037496260_0063_m_000008_0
+attempt_1456037496260_0063_m_000008_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 24802
+========================================
+Esitmate Time from LATE-Algo : 24801
+Esitmate Time from New-Algo : 24809
+Update attemptID:attempt_1456037496260_0063_m_000015_0
+attempt_1456037496260_0063_m_000015_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 24801
+========================================
+Esitmate Time from LATE-Algo : 38775
+Esitmate Time from New-Algo : 38756
+Update attemptID:attempt_1456037496260_0063_m_000016_0
+attempt_1456037496260_0063_m_000016_0:MAP:SORT:0.6403494
+-1.0
+I/O Intensive
+Task Time : 24830
+========================================
+Esitmate Time from LATE-Algo : 37930
+Esitmate Time from New-Algo : 37911
+Update attemptID:attempt_1456037496260_0063_m_000014_0
+attempt_1456037496260_0063_m_000014_0:MAP:MAP:0.6579128
+-1.0
+I/O Intensive
+Task Time : 24955
+========================================
+Esitmate Time from LATE-Algo : 37382
+Esitmate Time from New-Algo : 37382
+Update attemptID:attempt_1456037496260_0063_m_000007_0
+attempt_1456037496260_0063_m_000007_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 24934
+========================================
+Esitmate Time from LATE-Algo : 24803
+Esitmate Time from New-Algo : 24811
+Update attemptID:attempt_1456037496260_0063_m_000022_0
+attempt_1456037496260_0063_m_000022_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 24803
+========================================
+Esitmate Time from LATE-Algo : 37269
+Esitmate Time from New-Algo : 37269
+Update attemptID:attempt_1456037496260_0063_m_000021_0
+attempt_1456037496260_0063_m_000021_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 24859
+========================================
+Successful task time : task_1456037496260_0063_m_000015 : Runtime : 24996 : MapPhaseTime : 24372
+Esitmate Time from LATE-Algo : 37740
+Esitmate Time from New-Algo : 25817
+Update attemptID:attempt_1456037496260_0063_m_000010_0
+attempt_1456037496260_0063_m_000010_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 25173
+========================================
+Successful task time : task_1456037496260_0063_m_000022 : Runtime : 24946 : MapPhaseTime : 24453
+Esitmate Time from LATE-Algo : 25189
+Esitmate Time from New-Algo : 25189
+Update attemptID:attempt_1456037496260_0063_m_000008_0
+Task ID >> task_1456037496260_0063_m_000007 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000007_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611440 , estimatedRunTime >> 37382 , estimatedEndTime >> 1456131648822
+Task ID >> task_1456037496260_0063_m_000019 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000019_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611422 , estimatedRunTime >> 70211 , estimatedEndTime >> 1456131681633
+Ramda : 0.5 Save Time : 19984 Target Bound Time : 22477.5
+Can save little time !
+attempt_1456037496260_0063_m_000008_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25189
+========================================
+Esitmate Time from LATE-Algo : 37790
+Task ID >> task_1456037496260_0063_m_000014 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000014_0
+Esitmate Time from New-Algo : 25782
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611417 , estimatedRunTime >> 37911 , estimatedEndTime >> 1456131649328
+Update attemptID:attempt_1456037496260_0063_m_000009_0
+Task ID >> task_1456037496260_0063_m_000016 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000016_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611436 , estimatedRunTime >> 38756 , estimatedEndTime >> 1456131650192
+Task ID >> task_1456037496260_0063_m_000017 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000017_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611426 , estimatedRunTime >> 38045 , estimatedEndTime >> 1456131649471
+Task ID >> task_1456037496260_0063_m_000008 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000008_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611420 , estimatedRunTime >> 25189 , estimatedEndTime >> 1456131636609
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611433
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+attempt_1456037496260_0063_m_000009_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 25206
+========================================
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Esitmate Time from LATE-Algo : 38401
+Esitmate Time from New-Algo : 26186
+Task ID >> task_1456037496260_0063_m_000018 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000018_0
+Update attemptID:attempt_1456037496260_0063_m_000006_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611430 , estimatedRunTime >> 39383 , estimatedEndTime >> 1456131650813
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000010 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000010_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611424 , estimatedRunTime >> 25817 , estimatedEndTime >> 1456131637241
+Task ID >> task_1456037496260_0063_m_000011 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000011_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611414 , estimatedRunTime >> 41203 , estimatedEndTime >> 1456131652617
+attempt_1456037496260_0063_m_000006_0:MAP:SORT:0.65610266
+-1.0
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+I/O Intensive
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task Time : 25195
+========================================
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 25193
+Esitmate Time from New-Algo : 25193
+Update attemptID:attempt_1456037496260_0063_m_000016_0
+Task ID >> task_1456037496260_0063_m_000021 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000021_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611567 , estimatedRunTime >> 37269 , estimatedEndTime >> 1456131648836
+Task ID >> task_1456037496260_0063_m_000012 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000012_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611428 , estimatedRunTime >> 37106 , estimatedEndTime >> 1456131648534
+Task ID >> task_1456037496260_0063_m_000009 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000009_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611407 , estimatedRunTime >> 25782 , estimatedEndTime >> 1456131637189
+Task ID >> task_1456037496260_0063_m_000020 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000020_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611438 , estimatedRunTime >> 39558 , estimatedEndTime >> 1456131650996
+Task ID >> task_1456037496260_0063_m_000006 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000006_0
+Now >> 1456131636678 taskAttemptStartTime >> 1456131611432 , estimatedRunTime >> 26186 , estimatedEndTime >> 1456131637618
+attempt_1456037496260_0063_m_000016_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25193
+========================================
+Esitmate Time from LATE-Algo : 25305
+Esitmate Time from New-Algo : 25305
+Update attemptID:attempt_1456037496260_0063_m_000007_0
+attempt_1456037496260_0063_m_000007_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25305
+========================================
+Esitmate Time from LATE-Algo : 43390
+Esitmate Time from New-Algo : 29588
+Update attemptID:attempt_1456037496260_0063_m_000019_0
+attempt_1456037496260_0063_m_000019_0:MAP:MAP:0.5837938
+-1.0
+I/O Intensive
+Task Time : 25331
+========================================
+Esitmate Time from LATE-Algo : 25189
+Esitmate Time from New-Algo : 25189
+Update attemptID:attempt_1456037496260_0063_m_000021_0
+attempt_1456037496260_0063_m_000021_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25189
+========================================
+Successful task time : task_1456037496260_0063_m_000008 : Runtime : 25369 : MapPhaseTime : 24748
+Esitmate Time from LATE-Algo : 38109
+Esitmate Time from New-Algo : 26019
+Update attemptID:attempt_1456037496260_0063_m_000009_0
+attempt_1456037496260_0063_m_000009_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 25419
+========================================
+Esitmate Time from LATE-Algo : 39036
+Esitmate Time from New-Algo : 26638
+Update attemptID:attempt_1456037496260_0063_m_000017_0
+attempt_1456037496260_0063_m_000017_0:MAP:SORT:0.65131444
+-1.0
+I/O Intensive
+Task Time : 25425
+========================================
+Esitmate Time from LATE-Algo : 25432
+Esitmate Time from New-Algo : 25432
+Update attemptID:attempt_1456037496260_0063_m_000010_0
+attempt_1456037496260_0063_m_000010_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25432
+========================================
+Successful task time : task_1456037496260_0063_m_000016 : Runtime : 25416 : MapPhaseTime : 24807
+Successful task time : task_1456037496260_0063_m_000007 : Runtime : 25414 : MapPhaseTime : 24888
+Esitmate Time from LATE-Algo : 40943
+Esitmate Time from New-Algo : 27932
+Update attemptID:attempt_1456037496260_0063_m_000018_0
+attempt_1456037496260_0063_m_000018_0:MAP:SORT:0.6230218
+-1.0
+I/O Intensive
+Task Time : 25509
+========================================
+Successful task time : task_1456037496260_0063_m_000021 : Runtime : 25304 : MapPhaseTime : 24804
+Esitmate Time from LATE-Algo : 25545
+Esitmate Time from New-Algo : 25545
+Update attemptID:attempt_1456037496260_0063_m_000006_0
+attempt_1456037496260_0063_m_000006_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25545
+========================================
+Esitmate Time from LATE-Algo : 38932
+Esitmate Time from New-Algo : 26546
+Update attemptID:attempt_1456037496260_0063_m_000014_0
+attempt_1456037496260_0063_m_000014_0:MAP:SORT:0.6579128
+-1.0
+I/O Intensive
+Task Time : 25614
+========================================
+Esitmate Time from LATE-Algo : 43395
+Esitmate Time from New-Algo : 29589
+Update attemptID:attempt_1456037496260_0063_m_000011_0
+attempt_1456037496260_0063_m_000011_0:MAP:SORT:0.59108055
+-1.0
+I/O Intensive
+Task Time : 25650
+========================================
+Esitmate Time from LATE-Algo : 25751
+Esitmate Time from New-Algo : 25751
+Update attemptID:attempt_1456037496260_0063_m_000009_0
+attempt_1456037496260_0063_m_000009_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25751
+========================================
+Esitmate Time from LATE-Algo : 25735
+Esitmate Time from New-Algo : 25735
+Update attemptID:attempt_1456037496260_0063_m_000017_0
+attempt_1456037496260_0063_m_000017_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25735
+========================================
+Successful task time : task_1456037496260_0063_m_000010 : Runtime : 25707 : MapPhaseTime : 25062
+Esitmate Time from LATE-Algo : 25837
+Esitmate Time from New-Algo : 25837
+Update attemptID:attempt_1456037496260_0063_m_000018_0
+attempt_1456037496260_0063_m_000018_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25837
+========================================
+Esitmate Time from LATE-Algo : 41656
+Esitmate Time from New-Algo : 28415
+Update attemptID:attempt_1456037496260_0063_m_000020_0
+attempt_1456037496260_0063_m_000020_0:MAP:SORT:0.6206204
+0.5035265542528843
+I/O Intensive
+Task Time : 25853
+========================================
+Esitmate Time from LATE-Algo : 25875
+Esitmate Time from New-Algo : 25875
+Update attemptID:attempt_1456037496260_0063_m_000014_0
+attempt_1456037496260_0063_m_000014_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25875
+========================================
+Esitmate Time from LATE-Algo : 25879
+Esitmate Time from New-Algo : 25879
+Update attemptID:attempt_1456037496260_0063_m_000011_0
+attempt_1456037496260_0063_m_000011_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25879
+========================================
+Successful task time : task_1456037496260_0063_m_000006 : Runtime : 25837 : MapPhaseTime : 25106
+Successful task time : task_1456037496260_0063_m_000009 : Runtime : 25887 : MapPhaseTime : 25395
+Esitmate Time from LATE-Algo : 38964
+Esitmate Time from New-Algo : 26597
+Update attemptID:attempt_1456037496260_0063_m_000012_0
+attempt_1456037496260_0063_m_000012_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 25989
+========================================
+Successful task time : task_1456037496260_0063_m_000017 : Runtime : 25960 : MapPhaseTime : 25354
+Successful task time : task_1456037496260_0063_m_000018 : Runtime : 25988 : MapPhaseTime : 25421
+Successful task time : task_1456037496260_0063_m_000011 : Runtime : 26015 : MapPhaseTime : 25508
+Successful task time : task_1456037496260_0063_m_000014 : Runtime : 26013 : MapPhaseTime : 25477
+Esitmate Time from LATE-Algo : 26133
+Esitmate Time from New-Algo : 26133
+Update attemptID:attempt_1456037496260_0063_m_000020_0
+attempt_1456037496260_0063_m_000020_0:MAP:SORT:1.0
+0.5035265542528843
+I/O Intensive
+Task Time : 26133
+========================================
+Successful task time : task_1456037496260_0063_m_000020 : Runtime : 26194 : MapPhaseTime : 25798
+Esitmate Time from LATE-Algo : 26269
+Esitmate Time from New-Algo : 26269
+Update attemptID:attempt_1456037496260_0063_m_000012_0
+attempt_1456037496260_0063_m_000012_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 26269
+========================================
+Task ID >> task_1456037496260_0063_m_000019 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000019_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611422 , estimatedRunTime >> 29588 , estimatedEndTime >> 1456131641010
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611433
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Task ID >> task_1456037496260_0063_m_000012 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000012_0
+Now >> 1456131637736 taskAttemptStartTime >> 1456131611428 , estimatedRunTime >> 26269 , estimatedEndTime >> 1456131637697
+Successful task time : task_1456037496260_0063_m_000012 : Runtime : 26338 : MapPhaseTime : 25910
+Esitmate Time from LATE-Algo : 45480
+Esitmate Time from New-Algo : 30986
+Update attemptID:attempt_1456037496260_0063_m_000019_0
+attempt_1456037496260_0063_m_000019_0:MAP:SORT:0.5837938
+-1.0
+I/O Intensive
+Task Time : 26551
+========================================
+Esitmate Time from LATE-Algo : 26890
+Esitmate Time from New-Algo : 26890
+Update attemptID:attempt_1456037496260_0063_m_000019_0
+attempt_1456037496260_0063_m_000019_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 26890
+========================================
+Successful task time : task_1456037496260_0063_m_000019 : Runtime : 26957 : MapPhaseTime : 26540
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611433
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131638761 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611433
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131639779 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 111592
+Esitmate Time from New-Algo : 76000
+Update attemptID:attempt_1456037496260_0063_m_000013_0
+attempt_1456037496260_0063_m_000013_0:MAP:MAP:0.257518
+0.4078365869784598
+I/O Intensive
+Task Time : 28737
+========================================
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> 76000 , estimatedEndTime >> 1456131687434
+Ramda : 0.5 Save Time : 20873 Target Bound Time : 23321.0
+Can save little time !
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131640792 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> 76000 , estimatedEndTime >> 1456131687434
+Ramda : 0.5 Save Time : 19859 Target Bound Time : 22814.0
+Can save little time !
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131641806 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> 76000 , estimatedEndTime >> 1456131687434
+Ramda : 0.5 Save Time : 18843 Target Bound Time : 22306.0
+Can save little time !
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131642822 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 54390
+Esitmate Time from New-Algo : 37042
+Update attemptID:attempt_1456037496260_0063_m_000013_0
+attempt_1456037496260_0063_m_000013_0:MAP:MAP:0.58696276
+0.4078365869784598
+I/O Intensive
+Task Time : 31925
+========================================
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> 37042 , estimatedEndTime >> 1456131648476
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131643833 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 56717
+Esitmate Time from New-Algo : 38627
+Update attemptID:attempt_1456037496260_0063_m_000013_0
+attempt_1456037496260_0063_m_000013_0:MAP:SORT:0.58696276
+0.4078365869784598
+I/O Intensive
+Task Time : 33291
+========================================
+Task ID >> task_1456037496260_0063_m_000013 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000013_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611434 , estimatedRunTime >> 38627 , estimatedEndTime >> 1456131650061
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131644850 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 33659
+Esitmate Time from New-Algo : 33659
+Update attemptID:attempt_1456037496260_0063_m_000013_0
+attempt_1456037496260_0063_m_000013_0:MAP:SORT:1.0
+0.4078365869784598
+I/O Intensive
+Task Time : 33659
+========================================
+Successful task time : task_1456037496260_0063_m_000013 : Runtime : 33743 : MapPhaseTime : 33279
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611451
+Esitmate Time from LATE-Algo : 344170000
+Esitmate Time from New-Algo : 344170000
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611458
+Esitmate Time from LATE-Algo : 344130000
+Esitmate Time from New-Algo : 344130000
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611456
+Esitmate Time from LATE-Algo : 344190000
+Esitmate Time from New-Algo : 344190000
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611454
+Esitmate Time from LATE-Algo : 344240000
+Esitmate Time from New-Algo : 344240000
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611447
+Esitmate Time from LATE-Algo : 344320000
+Esitmate Time from New-Algo : 344320000
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131645862 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> -1 , estimatedEndTime >> 1456131611449
+Esitmate Time from LATE-Algo : 344310000
+Esitmate Time from New-Algo : 344310000
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> 344170000 , estimatedEndTime >> 1456475781452
+Ramda : 0.5 Save Time : 344108331 Target Bound Time : 1.7206728E8
+task_1456037496260_0063_m_000000 will end in 1456475781452
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000000is not so good, if run backup for this task will save 344108331
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> 344130000 , estimatedEndTime >> 1456475741459
+Ramda : 0.5 Save Time : 344068338 Target Bound Time : 1.72047296E8
+task_1456037496260_0063_m_000005 will end in 1456475741459
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000005is not so good, if run backup for this task will save 344068338
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> 344190000 , estimatedEndTime >> 1456475801457
+Ramda : 0.5 Save Time : 344128336 Target Bound Time : 1.7207728E8
+task_1456037496260_0063_m_000002 will end in 1456475801457
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000002is not so good, if run backup for this task will save 344128336
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 344240000 , estimatedEndTime >> 1456475851455
+Ramda : 0.5 Save Time : 344178334 Target Bound Time : 1.72102288E8
+task_1456037496260_0063_m_000003 will end in 1456475851455
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000003is not so good, if run backup for this task will save 344178334
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> 344320000 , estimatedEndTime >> 1456475931448
+Ramda : 0.5 Save Time : 344258327 Target Bound Time : 1.72142288E8
+task_1456037496260_0063_m_000001 will end in 1456475931448
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000001is not so good, if run backup for this task will save 344258327
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131646883 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> 344310000 , estimatedEndTime >> 1456475921450
+Ramda : 0.5 Save Time : 344248329 Target Bound Time : 1.7213728E8
+task_1456037496260_0063_m_000004 will end in 1456475921450
+But back up task will end in 1456131673121
+task_1456037496260_0063_m_000004is not so good, if run backup for this task will save 344248329
+Best Id of this round is task_1456037496260_0063_m_000001
+Add speculative tasktask_1456037496260_0063_m_000001
+Esitmate Time from LATE-Algo : 81042
+Esitmate Time from New-Algo : 55170
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> 344170000 , estimatedEndTime >> 1456475781452
+Esitmate Time from LATE-Algo : 504570000
+Esitmate Time from New-Algo : 504570000
+Ramda : 0.25 Save Time : 344093311 Target Bound Time : 8.6029888E7
+task_1456037496260_0063_m_000000 will end in 1456475781452
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000000is not so good, if run backup for this task will save 344093311
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> 344130000 , estimatedEndTime >> 1456475741459
+Esitmate Time from LATE-Algo : 504540000
+Esitmate Time from New-Algo : 504540000
+Ramda : 0.25 Save Time : 344053318 Target Bound Time : 8.6019888E7
+task_1456037496260_0063_m_000005 will end in 1456475741459
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000005is not so good, if run backup for this task will save 344053318
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> 344190000 , estimatedEndTime >> 1456475801457
+Esitmate Time from LATE-Algo : 504610000
+Esitmate Time from New-Algo : 504610000
+Ramda : 0.25 Save Time : 344113316 Target Bound Time : 8.6034888E7
+task_1456037496260_0063_m_000002 will end in 1456475801457
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000002is not so good, if run backup for this task will save 344113316
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 344240000 , estimatedEndTime >> 1456475851455
+Esitmate Time from LATE-Algo : 504650000
+Esitmate Time from New-Algo : 504650000
+Ramda : 0.25 Save Time : 344163314 Target Bound Time : 8.6047392E7
+task_1456037496260_0063_m_000003 will end in 1456475851455
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000003is not so good, if run backup for this task will save 344163314
+Task ID >> task_1456037496260_0063_m_000001 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000001_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611448 , estimatedRunTime >> 344320000 , estimatedEndTime >> 1456475931448
+Esitmate Time from LATE-Algo : 504730000
+Esitmate Time from New-Algo : 504730000
+Ramda : 0.25 Save Time : 344243307 Target Bound Time : 8.6067384E7
+task_1456037496260_0063_m_000001 will end in 1456475931448
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000001is not so good, if run backup for this task will save 344243307
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131661903 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> 344310000 , estimatedEndTime >> 1456475921450
+Esitmate Time from LATE-Algo : 504730000
+Esitmate Time from New-Algo : 504730000
+Ramda : 0.25 Save Time : 344233309 Target Bound Time : 8.6064888E7
+task_1456037496260_0063_m_000004 will end in 1456475921450
+But back up task will end in 1456131688141
+task_1456037496260_0063_m_000004is not so good, if run backup for this task will save 344233309
+Best Id of this round is task_1456037496260_0063_m_000004
+Add speculative tasktask_1456037496260_0063_m_000004
+Esitmate Time from LATE-Algo : 94071
+Esitmate Time from New-Algo : 64039
+Esitmate Time from LATE-Algo : 106755
+Esitmate Time from New-Algo : 72674
+Esitmate Time from LATE-Algo : 119438
+Esitmate Time from New-Algo : 81308
+Esitmate Time from LATE-Algo : 61442
+Esitmate Time from New-Algo : 41827
+Update attemptID:attempt_1456037496260_0063_m_000001_1
+attempt_1456037496260_0063_m_000001_1:MAP:MAP:0.33454025
+-1.0
+I/O Intensive
+Task Time : 20555
+========================================
+Esitmate Time from LATE-Algo : 132114
+Esitmate Time from New-Algo : 89937
+Esitmate Time from LATE-Algo : 38142
+Esitmate Time from New-Algo : 25965
+Update attemptID:attempt_1456037496260_0063_m_000001_1
+attempt_1456037496260_0063_m_000001_1:MAP:MAP:0.6219562
+-1.0
+I/O Intensive
+Task Time : 23723
+========================================
+Esitmate Time from LATE-Algo : 40083
+Esitmate Time from New-Algo : 27286
+Update attemptID:attempt_1456037496260_0063_m_000001_1
+attempt_1456037496260_0063_m_000001_1:MAP:SORT:0.6219562
+-1.0
+I/O Intensive
+Task Time : 24930
+========================================
+Esitmate Time from LATE-Algo : 25263
+Esitmate Time from New-Algo : 25263
+Update attemptID:attempt_1456037496260_0063_m_000001_1
+attempt_1456037496260_0063_m_000001_1:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 25263
+========================================
+Successful task time : task_1456037496260_0063_m_000001 : Runtime : 62030 : MapPhaseTime : 61607
+Esitmate Time from LATE-Algo : 136723
+Esitmate Time from New-Algo : 93002
+Esitmate Time from LATE-Algo : 1753587
+Esitmate Time from New-Algo : 1192826
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.036257673
+-1.0
+I/O Intensive
+Task Time : 63581
+========================================
+Esitmate Time from LATE-Algo : 1560930
+Esitmate Time from New-Algo : 1061777
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:MAP:0.041036412
+-1.0
+I/O Intensive
+Task Time : 64055
+========================================
+Task ID >> task_1456037496260_0063_m_000000 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000000_0
+Now >> 1456131676926 taskAttemptStartTime >> 1456131611452 , estimatedRunTime >> 504570000 , estimatedEndTime >> 1456636181452
+Ramda : 0.125 Save Time : 504478338 Target Bound Time : 6.3063064E7
+task_1456037496260_0063_m_000000 will end in 1456636181452
+But back up task will end in 1456131703114
+task_1456037496260_0063_m_000000is not so good, if run backup for this task will save 504478338
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131676926 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> 504540000 , estimatedEndTime >> 1456636151459
+Ramda : 0.125 Save Time : 504448345 Target Bound Time : 6.3059316E7
+task_1456037496260_0063_m_000005 will end in 1456636151459
+But back up task will end in 1456131703114
+task_1456037496260_0063_m_000005is not so good, if run backup for this task will save 504448345
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131676926 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> 1061777 , estimatedEndTime >> 1456132673234
+Ramda : 0.125 Save Time : 970120 Target Bound Time : 124538.5
+task_1456037496260_0063_m_000002 will end in 1456132673234
+But back up task will end in 1456131703114
+task_1456037496260_0063_m_000002is not so good, if run backup for this task will save 970120
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131676926 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 1192826 , estimatedEndTime >> 1456132804281
+Ramda : 0.125 Save Time : 1101167 Target Bound Time : 140919.38
+task_1456037496260_0063_m_000003 will end in 1456132804281
+But back up task will end in 1456131703114
+task_1456037496260_0063_m_000003is not so good, if run backup for this task will save 1101167
+Task ID >> task_1456037496260_0063_m_000004 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000004_0
+Now >> 1456131676926 taskAttemptStartTime >> 1456131611450 , estimatedRunTime >> 504730000 , estimatedEndTime >> 1456636341450
+Ramda : 0.125 Save Time : 504638336 Target Bound Time : 6.3083064E7
+task_1456037496260_0063_m_000004 will end in 1456636341450
+But back up task will end in 1456131703114
+task_1456037496260_0063_m_000004is not so good, if run backup for this task will save 504638336
+Best Id of this round is task_1456037496260_0063_m_000000
+Add speculative tasktask_1456037496260_0063_m_000000
+Esitmate Time from LATE-Algo : 148718
+Esitmate Time from New-Algo : 101161
+Esitmate Time from LATE-Algo : 514816
+Esitmate Time from New-Algo : 350189
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.13046779
+-1.0
+I/O Intensive
+Task Time : 67167
+========================================
+Esitmate Time from LATE-Algo : 469701
+Esitmate Time from New-Algo : 319500
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:MAP:0.14347634
+-1.0
+I/O Intensive
+Task Time : 67391
+========================================
+Esitmate Time from LATE-Algo : 596418
+Esitmate Time from New-Algo : 405696
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:MAP:0.113765664
+-1.0
+I/O Intensive
+Task Time : 67852
+========================================
+Esitmate Time from LATE-Algo : 444313
+Esitmate Time from New-Algo : 302231
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:MAP:0.15398587
+-1.0
+I/O Intensive
+Task Time : 68418
+========================================
+Esitmate Time from LATE-Algo : 160666
+Esitmate Time from New-Algo : 109288
+Esitmate Time from LATE-Algo : 535728
+Esitmate Time from New-Algo : 364413
+Update attemptID:attempt_1456037496260_0063_m_000004_0
+attempt_1456037496260_0063_m_000004_0:MAP:MAP:0.12990165
+-1.0
+I/O Intensive
+Task Time : 69592
+========================================
+Esitmate Time from LATE-Algo : 283334
+Esitmate Time from New-Algo : 192730
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.24848686
+0.1818052695121085
+I/O Intensive
+Task Time : 70405
+========================================
+Esitmate Time from LATE-Algo : 219603
+Esitmate Time from New-Algo : 149379
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:MAP:0.3220707
+-1.0
+I/O Intensive
+Task Time : 70728
+========================================
+Esitmate Time from LATE-Algo : 227337
+Esitmate Time from New-Algo : 154639
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:MAP:0.31321314
+-1.0
+I/O Intensive
+Task Time : 71205
+========================================
+Esitmate Time from LATE-Algo : 260566
+Esitmate Time from New-Algo : 177242
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:MAP:0.27549243
+0.17301905717151456
+I/O Intensive
+Task Time : 71784
+========================================
+Esitmate Time from LATE-Algo : 67475
+Esitmate Time from New-Algo : 45898
+Update attemptID:attempt_1456037496260_0063_m_000004_1
+attempt_1456037496260_0063_m_000004_1:MAP:MAP:0.3064944
+-1.0
+I/O Intensive
+Task Time : 20681
+========================================
+Esitmate Time from LATE-Algo : 172622
+Esitmate Time from New-Algo : 117421
+Esitmate Time from LATE-Algo : 223292
+Esitmate Time from New-Algo : 151888
+Update attemptID:attempt_1456037496260_0063_m_000004_0
+attempt_1456037496260_0063_m_000004_0:MAP:MAP:0.32631162
+-1.0
+I/O Intensive
+Task Time : 72863
+========================================
+Esitmate Time from LATE-Algo : 194214
+Esitmate Time from New-Algo : 132108
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.37966278
+0.1818052695121085
+I/O Intensive
+Task Time : 73736
+========================================
+Esitmate Time from LATE-Algo : 150392
+Esitmate Time from New-Algo : 102300
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:MAP:0.4916328
+-1.0
+I/O Intensive
+Task Time : 73938
+========================================
+Esitmate Time from LATE-Algo : 153554
+Esitmate Time from New-Algo : 104451
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:MAP:0.48530623
+-1.0
+I/O Intensive
+Task Time : 74521
+========================================
+Esitmate Time from LATE-Algo : 171638
+Esitmate Time from New-Algo : 116752
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:MAP:0.43755928
+0.17301905717151456
+I/O Intensive
+Task Time : 75102
+========================================
+Esitmate Time from LATE-Algo : 184759
+Esitmate Time from New-Algo : 125676
+Esitmate Time from LATE-Algo : 37624
+Esitmate Time from New-Algo : 25592
+Update attemptID:attempt_1456037496260_0063_m_000004_1
+attempt_1456037496260_0063_m_000004_1:MAP:MAP:0.6353877
+-1.0
+I/O Intensive
+Task Time : 23906
+========================================
+Esitmate Time from LATE-Algo : 154747
+Esitmate Time from New-Algo : 105262
+Update attemptID:attempt_1456037496260_0063_m_000004_0
+attempt_1456037496260_0063_m_000004_0:MAP:MAP:0.49181497
+-1.0
+I/O Intensive
+Task Time : 76107
+========================================
+Esitmate Time from LATE-Algo : 38744
+Esitmate Time from New-Algo : 26355
+Update attemptID:attempt_1456037496260_0063_m_000004_1
+attempt_1456037496260_0063_m_000004_1:MAP:SORT:0.6353877
+-1.0
+I/O Intensive
+Task Time : 24618
+========================================
+Esitmate Time from LATE-Algo : 24972
+Esitmate Time from New-Algo : 24972
+Update attemptID:attempt_1456037496260_0063_m_000004_1
+attempt_1456037496260_0063_m_000004_1:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 24972
+========================================
+Successful task time : task_1456037496260_0063_m_000004 : Runtime : 76889 : MapPhaseTime : 76476
+Esitmate Time from LATE-Algo : 136549
+Esitmate Time from New-Algo : 92811
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.56499666
+0.1818052695121085
+I/O Intensive
+Task Time : 77150
+========================================
+Esitmate Time from LATE-Algo : 116605
+Esitmate Time from New-Algo : 79295
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 77776
+========================================
+Esitmate Time from LATE-Algo : 117098
+Esitmate Time from New-Algo : 79630
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:MAP:0.667
+-1.0
+I/O Intensive
+Task Time : 78105
+========================================
+Esitmate Time from LATE-Algo : 117188
+Esitmate Time from New-Algo : 79691
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 78165
+========================================
+Esitmate Time from LATE-Algo : 130087
+Esitmate Time from New-Algo : 88419
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:MAP:0.6037991
+0.17301905717151456
+I/O Intensive
+Task Time : 78547
+========================================
+Esitmate Time from LATE-Algo : 186358
+Esitmate Time from New-Algo : 126665
+Esitmate Time from LATE-Algo : 78940
+Esitmate Time from New-Algo : 78941
+Update attemptID:attempt_1456037496260_0063_m_000000_0
+attempt_1456037496260_0063_m_000000_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 78940
+========================================
+Successful task time : task_1456037496260_0063_m_000000 : Runtime : 78993 : MapPhaseTime : 78154
+Esitmate Time from LATE-Algo : 120542
+Esitmate Time from New-Algo : 81936
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 80402
+========================================
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131691935 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> 88419 , estimatedEndTime >> 1456131699878
+Task ID >> task_1456037496260_0063_m_000002 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000002_0
+Now >> 1456131691935 taskAttemptStartTime >> 1456131611457 , estimatedRunTime >> 81936 , estimatedEndTime >> 1456131693393
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131691935 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 92811 , estimatedEndTime >> 1456131704266
+Esitmate Time from LATE-Algo : 121077
+Esitmate Time from New-Algo : 82300
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:MAP:0.667
+0.1818052695121085
+I/O Intensive
+Task Time : 80759
+========================================
+Esitmate Time from LATE-Algo : 134018
+Esitmate Time from New-Algo : 91051
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:SORT:0.6037991
+0.17301905717151456
+I/O Intensive
+Task Time : 80920
+========================================
+Esitmate Time from LATE-Algo : 81351
+Esitmate Time from New-Algo : 81352
+Update attemptID:attempt_1456037496260_0063_m_000002_0
+attempt_1456037496260_0063_m_000002_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 81351
+========================================
+Successful task time : task_1456037496260_0063_m_000002 : Runtime : 81403 : MapPhaseTime : 80389
+Task ID >> task_1456037496260_0063_m_000005 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000005_0
+Now >> 1456131692944 taskAttemptStartTime >> 1456131611459 , estimatedRunTime >> 91051 , estimatedEndTime >> 1456131702510
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131692944 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 82300 , estimatedEndTime >> 1456131693755
+Esitmate Time from LATE-Algo : 81663
+Esitmate Time from New-Algo : 81664
+Update attemptID:attempt_1456037496260_0063_m_000005_0
+attempt_1456037496260_0063_m_000005_0:MAP:SORT:1.0
+0.17301905717151456
+I/O Intensive
+Task Time : 81663
+========================================
+Successful task time : task_1456037496260_0063_m_000005 : Runtime : 81712 : MapPhaseTime : 80906
+Esitmate Time from LATE-Algo : 187790
+Esitmate Time from New-Algo : 127494
+Esitmate Time from LATE-Algo : 123433
+Esitmate Time from New-Algo : 83842
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:SORT:0.667
+0.1818052695121085
+I/O Intensive
+Task Time : 82330
+========================================
+Task ID >> task_1456037496260_0063_m_000003 , runningTaskAttemptID >> attempt_1456037496260_0063_m_000003_0
+Now >> 1456131693950 taskAttemptStartTime >> 1456131611455 , estimatedRunTime >> 83842 , estimatedEndTime >> 1456131695297
+Esitmate Time from LATE-Algo : 82667
+Esitmate Time from New-Algo : 82668
+Update attemptID:attempt_1456037496260_0063_m_000003_0
+attempt_1456037496260_0063_m_000003_0:MAP:SORT:1.0
+0.1818052695121085
+I/O Intensive
+Task Time : 82667
+========================================
+Successful task time : task_1456037496260_0063_m_000003 : Runtime : 82721 : MapPhaseTime : 82318
+Esitmate Time from LATE-Algo : 192789
+Esitmate Time from New-Algo : 130811
+Esitmate Time from LATE-Algo : 193945
+Esitmate Time from New-Algo : 131596
+Esitmate Time from LATE-Algo : 85292
+Esitmate Time from New-Algo : 58579
+Esitmate Time from LATE-Algo : 86426
+Esitmate Time from New-Algo : 61654
+Esitmate Time from LATE-Algo : 85390
+Esitmate Time from New-Algo : 64659
+Esitmate Time from LATE-Algo : 84100
+Esitmate Time from New-Algo : 67633
+Esitmate Time from LATE-Algo : 85147
+Esitmate Time from New-Algo : 70715
+Esitmate Time from LATE-Algo : 84435
+Esitmate Time from New-Algo : 73675
+Esitmate Time from LATE-Algo : 84542
+Esitmate Time from New-Algo : 76659
+Esitmate Time from LATE-Algo : 85155
+Esitmate Time from New-Algo : 79655
+Esitmate Time from LATE-Algo : 85218
+Esitmate Time from New-Algo : 82612
+Esitmate Time from LATE-Algo : 85628
+Esitmate Time from New-Algo : 85629
+Esitmate Time from LATE-Algo : 88758
+Esitmate Time from New-Algo : 88759
+serviceStop

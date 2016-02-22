@@ -56,5 +56,6 @@ public interface Task {
 
   //Project
   long getMapFinishedTime(TaskAttemptId taskAttemptID);
+  boolean getIsSpeculativeFinishedFirst();
   
 }

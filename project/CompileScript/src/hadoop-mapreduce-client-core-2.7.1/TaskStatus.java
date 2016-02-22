@@ -239,6 +239,7 @@ public abstract class TaskStatus implements Writable, Cloneable {
    */
   void setMapFinishTime(long mapFinishTime) {
     //Project
+    //LOG.info("taskid : " + taskid + "mapFinishTime " + mapFinishTime);
     this.mapFinishTime = mapFinishTime;
   }
 
@@ -303,7 +304,7 @@ public abstract class TaskStatus implements Writable, Cloneable {
       if (phase == TaskStatus.Phase.SORT){
         if (oldPhase == TaskStatus.Phase.MAP) {
           //Project
-          System.out.println("TaskStatus Class " + System.currentTimeMillis());
+          //System.out.println("TaskStatus Class " + System.currentTimeMillis());
           setMapFinishTime(System.currentTimeMillis());
         }
         else {

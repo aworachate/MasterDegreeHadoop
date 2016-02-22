@@ -654,10 +654,11 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   private JobState lastNonFinalState = JobState.NEW;
 
   //Project
-  private static Map<Integer ,String> allTaskInputLenght = new HashMap<Integer, String>();
-  private static Map<Integer ,String> allTaskInputLocation = new HashMap<Integer, String>();
-  private static Map<Integer ,String> allTaskInputSplitLocation = new HashMap<Integer, String>();
-  private static Map<Integer ,MapTaskTime> allFinishedMapTime = new HashMap<Integer, MapTaskTime>();
+  private Map<Integer ,String> allTaskInputLenght = new HashMap<Integer, String>();
+  private Map<Integer ,String> allTaskInputLocation = new HashMap<Integer, String>();
+  private Map<Integer ,String> allTaskInputSplitLocation = new HashMap<Integer, String>();
+  private Map<Integer ,MapTaskTime> allFinishedMapTime = new HashMap<Integer, MapTaskTime>();
+  private int numberOfFailSpeculativeTask = 0;
 
 
   public JobImpl(JobId jobId, ApplicationAttemptId applicationAttemptId,
@@ -1543,7 +1544,7 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
                 job.metrics, job.appContext);
         job.addTask(task);
         //Project
-        allTaskInputLenght.put(i,(splits[i].getInputDataLength()+""));
+        job.allTaskInputLenght.put(i,(splits[i].getInputDataLength()+""));
         //allTaskInputLocation.put(job.applicationAttemptId.getAttemptId(),(splits[i].getLocations()+""));
         //allTaskInputSplitLocation.put(job.applicationAttemptId.getAttemptId(),(splits[i].getSplitLocation()+""));
       }
@@ -2027,8 +2028,14 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
         long temp_Task_Finish_Time = task.getReport().getFinishTime();
         //long temp_Task_Map_Finish_Time = task.getMapFinishTime(task.getReport().getSuccessfulAttempt());
         long temp_Task_Map_Finish_Time = task.getMapFinishedTime(task.getReport().getSuccessfulAttempt());
-        //System.out.println("temp_Task_Map_Finish_Time " + temp_Task_Map_Finish_Time);
-        allFinishedMapTime.put(job.succeededMapTaskCount,new MapTaskTime(temp_Task_Id,temp_Task_Start_Time,temp_Task_Map_Finish_Time,temp_Task_Finish_Time));
+        //System.out.println("finish task 1 " + job.succeededMapTaskCount);
+        //System.out.println("finish task 2 " + succeededMapTaskCount);
+        job.allFinishedMapTime.put(job.succeededMapTaskCount,new MapTaskTime(temp_Task_Id,temp_Task_Start_Time,temp_Task_Map_Finish_Time,temp_Task_Finish_Time));
+        System.out.println("Successful task time : " + temp_Task_Id + " : Runtime : " + (temp_Task_Finish_Time - temp_Task_Start_Time) + " : MapPhaseTime : " + (temp_Task_Map_Finish_Time - temp_Task_Start_Time));
+        if((task.getAttempts().size()>1) && (!task.getIsSpeculativeFinishedFirst()))
+            {
+              job.numberOfFailSpeculativeTask++;
+            }
       } else {
         job.succeededReduceTaskCount++;
       }
@@ -2237,5 +2244,8 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   }
   public Map<Integer,MapTaskTime> getAllFinishedMapTime(){
       return allFinishedMapTime;
+  }
+  public int getNumberOfFailSpeculativeTask(){
+      return numberOfFailSpeculativeTask;
   }
 }

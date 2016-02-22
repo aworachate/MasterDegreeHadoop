@@ -62,7 +62,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
     int numMap = job.getTotalMaps();
     int numReduce = job.getTotalReduces();
     Map<Integer ,String> allTaskInputLenght = job.getAllTaskInputLenght();
-    System.out.println("Task Size >> "+allTaskInputLenght.toString());
+    //System.out.println("Task Size >> "+allTaskInputLenght.toString());
     //Map<Integer ,String> allTaskInputLocation = job.getAllTaskInputLocation();
     //System.out.println("Task Location 1 >> "+allTaskInputLocation.toString());
     //Map<Integer ,String> allTaskInputSplitLocation = job.getAllTaskInputSplitLocation();
@@ -137,62 +137,70 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       // This code assumes that we'll never consider starting a third
       //  speculative task attempt if two are already running for this task
       if (start > 0 && timestamp > start) {
-        System.out.println("Number of complete Map Task! " + job.getCompletedMaps());
-        //If Complete Map Task = 0
-          // Use  
-        //If Complete Map Task > 0
-          // Use wieght from finished task
-          //
+        //System.out.println("Number of complete Map Task! " + job.getCompletedMaps());
+        
         boolean isDynamicEnable = false;
         float dynamic_weight = 0.0f;
         if (job.getCompletedMaps() > 0)
           {
-              long temp_sum_totaltime = 0L;
-              long temp_sum_mapFinishedtime = 0L;
-              float avg_runtime = 0.0f;
-              float avg_mapfinishedtime = 0.0f;
+              //long temp_sum_totaltime = 0L;
+              //long temp_sum_mapFinishedtime = 0L;
+              float temp_sum_map_ratio = 0.0f;
+              float temp_sum_sort_ratio = 0.0f;
+              float avg_map_runtime = 0.0f;
+              float avg_sort_runtime = 0.0f;
+              //float avg_runtime2 = 0.0f;
+              //float avg_mapfinishedtime2 = 0.0f;
               Map<Integer,MapTaskTime> temp_AllFinishedMapTime = job.getAllFinishedMapTime();
               for (Map.Entry<Integer, MapTaskTime> e : temp_AllFinishedMapTime.entrySet())
                   {
-                   // System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + "Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
-                    temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
-                    temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                    //System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + " Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())) + " Map Finished Time " + ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())));
+                    //System.out.println((e.getValue().getTaskMapFinishedTime()) + " start time " +  (e.getValue().getTaskStartTime()));
+                    //temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
+                    //temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                    temp_sum_map_ratio += (((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()))) / (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
+                    temp_sum_sort_ratio += ((((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))) - ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())))))/ (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
                   }
 
-              avg_runtime = temp_sum_totaltime / (float)job.getCompletedMaps();
-              avg_mapfinishedtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
-              dynamic_weight = avg_mapfinishedtime / avg_runtime;
-              System.out.println("Average runtime = " + avg_runtime + " Average MapPhasetime = " + avg_mapfinishedtime + " Dybamice Weight = " + dynamic_weight + ":" + ((avg_runtime - avg_mapfinishedtime)/avg_runtime));   
+              //avg_runtime = temp_sum_totaltime / (float)job.getCompletedMaps();
+              //avg_mapfinishedtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
+              avg_map_runtime = temp_sum_map_ratio / (float)job.getCompletedMaps();
+              avg_sort_runtime = temp_sum_sort_ratio / (float)job.getCompletedMaps();
+              //dynamic_weight = avg_mapfinishedtime / avg_runtime;
+              dynamic_weight = avg_map_runtime;
+              //System.out.println(dynamic_weight + " VS. " + avg_runtime2 + " , " + ((avg_runtime - avg_mapfinishedtime)/avg_runtime) + " VS. " + avg_mapfinishedtime2);
+              //System.out.println("Average runtime = " + avg_runtime + " Average MapPhasetime = " + avg_mapfinishedtime + " Dynamic Weight = " + dynamic_weight + ":" + ((avg_runtime - avg_mapfinishedtime)/avg_runtime));   
               isDynamicEnable = true;
           }
         // Progject dynamic weight
         float reverse_progress = 0.0f;
         float new_progress = 0.0f;
-        //float word_count_weight = 0.995f;
-        //float word_count_weight = 0.97f;
-        //float word_count_weight = 0.99f;
-        float word_count_weight = 0.85f;
+        //float new_weight = 0.995f;
+        //float new_weight = 0.97f;
+        //float new_weight = 0.99f;
+        float new_weight = 0.667f;
+        //If Complete Map Task != 0 , use Dynamic Weight, else use Default 66.7:33.3
         if (isDynamicEnable)
             {
-              word_count_weight = dynamic_weight;
+              new_weight = dynamic_weight;
             }
         if (status.progress < 0.667f)
             {
               reverse_progress = status.progress * 1.5f;
-              System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = word_count_weight * reverse_progress;
+              //System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = new_weight * reverse_progress;
             } 
         else if (status.progress == 0.667f)
             {
               reverse_progress = 1.0f;
-              System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = word_count_weight * reverse_progress;
+              //System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = new_weight * reverse_progress;
             }
         else if (status.progress > 0.667f)
              {
               reverse_progress = (status.progress - 0.667f)*3.0f ;
-              System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = word_count_weight + (1.0f - word_count_weight)*(reverse_progress);
+              //System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
             }         
 
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
@@ -204,7 +212,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         System.out.println("Esitmate Time from LATE-Algo : " + estimate);
         System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
         estimate = estimate_new;
-        varianceEstimate = varianceEstimate_new;    
+        varianceEstimate = varianceEstimate_new;  
 
 
       /*  System.out.println("timestamp >> "+ timestamp +
@@ -235,12 +243,12 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             //System.out.println(tempCounters.getCounterGroup(TaskCounter));
             long process_time = timestamp - start;
             long CPU_Time = tempCounters.getCounterGroup(TaskCounter).getCounter("CPU_MILLISECONDS").getValue();
-            System.out.println("CPU/Time : " + (CPU_Time/(double)process_time));
-            System.out.println("Written/Time : " + ((FBW+HBW)/(double)process_time));
+            //System.out.println("CPU/Time : " + (CPU_Time/(double)process_time));
+            //System.out.println("Written/Time : " + ((FBW+HBW)/(double)process_time));
             //long tempSize = Long.parseLong(allTaskInputLenght.get(0));
             //Double finishedSize = (double)status.progress * (double)tempSize;
             //System.out.println("FinishedSize : " + finishedSize);
-            System.out.println("Add graph Data" + status.progress + " <> " +(CPU_Time/(double)process_time));
+            //System.out.println("Add graph Data" + status.progress + " <> " +(CPU_Time/(double)process_time));
             attemptGraphData.addData(status.progress,(CPU_Time/(double)process_time));
             //singleGraphData.addData(status.progress,(CPU_Time/(double)process_time));
             // Decision algorithm
@@ -262,7 +270,8 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             //long now = clock.getTime();
             long run_time = (long)(timestamp-start);
             System.out.println("Task Time : "+run_time);
-            System.out.println("CPU Time : "+CPU_Time);
+            //System.out.println("CPU Time : "+CPU_Time);
+            //System.out.println("pair : (" +new_progress+","+ estimate+")");
             System.out.println("========================================");
           }
       }
@@ -284,17 +293,23 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
     Task task = job.getTask(taskID);
 
     if (task == null) {
+      //Project
+      //System.out.println("No Task in estimate array");
       return -1L;
     }
 
     TaskAttempt taskAttempt = task.getAttempt(attemptID);
 
     if (taskAttempt == null) {
+      //Projec
+      //System.out.println("No Task Attem in estimate array");
       return -1L;
     }
 
     AtomicLong estimate = data.get(taskAttempt);
-
+    //Project
+    //if (estimate == null)
+      //System.out.println("No Task estimate time in estimate array due to no progress");
     return estimate == null ? -1L : estimate.get();
 
   }

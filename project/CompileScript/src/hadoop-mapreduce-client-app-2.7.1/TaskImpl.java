@@ -280,6 +280,9 @@ public abstract class TaskImpl implements Task, EventHandler<TaskEvent> {
         }
       };
 
+  //Project
+  private boolean isSpeculativeFinishedFirst = false;
+
   @Override
   public TaskState getState() {
     readLock.lock();
@@ -535,6 +538,9 @@ public abstract class TaskImpl implements Task, EventHandler<TaskEvent> {
       return mapFinishTime;
   }
 
+  public boolean getIsSpeculativeFinishedFirst(){
+      return isSpeculativeFinishedFirst;
+  }
 
   private TaskStateInternal finished(TaskStateInternal finalState) {
     if (getInternalState() == TaskStateInternal.RUNNING) {
@@ -966,6 +972,26 @@ public abstract class TaskImpl implements Task, EventHandler<TaskEvent> {
         }
       }
       task.finished(TaskStateInternal.SUCCEEDED);
+
+      //Project check Speculative win original or not
+      // success ful id is task.successfulAttempt
+      TaskAttemptId taskAttemptOriginalId = null;
+      long originalTaskStartTime = Long.MAX_VALUE;
+      for(TaskAttempt attempt : task.attempts.values()){
+          if (attempt.getReport().getStartTime() < originalTaskStartTime){
+                originalTaskStartTime = attempt.getReport().getStartTime();
+                taskAttemptOriginalId = attempt.getID();
+          }
+      }
+      if (taskAttemptOriginalId != task.successfulAttempt)
+          {
+            task.isSpeculativeFinishedFirst = true;
+            //System.out.println("Original Id : " + taskAttemptOriginalId + " , Finished ID" + task.successfulAttempt);
+          }
+      else
+          {
+            task.isSpeculativeFinishedFirst = false;
+          }
     }
   }
 

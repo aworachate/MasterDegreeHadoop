@@ -108,4 +108,5 @@ public interface Job {
   Map<Integer,String> getAllTaskInputLocation();
   Map<Integer,String> getAllTaskInputSplitLocation();
   Map<Integer,MapTaskTime> getAllFinishedMapTime();
+  int getNumberOfFailSpeculativeTask();
 }
