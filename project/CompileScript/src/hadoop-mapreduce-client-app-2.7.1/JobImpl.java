@@ -659,7 +659,11 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   private Map<Integer ,String> allTaskInputSplitLocation = new HashMap<Integer, String>();
   private Map<Integer ,MapTaskTime> allFinishedMapTime = new HashMap<Integer, MapTaskTime>();
   private int numberOfFailSpeculativeTask = 0;
-
+  //Project implement EWMA
+  private float ewma_avg_backup_t0 = 0.0f;
+  private float ewma_avg_backup_t1 = -1.0f;
+  private float alpha_backup = 0.2f;
+  private float ramda = 0.0f;
 
   public JobImpl(JobId jobId, ApplicationAttemptId applicationAttemptId,
       Configuration conf, EventHandler eventHandler,
@@ -2019,10 +2023,17 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
       return job.checkReadyForCommit();
     }
 
+
+    private float calEWMABack(long temp_Task_Finish_Time, long temp_Task_Start_Time, float ewma_avg_backup_t0, float alpha)
+    { 
+        long temp_cal = temp_Task_Finish_Time - temp_Task_Start_Time;
+        return (float)(alpha * temp_cal) + (float)((1-alpha) * ewma_avg_backup_t0);
+    }
+
     private void taskSucceeded(JobImpl job, Task task) {
       if (task.getType() == TaskType.MAP) {
         job.succeededMapTaskCount++;
-        //Project
+        //Project now support only Map Task
         TaskId temp_Task_Id = task.getID();
         long temp_Task_Start_Time = task.getReport().getStartTime();
         long temp_Task_Finish_Time = task.getReport().getFinishTime();
@@ -2032,6 +2043,22 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
         //System.out.println("finish task 2 " + succeededMapTaskCount);
         job.allFinishedMapTime.put(job.succeededMapTaskCount,new MapTaskTime(temp_Task_Id,temp_Task_Start_Time,temp_Task_Map_Finish_Time,temp_Task_Finish_Time));
         System.out.println("Successful task time : " + temp_Task_Id + " : Runtime : " + (temp_Task_Finish_Time - temp_Task_Start_Time) + " : MapPhaseTime : " + (temp_Task_Map_Finish_Time - temp_Task_Start_Time));
+        // //Project implement EWMA
+        // if (job.succeededMapTaskCount == 1)
+        //     {
+        //       job.ewma_avg_backup_t0 = (temp_Task_Finish_Time - temp_Task_Start_Time);
+        //     }
+        // else
+        //     {
+        //       job.ewma_avg_backup_t0 = job.ewma_avg_backup_t1;
+        //     }
+        // job.ewma_avg_backup_t1 = calEWMABack(temp_Task_Finish_Time,temp_Task_Start_Time,job.ewma_avg_backup_t0,job.alpha_backup);
+        // System.out.println("EMWA next back up finished time : " + job.ewma_avg_backup_t1);
+        //Project linear ramda
+        //job.ramda = 0.9f - ((0.8f) * (job.succeededMapTaskCount / (float)(job.numMapTasks)));
+        //Project save speed
+        
+        // Check finished task is a speculative task or not
         if((task.getAttempts().size()>1) && (!task.getIsSpeculativeFinishedFirst()))
             {
               job.numberOfFailSpeculativeTask++;
@@ -2248,4 +2275,10 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
   public int getNumberOfFailSpeculativeTask(){
       return numberOfFailSpeculativeTask;
   }
+  // public float getEstimateEMWA(){
+  //     return ewma_avg_backup_t1;
+  // }
+  // public float getRamda(){
+  //     return ramda;
+  // }
 }

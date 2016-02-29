@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("HP_Moonshot/measuer_ratio/kmean_r5.log", "r")
+infile = open("HP_Moonshot/measuer_ratio/kmean_r3_2_EWMA.log", "r")
 #infile = open("pi/bay1.log", "r")
 # progress_t0 = [[]for x in xrange(150)]
 # cpu_per_time_t0 = [[]for x in xrange(150)]
@@ -28,11 +28,14 @@ Taskid = [] * 150
 runtime = [] * 150
 avg_runtime = [] * 150
 ewma_avg = [] * 150
+ewma_avg_from_hadoop = [] * 500
+avg_runtime_from_hadoop = [] * 500
 mapphasetime = [] * 150
 mapratio = [] * 150
 sortratio = [] * 150
 avg_weight = [] * 150
 ewma_avg_weight = [] * 150
+
 #byte_write_per_read = [[]for x in xrange(150)]
 
 # cpu_per_time_t1 = []
@@ -86,6 +89,10 @@ for line in infile.readlines():
 		#else:
 		#	tempPro = ((float(line.split(":")[3].strip()) - 0.667)/0.333 ) + 1
 		#	progress_t0[flag].append(tempPro)
+	elif line.find("Old estimate back up") >=0:
+		avg_runtime_from_hadoop.append((long)(line.split(">>")[1].strip()))
+	elif line.find("EMWA next back up finished time") >=0:
+		ewma_avg_from_hadoop.append((float)(line.split(":")[1].strip()))
 	else:
 		continue
 
@@ -99,6 +106,7 @@ print max(runtime)
 #print Taskid[runtime.index(984141)]
 print ewma_avg
 print ewma_avg_weight
+print ewma_avg_from_hadoop
 #print (progress_t0)
 #print (cpu_per_time_t0[0])
 #print (write_per_time_t0)
@@ -124,13 +132,16 @@ print ewma_avg_weight
 #plt2.xlim([0,1.0])
 #plt2.ylim([0,1.5])
 
-plt2.plot(mapratio,'bo')
-plt2.plot(sortratio,'ro')
-plt2.plot(avg_weight,'go')
-plt2.plot(ewma_avg_weight,'yo')
-# plt2.plot(runtime,'ro')
-# plt2.plot(avg_runtime,'bo')
-# plt2.plot(ewma_avg,'go')
+# plt2.plot(mapratio,'bo')
+# plt2.plot(sortratio,'ro')
+# plt2.plot(avg_weight,'go')
+# plt2.plot(ewma_avg_weight,'yo')
+
+#plt2.plot(ewma_avg,'go')
+#plt2.plot(avg_runtime_from_hadoop,'bo')
+plt2.plot(runtime,'ro')
+plt2.plot(avg_runtime,'bo')
+plt2.plot(ewma_avg_from_hadoop,'go')
 
 #plt2.plot(progress_t0[0],'bo')
 #plt2.plot(progress_t0[1],'ro')

@@ -12,19 +12,20 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("HP_Moonshot/temp.log", "r")
+infile = open("/Users/worachate-a/Desktop/temp16.log", "r")
 #infile = open("pi/bay1.log", "r")
-progress_t0 = [[]for x in xrange(150)]
-cpu_per_time_t0 = [[]for x in xrange(150)]
-write_per_time_t0 = [[]for x in xrange(150)]
-finishedSize_t0 =[[]for x in xrange(150)]
-write_per_done_t0 = [[]for x in xrange(150)]
-task_time_t0 = [[]for x in xrange(150)]
-fin_map_time_t0 = [[]for x in xrange(150)]
-byte_read = [[]for x in xrange(150)]
-byte_write = [[]for x in xrange(150)]
-byte_write_per_read = [[]for x in xrange(150)]
-
+progress_t0 = [[]for x in xrange(550)]
+cpu_per_time_t0 = [[]for x in xrange(550)]
+write_per_time_t0 = [[]for x in xrange(550)]
+finishedSize_t0 =[[]for x in xrange(550)]
+write_per_done_t0 = [[]for x in xrange(550)]
+task_time_t0 = [[]for x in xrange(550)]
+fin_map_time_t0 = [[]for x in xrange(550)]
+byte_read = [[]for x in xrange(550)]
+byte_write = [[]for x in xrange(550)]
+byte_write_per_read = [[]for x in xrange(550)]
+est_old = [[]for x in xrange(550)]
+est_new = [[]for x in xrange(550)]
 # cpu_per_time_t1 = []
 # write_per_time_t1 = []
 # write_per_done_t1 = []
@@ -37,17 +38,28 @@ byte_write_per_read = [[]for x in xrange(150)]
 flag = -1
 mapFin = -1
 for line in infile.readlines():
-	if line.find("attempt_1455851630738_0009_m_000006_0:MAP:MAP:") >=0:
+	if line.find("Esitmate Time from LATE-Algo :") >= 0:
+		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
+		#est_old[flag].append((float)(line.split(":")[1].strip())/(1000))
+		temp1 = (float)(line.split(":")[1].strip())/(1000)
+	if line.find("Esitmate Time from New-Algo :") >= 0:
+		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
+		#est_new[flag].append((float)(line.split(":")[1].strip())/(1000))
+		temp2 = (float)(line.split(":")[1].strip())/(1000)
+
+	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print (temp)
-		flag = 0
-		print line
+		flag = temp 
+		#print line
 		progress_t0[flag].append(float(line.split(":")[3].strip()))
-		print float(line.split(":")[3].strip())
-		if float_eq(float(line.split(":")[3].strip()),0.667):
-			mapFin = 1
-		else:
-			mapFin = -1
+		est_old[flag].append(temp1)
+		est_new[flag].append(temp2)
+		#print float(line.split(":")[3].strip())
+		#if float_eq(float(line.split(":")[3].strip()),0.667):
+		#	mapFin = 1
+		#else:
+		#	mapFin = -1
 		#if float(line.split(":")[3].strip() < 0.667):
 		#	progress_t0[flag].append(float(line.split(":")[3].strip())/0.667)
 		#else:
@@ -69,14 +81,16 @@ for line in infile.readlines():
 	elif line.find("Written/Done") >= 0:
 		write_per_done_t0[flag].append(line.split(":")[1].strip())
 	elif line.find("Task Time") >= 0:
+		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
 		task_time_t0[flag].append(line.split(":")[1].strip())
-		if mapFin == 1:
-			fin_map_time_t0[flag].append(line.split(":")[1].strip())
+		#if mapFin == 1:
+		#	fin_map_time_t0[flag].append(line.split(":")[1].strip())
 	else:
 		continue
 
 infile.close()
-print fin_map_time_t0
+#print len(progress_t0[0])
+#print len(task_time_t0[0])
 #print (progress_t0)
 #print (cpu_per_time_t0[0])
 #print (write_per_time_t0)
@@ -100,13 +114,38 @@ print fin_map_time_t0
 
 #plt1.plot(progress_t0,'ro')
 #plt2.xlim([0,1.0])
-#plt2.ylim([0,1.5])
 
-plt2.plot(progress_t0[0],'bo')
-plt2.plot(progress_t0[1],'ro')
-plt2.plot(progress_t0[2],'go')
-plt2.plot(progress_t0[3],'yo')
-plt2.plot(progress_t0[4],'mo')
+#plt2.ylim([0,1000])
+plt2.ylim([0,1.4])
+#plt2.ylim([0,500])
+#plt2.xlim(0,200000)
+
+# plt2.plot(task_time_t0[0],progress_t0[0],'bo')
+# plt2.plot(task_time_t0[1],progress_t0[1],'go')
+# plt2.plot(task_time_t0[2],progress_t0[2],'yo')
+# plt2.plot(task_time_t0[4],progress_t0[4],'ro')
+# plt2.plot(task_time_t0[5],progress_t0[5],'bx')
+# plt2.plot(task_time_t0[6],progress_t0[6],'gx')
+# plt2.plot(task_time_t0[7],progress_t0[7],'yx')
+# plt2.plot(task_time_t0[80],progress_t0[80],'rx')
+
+plt2.plot(task_time_t0[2],progress_t0[2],'rx')
+
+# print len(task_time_t0[35])
+# print len(est_old[35])
+# print len(est_new[35])
+# print (task_time_t0[35])
+# print (est_old[35])
+# print (est_new[35])
+
+# plt2.plot(task_time_t0[2],est_old[2],'r')
+# plt2.plot(task_time_t0[2],est_new[2],'g')
+# plt2.axhline(y=110,xmin=0,xmax=3,c="blue",linewidth=2.5,zorder=0)
+
+#plt2.plot(progress_t0[1],task_time_t0[1],'ro')
+#plt2.plot(progress_t0[2],task_time_t0[2],'go')
+#plt2.plot(progress_t0[3],'yo')
+#plt2.plot(progress_t0[4],task_time_t0[4],'mo')
 # plt2.plot(progress_t0[5],'ko')
 # plt2.plot(progress_t0[6],'co')
 # plt2.plot(progress_t0[7],'rx')

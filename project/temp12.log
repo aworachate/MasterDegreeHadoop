@@ -1,0 +1,2035 @@
+
+Logged in as: dr.who 
+Application
+About
+Jobs
+Tools
+Log Type: stdout
+Log Upload Time: Mon Feb 29 15:28:21 +0900 2016
+Log Length: 106072
+Now Use estimatorClass : org.apache.hadoop.mapreduce.v2.app.speculate.LegacyTaskRuntimeEstimator_Fixed
+serviceStart1456726823652
+Esitmate Time from LATE-Algo : 276246
+Esitmate Time from New-Algo : 20376
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.073713094
+-1.0
+I/O Intensive
+Task Time : 20363
+========================================
+Esitmate Time from LATE-Algo : 170217
+Esitmate Time from New-Algo : 20507
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.120428376
+-1.0
+I/O Intensive
+Task Time : 20499
+========================================
+Esitmate Time from LATE-Algo : 286474
+Esitmate Time from New-Algo : 20661
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.07207629
+-1.0
+I/O Intensive
+Task Time : 20648
+========================================
+Esitmate Time from LATE-Algo : 227768
+Esitmate Time from New-Algo : 50953
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.10328033
+-1.0
+I/O Intensive
+Task Time : 23524
+========================================
+Esitmate Time from LATE-Algo : 118321
+Esitmate Time from New-Algo : 35802
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.19900037
+-1.0
+I/O Intensive
+Task Time : 23546
+========================================
+Esitmate Time from LATE-Algo : 220059
+Esitmate Time from New-Algo : 49833
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.10818424
+-1.0
+I/O Intensive
+Task Time : 23807
+========================================
+Esitmate Time from LATE-Algo : 258074
+Esitmate Time from New-Algo : 81244
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.10328033
+-1.0
+I/O Intensive
+Task Time : 26654
+========================================
+Esitmate Time from LATE-Algo : 134070
+Esitmate Time from New-Algo : 51543
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.19900037
+-1.0
+I/O Intensive
+Task Time : 26680
+========================================
+Esitmate Time from LATE-Algo : 249001
+Esitmate Time from New-Algo : 78760
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.10818424
+-1.0
+I/O Intensive
+Task Time : 26938
+========================================
+Esitmate Time from LATE-Algo : 288409
+Esitmate Time from New-Algo : 111564
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.10328033
+-1.0
+I/O Intensive
+Task Time : 29787
+========================================
+Esitmate Time from LATE-Algo : 149788
+Esitmate Time from New-Algo : 67254
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.19900037
+-1.0
+I/O Intensive
+Task Time : 29808
+========================================
+Esitmate Time from LATE-Algo : 277961
+Esitmate Time from New-Algo : 107705
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.10818424
+-1.0
+I/O Intensive
+Task Time : 30071
+========================================
+Esitmate Time from LATE-Algo : 236910
+Esitmate Time from New-Algo : 110689
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.13895938
+-1.0
+I/O Intensive
+Task Time : 32921
+========================================
+Esitmate Time from LATE-Algo : 165517
+Esitmate Time from New-Algo : 82975
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.19900037
+-1.0
+I/O Intensive
+Task Time : 32938
+========================================
+Esitmate Time from LATE-Algo : 291093
+Esitmate Time from New-Algo : 130647
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.11405251
+-1.0
+I/O Intensive
+Task Time : 33200
+========================================
+Esitmate Time from LATE-Algo : 185306
+Esitmate Time from New-Algo : 100961
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.19454755
+-1.0
+I/O Intensive
+Task Time : 36051
+========================================
+Esitmate Time from LATE-Algo : 202078
+Esitmate Time from New-Algo : 107889
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.17987105
+-1.0
+I/O Intensive
+Task Time : 36348
+========================================
+Esitmate Time from LATE-Algo : 108250
+Esitmate Time from New-Algo : 71914
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.3608378
+-1.0
+I/O Intensive
+Task Time : 39061
+========================================
+Esitmate Time from LATE-Algo : 201328
+Esitmate Time from New-Algo : 116974
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.19454755
+-1.0
+I/O Intensive
+Task Time : 39168
+========================================
+Esitmate Time from LATE-Algo : 207602
+Esitmate Time from New-Algo : 119616
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.19015653
+-1.0
+I/O Intensive
+Task Time : 39477
+========================================
+Esitmate Time from LATE-Algo : 116905
+Esitmate Time from New-Algo : 80565
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.3608378
+-1.0
+I/O Intensive
+Task Time : 42184
+========================================
+Esitmate Time from LATE-Algo : 217448
+Esitmate Time from New-Algo : 133086
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.19454755
+-1.0
+I/O Intensive
+Task Time : 42304
+========================================
+Esitmate Time from LATE-Algo : 224062
+Esitmate Time from New-Algo : 136068
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.19015653
+-1.0
+I/O Intensive
+Task Time : 42607
+========================================
+Esitmate Time from LATE-Algo : 125599
+Esitmate Time from New-Algo : 89254
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.3608378
+-1.0
+I/O Intensive
+Task Time : 45321
+========================================
+Esitmate Time from LATE-Algo : 224397
+Esitmate Time from New-Algo : 144124
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.20246617
+0.8956045165408404
+CPU Intensive
+Task Time : 45433
+========================================
+Esitmate Time from LATE-Algo : 240475
+Esitmate Time from New-Algo : 152473
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.19015653
+-1.0
+I/O Intensive
+Task Time : 45728
+========================================
+Esitmate Time from LATE-Algo : 119024
+Esitmate Time from New-Algo : 89157
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.4072782
+-1.0
+I/O Intensive
+Task Time : 48476
+========================================
+Esitmate Time from LATE-Algo : 179112
+Esitmate Time from New-Algo : 124359
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.27127665
+0.913133917699509
+CPU Intensive
+Task Time : 48589
+========================================
+Esitmate Time from LATE-Algo : 99309
+Esitmate Time from New-Algo : 80334
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.5196995
+-1.0
+I/O Intensive
+Task Time : 51611
+========================================
+Esitmate Time from LATE-Algo : 182030
+Esitmate Time from New-Algo : 130640
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.284013
+0.9333653495342938
+CPU Intensive
+Task Time : 51699
+========================================
+Esitmate Time from LATE-Algo : 194028
+Esitmate Time from New-Algo : 137334
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.26717168
+0.9600879646598122
+CPU Intensive
+Task Time : 51839
+========================================
+Esitmate Time from LATE-Algo : 105332
+Esitmate Time from New-Algo : 86354
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.5196995
+-1.0
+I/O Intensive
+Task Time : 54741
+========================================
+Esitmate Time from LATE-Algo : 192977
+Esitmate Time from New-Algo : 141582
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.284013
+0.9455361268179424
+CPU Intensive
+Task Time : 54808
+========================================
+Esitmate Time from LATE-Algo : 205665
+Esitmate Time from New-Algo : 148965
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.26717168
+0.9619541519448147
+CPU Intensive
+Task Time : 54948
+========================================
+Esitmate Time from LATE-Algo : 111318
+Esitmate Time from New-Algo : 92337
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.5196995
+-1.0
+I/O Intensive
+Task Time : 57852
+========================================
+Esitmate Time from LATE-Algo : 204099
+Esitmate Time from New-Algo : 152699
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.284013
+0.9551977216628054
+CPU Intensive
+Task Time : 57967
+========================================
+Esitmate Time from LATE-Algo : 209078
+Esitmate Time from New-Algo : 155335
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.277809
+0.9648452668683511
+CPU Intensive
+Task Time : 58084
+========================================
+Esitmate Time from LATE-Algo : 117365
+Esitmate Time from New-Algo : 98382
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:MAP:0.5196995
+-1.0
+I/O Intensive
+Task Time : 60995
+========================================
+Esitmate Time from LATE-Algo : 178832
+Esitmate Time from New-Algo : 139114
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.34238103
+0.9648452668683511
+CPU Intensive
+Task Time : 61229
+========================================
+Esitmate Time from LATE-Algo : 170865
+Esitmate Time from New-Algo : 136876
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.3750487
+0.9551977216628054
+CPU Intensive
+Task Time : 64083
+========================================
+Esitmate Time from LATE-Algo : 183466
+Esitmate Time from New-Algo : 145163
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.3506245
+0.9648452668683511
+CPU Intensive
+Task Time : 64328
+========================================
+Esitmate Time from LATE-Algo : 125612
+Esitmate Time from New-Algo : 106624
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.5196995
+-1.0
+I/O Intensive
+Task Time : 65281
+========================================
+Esitmate Time from LATE-Algo : 100668
+Esitmate Time from New-Algo : 90434
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 67146
+========================================
+Esitmate Time from LATE-Algo : 179166
+Esitmate Time from New-Algo : 145172
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.3750487
+0.9551977216628054
+CPU Intensive
+Task Time : 67196
+========================================
+Esitmate Time from LATE-Algo : 192291
+Esitmate Time from New-Algo : 153983
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.3506245
+0.9648452668683511
+CPU Intensive
+Task Time : 67422
+========================================
+Esitmate Time from LATE-Algo : 105328
+Esitmate Time from New-Algo : 95094
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 70254
+========================================
+Esitmate Time from LATE-Algo : 187428
+Esitmate Time from New-Algo : 153431
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.3750487
+0.9551977216628054
+CPU Intensive
+Task Time : 70295
+========================================
+Esitmate Time from LATE-Algo : 198846
+Esitmate Time from New-Algo : 161210
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.3546956
+0.9648452668683511
+CPU Intensive
+Task Time : 70530
+========================================
+Esitmate Time from LATE-Algo : 109985
+Esitmate Time from New-Algo : 99750
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.667
+-1.0
+I/O Intensive
+Task Time : 73360
+========================================
+Esitmate Time from LATE-Algo : 186992
+Esitmate Time from New-Algo : 155435
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.39270467
+0.9551977216628054
+CPU Intensive
+Task Time : 73433
+========================================
+Esitmate Time from LATE-Algo : 172468
+Esitmate Time from New-Algo : 144753
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.42748702
+0.9648452668683511
+CPU Intensive
+Task Time : 73728
+========================================
+Esitmate Time from LATE-Algo : 166830
+Esitmate Time from New-Algo : 142758
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.45889765
+0.9551977216628054
+CPU Intensive
+Task Time : 76558
+========================================
+Esitmate Time from LATE-Algo : 172961
+Esitmate Time from New-Algo : 147058
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.4441634
+0.9648452668683511
+CPU Intensive
+Task Time : 76823
+========================================
+Esitmate Time from LATE-Algo : 114978
+Esitmate Time from New-Algo : 105839
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.6915756
+-1.0
+I/O Intensive
+Task Time : 79516
+========================================
+Esitmate Time from LATE-Algo : 171861
+Esitmate Time from New-Algo : 148233
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.46356523
+0.9551977216628054
+CPU Intensive
+Task Time : 79669
+========================================
+Esitmate Time from LATE-Algo : 179945
+Esitmate Time from New-Algo : 154038
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.4441634
+0.9648452668683511
+CPU Intensive
+Task Time : 79925
+========================================
+Esitmate Time from LATE-Algo : 114956
+Esitmate Time from New-Algo : 106939
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.7187172
+-1.0
+I/O Intensive
+Task Time : 82621
+========================================
+Esitmate Time from LATE-Algo : 178553
+Esitmate Time from New-Algo : 154921
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.46356523
+0.9551977216628054
+CPU Intensive
+Task Time : 82771
+========================================
+Esitmate Time from LATE-Algo : 186915
+Esitmate Time from New-Algo : 161005
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.4441634
+0.9648452668683511
+CPU Intensive
+Task Time : 83021
+========================================
+Esitmate Time from LATE-Algo : 114838
+Esitmate Time from New-Algo : 107885
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.7464769
+-1.0
+I/O Intensive
+Task Time : 85724
+========================================
+Esitmate Time from LATE-Algo : 185281
+Esitmate Time from New-Algo : 161646
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.46356523
+0.9551977216628054
+CPU Intensive
+Task Time : 85890
+========================================
+Esitmate Time from LATE-Algo : 180960
+Esitmate Time from New-Algo : 158177
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.47617492
+0.9648452668683511
+CPU Intensive
+Task Time : 86169
+========================================
+Esitmate Time from LATE-Algo : 114552
+Esitmate Time from New-Algo : 108625
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.77535003
+-1.0
+I/O Intensive
+Task Time : 88818
+========================================
+Esitmate Time from LATE-Algo : 168356
+Esitmate Time from New-Algo : 150007
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.5303636
+0.9648452668683511
+CPU Intensive
+Task Time : 89290
+========================================
+Esitmate Time from LATE-Algo : 114505
+Esitmate Time from New-Algo : 109483
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.80274737
+-1.0
+I/O Intensive
+Task Time : 91919
+========================================
+Esitmate Time from LATE-Algo : 167131
+Esitmate Time from New-Algo : 150438
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.5504757
+0.9551977216628054
+CPU Intensive
+Task Time : 92002
+========================================
+Esitmate Time from LATE-Algo : 173965
+Esitmate Time from New-Algo : 155667
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.53108793
+0.9648452668683511
+CPU Intensive
+Task Time : 92391
+========================================
+Esitmate Time from LATE-Algo : 113109
+Esitmate Time from New-Algo : 109225
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.8400901
+-1.0
+I/O Intensive
+Task Time : 95022
+========================================
+Esitmate Time from LATE-Algo : 172786
+Esitmate Time from New-Algo : 156090
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.5504757
+0.9551977216628054
+CPU Intensive
+Task Time : 95115
+========================================
+Esitmate Time from LATE-Algo : 179800
+Esitmate Time from New-Algo : 161499
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.53108793
+0.9648452668683511
+CPU Intensive
+Task Time : 95490
+========================================
+Esitmate Time from LATE-Algo : 111922
+Esitmate Time from New-Algo : 109068
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.87698984
+-1.0
+I/O Intensive
+Task Time : 98155
+========================================
+Esitmate Time from LATE-Algo : 178411
+Esitmate Time from New-Algo : 161711
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.5504757
+0.9551977216628054
+CPU Intensive
+Task Time : 98211
+========================================
+Esitmate Time from LATE-Algo : 185620
+Esitmate Time from New-Algo : 167316
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.53108793
+0.9648452668683511
+CPU Intensive
+Task Time : 98581
+========================================
+Esitmate Time from LATE-Algo : 110958
+Esitmate Time from New-Algo : 109022
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.9127307
+-1.0
+I/O Intensive
+Task Time : 101275
+========================================
+Esitmate Time from LATE-Algo : 172591
+Esitmate Time from New-Algo : 158202
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.5871143
+0.9551977216628054
+CPU Intensive
+Task Time : 101331
+========================================
+Esitmate Time from LATE-Algo : 109237
+Esitmate Time from New-Algo : 108316
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.9558472
+-1.0
+I/O Intensive
+Task Time : 104414
+========================================
+Esitmate Time from LATE-Algo : 164149
+Esitmate Time from New-Algo : 152438
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.636175
+0.9551977216628054
+CPU Intensive
+Task Time : 104428
+========================================
+Esitmate Time from LATE-Algo : 168442
+Esitmate Time from New-Algo : 155801
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.62153685
+0.9648452668683511
+CPU Intensive
+Task Time : 104693
+========================================
+Esitmate Time from LATE-Algo : 109235
+Esitmate Time from New-Algo : 108935
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:0.98421496
+-1.0
+I/O Intensive
+Task Time : 107511
+========================================
+Esitmate Time from LATE-Algo : 169010
+Esitmate Time from New-Algo : 157296
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.636175
+0.9551977216628054
+CPU Intensive
+Task Time : 107520
+========================================
+Esitmate Time from LATE-Algo : 173428
+Esitmate Time from New-Algo : 160785
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.62153685
+0.9648452668683511
+CPU Intensive
+Task Time : 107792
+========================================
+Esitmate Time from LATE-Algo : 109889
+Esitmate Time from New-Algo : 109918
+Update attemptID:attempt_1456657321845_0032_m_000002_0
+attempt_1456657321845_0032_m_000002_0:MAP:SORT:1.0
+-1.0
+I/O Intensive
+Task Time : 109889
+========================================
+Successful task time : task_1456657321845_0032_m_000002 : Runtime : 110008 : MapPhaseTime : 65275
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726937893 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 160785 , estimatedEndTime >> 1456726988191
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726937893 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 157296 , estimatedEndTime >> 1456726984704
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 173881
+Esitmate Time from New-Algo : 178841
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.636175
+0.9551977216628054
+CPU Intensive
+Task Time : 110619
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178412
+Esitmate Time from New-Algo : 182312
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.62153685
+0.9648452668683511
+CPU Intensive
+Task Time : 110890
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726938908 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182312 , estimatedEndTime >> 1456727009718
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726938908 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178841 , estimatedEndTime >> 1456727006249
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726939913 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182312 , estimatedEndTime >> 1456727009718
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726939913 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178841 , estimatedEndTime >> 1456727006249
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726940919 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182312 , estimatedEndTime >> 1456727009718
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726940919 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178841 , estimatedEndTime >> 1456727006249
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 171679
+Esitmate Time from New-Algo : 178599
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:MAP:0.6625842
+0.9551977216628054
+CPU Intensive
+Task Time : 113752
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 171949
+Esitmate Time from New-Algo : 178902
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.6625842
+0.9551977216628054
+CPU Intensive
+Task Time : 113931
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179679
+Esitmate Time from New-Algo : 184878
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:MAP:0.6345359
+0.9648452668683511
+CPU Intensive
+Task Time : 114013
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726941925 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 184878 , estimatedEndTime >> 1456727012284
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726941925 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178902 , estimatedEndTime >> 1456727006310
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 181816
+Esitmate Time from New-Algo : 187232
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.6345359
+0.9648452668683511
+CPU Intensive
+Task Time : 115369
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726942931 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 187232 , estimatedEndTime >> 1456727014638
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726942931 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178902 , estimatedEndTime >> 1456727006310
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726943936 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 187232 , estimatedEndTime >> 1456727014638
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726943936 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178902 , estimatedEndTime >> 1456727006310
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 175188
+Esitmate Time from New-Algo : 182974
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.667
+0.9551977216628054
+CPU Intensive
+Task Time : 116851
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 175607
+Esitmate Time from New-Algo : 183249
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.667
+0.9648452668683511
+CPU Intensive
+Task Time : 117130
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726944940 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 183249 , estimatedEndTime >> 1456727010655
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726944940 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182974 , estimatedEndTime >> 1456727010382
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726945945 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 183249 , estimatedEndTime >> 1456727010655
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726945945 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182974 , estimatedEndTime >> 1456727010382
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726946951 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 183249 , estimatedEndTime >> 1456727010655
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726946951 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182974 , estimatedEndTime >> 1456727010382
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179836
+Esitmate Time from New-Algo : 188198
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.667
+0.9551977216628054
+CPU Intensive
+Task Time : 119951
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 180250
+Esitmate Time from New-Algo : 188468
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.667
+0.9648452668683511
+CPU Intensive
+Task Time : 120227
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726947957 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188468 , estimatedEndTime >> 1456727015874
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726947957 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188198 , estimatedEndTime >> 1456727015606
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726948962 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188468 , estimatedEndTime >> 1456727015874
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726948962 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188198 , estimatedEndTime >> 1456727015606
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726949968 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188468 , estimatedEndTime >> 1456727015874
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726949968 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188198 , estimatedEndTime >> 1456727015606
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 180787
+Esitmate Time from New-Algo : 188703
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.68064296
+0.9551977216628054
+CPU Intensive
+Task Time : 123052
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 184770
+Esitmate Time from New-Algo : 193522
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.66762686
+0.9648452668683511
+CPU Intensive
+Task Time : 123358
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726950974 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193522 , estimatedEndTime >> 1456727020928
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726950974 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188703 , estimatedEndTime >> 1456727016111
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726951979 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193522 , estimatedEndTime >> 1456727020928
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726951979 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188703 , estimatedEndTime >> 1456727016111
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726952985 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193522 , estimatedEndTime >> 1456727020928
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726952985 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 188703 , estimatedEndTime >> 1456727016111
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179689
+Esitmate Time from New-Algo : 186659
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.7021837
+0.9551977216628054
+CPU Intensive
+Task Time : 126175
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726953991 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193522 , estimatedEndTime >> 1456727020928
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726953991 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 186659 , estimatedEndTime >> 1456727014067
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 186020
+Esitmate Time from New-Algo : 194307
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.6818908
+0.9648452668683511
+CPU Intensive
+Task Time : 126846
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726954997 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 194307 , estimatedEndTime >> 1456727021713
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726954997 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 186659 , estimatedEndTime >> 1456727014067
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726956002 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 194307 , estimatedEndTime >> 1456727021713
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726956002 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 186659 , estimatedEndTime >> 1456727014067
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179125
+Esitmate Time from New-Algo : 185350
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.72188133
+0.9551977216628054
+CPU Intensive
+Task Time : 129307
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726957008 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 194307 , estimatedEndTime >> 1456727021713
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726957008 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 185350 , estimatedEndTime >> 1456727012758
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 185589
+Esitmate Time from New-Algo : 193085
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.7001887
+0.9648452668683511
+CPU Intensive
+Task Time : 129948
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726958010 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193085 , estimatedEndTime >> 1456727020491
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726958010 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 185350 , estimatedEndTime >> 1456727012758
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726959015 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193085 , estimatedEndTime >> 1456727020491
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726959015 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 185350 , estimatedEndTime >> 1456727012758
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178675
+Esitmate Time from New-Algo : 184240
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.7411142
+0.9551977216628054
+CPU Intensive
+Task Time : 132419
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 182069
+Esitmate Time from New-Algo : 57512
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726960020 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 193085 , estimatedEndTime >> 1456727020491
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726960020 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 184240 , estimatedEndTime >> 1456727011648
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 185597
+Esitmate Time from New-Algo : 192458
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.7169801
+0.9648452668683511
+CPU Intensive
+Task Time : 133070
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726961026 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 192458 , estimatedEndTime >> 1456727019864
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726961026 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 184240 , estimatedEndTime >> 1456727011648
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726962032 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 192458 , estimatedEndTime >> 1456727019864
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726962032 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 184240 , estimatedEndTime >> 1456727011648
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178348
+Esitmate Time from New-Algo : 183327
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.75977707
+0.9551977216628054
+CPU Intensive
+Task Time : 135505
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726963037 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 192458 , estimatedEndTime >> 1456727019864
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726963037 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 183327 , estimatedEndTime >> 1456727010735
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 210239
+Esitmate Time from New-Algo : 78430
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 185662
+Esitmate Time from New-Algo : 191945
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.7333801
+0.9648452668683511
+CPU Intensive
+Task Time : 136161
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726964043 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191945 , estimatedEndTime >> 1456727019351
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726964043 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 183327 , estimatedEndTime >> 1456727010735
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726965049 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191945 , estimatedEndTime >> 1456727019351
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726965049 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 183327 , estimatedEndTime >> 1456727010735
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177789
+Esitmate Time from New-Algo : 182178
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.7795504
+0.9551977216628054
+CPU Intensive
+Task Time : 138596
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726966054 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191945 , estimatedEndTime >> 1456727019351
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726966054 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182178 , estimatedEndTime >> 1456727009586
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 238400
+Esitmate Time from New-Algo : 99349
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 185625
+Esitmate Time from New-Algo : 191342
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.75017625
+0.9648452668683511
+CPU Intensive
+Task Time : 139252
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726967059 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191342 , estimatedEndTime >> 1456727018748
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726967059 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182178 , estimatedEndTime >> 1456727009586
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726968065 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191342 , estimatedEndTime >> 1456727018748
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726968065 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182178 , estimatedEndTime >> 1456727009586
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726969070 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 191342 , estimatedEndTime >> 1456727018748
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726969070 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 182178 , estimatedEndTime >> 1456727009586
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177625
+Esitmate Time from New-Algo : 181532
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.79767793
+0.9551977216628054
+CPU Intensive
+Task Time : 141688
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 266552
+Esitmate Time from New-Algo : 120260
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 184125
+Esitmate Time from New-Algo : 189018
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.7731687
+0.9648452668683511
+CPU Intensive
+Task Time : 142360
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726970075 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 189018 , estimatedEndTime >> 1456727016424
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726970075 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 181532 , estimatedEndTime >> 1456727008940
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726971081 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 189018 , estimatedEndTime >> 1456727016424
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726971081 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 181532 , estimatedEndTime >> 1456727008940
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726972086 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 189018 , estimatedEndTime >> 1456727016424
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726972086 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 181532 , estimatedEndTime >> 1456727008940
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177077
+Esitmate Time from New-Algo : 180468
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.8175915
+0.9551977216628054
+CPU Intensive
+Task Time : 144777
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 294749
+Esitmate Time from New-Algo : 141205
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 183676
+Esitmate Time from New-Algo : 188005
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.79196936
+0.9648452668683511
+CPU Intensive
+Task Time : 145466
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726973090 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188005 , estimatedEndTime >> 1456727015411
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726973090 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 180468 , estimatedEndTime >> 1456727007876
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726974095 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188005 , estimatedEndTime >> 1456727015411
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726974095 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 180468 , estimatedEndTime >> 1456727007876
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726975098 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 188005 , estimatedEndTime >> 1456727015411
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726975098 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 180468 , estimatedEndTime >> 1456727007876
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 176558
+Esitmate Time from New-Algo : 179474
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.83748305
+0.9551977216628054
+CPU Intensive
+Task Time : 147865
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 322793
+Esitmate Time from New-Algo : 162037
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179757
+Esitmate Time from New-Algo : 182998
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.82642484
+0.9648452668683511
+CPU Intensive
+Task Time : 148556
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726976103 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182998 , estimatedEndTime >> 1456727010404
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726976103 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179474 , estimatedEndTime >> 1456727006882
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726977108 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182998 , estimatedEndTime >> 1456727010404
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726977108 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179474 , estimatedEndTime >> 1456727006882
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726978110 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182998 , estimatedEndTime >> 1456727010404
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726978110 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179474 , estimatedEndTime >> 1456727006882
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 175727
+Esitmate Time from New-Algo : 178155
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.8590044
+0.9551977216628054
+CPU Intensive
+Task Time : 150951
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 351476
+Esitmate Time from New-Algo : 183343
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179257
+Esitmate Time from New-Algo : 182038
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.8459429
+0.9648452668683511
+CPU Intensive
+Task Time : 151642
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726979115 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182038 , estimatedEndTime >> 1456727009444
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726979115 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178155 , estimatedEndTime >> 1456727005563
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726980120 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182038 , estimatedEndTime >> 1456727009444
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726980120 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178155 , estimatedEndTime >> 1456727005563
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726981124 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182038 , estimatedEndTime >> 1456727009444
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726981124 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178155 , estimatedEndTime >> 1456727005563
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 175636
+Esitmate Time from New-Algo : 177701
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.87725586
+0.9551977216628054
+CPU Intensive
+Task Time : 154078
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 379520
+Esitmate Time from New-Algo : 204174
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726982129 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182038 , estimatedEndTime >> 1456727009444
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726982129 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 177701 , estimatedEndTime >> 1456727005109
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178741
+Esitmate Time from New-Algo : 181086
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.86570776
+0.9648452668683511
+CPU Intensive
+Task Time : 154738
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726983134 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 181086 , estimatedEndTime >> 1456727008492
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726983134 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 177701 , estimatedEndTime >> 1456727005109
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726984136 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 181086 , estimatedEndTime >> 1456727008492
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726984136 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 177701 , estimatedEndTime >> 1456727005109
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 176314
+Esitmate Time from New-Algo : 178132
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.8913913
+0.9551977216628054
+CPU Intensive
+Task Time : 157165
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 407555
+Esitmate Time from New-Algo : 224999
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726985141 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 181086 , estimatedEndTime >> 1456727008492
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726985141 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178132 , estimatedEndTime >> 1456727005540
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726986146 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 181086 , estimatedEndTime >> 1456727008492
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726986146 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178132 , estimatedEndTime >> 1456727005540
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 180330
+Esitmate Time from New-Algo : 182338
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.88519067
+0.9648452668683511
+CPU Intensive
+Task Time : 159627
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726987148 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182338 , estimatedEndTime >> 1456727009744
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726987148 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178132 , estimatedEndTime >> 1456727005540
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177197
+Esitmate Time from New-Algo : 178797
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.9044672
+0.9551977216628054
+CPU Intensive
+Task Time : 160269
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726988153 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182338 , estimatedEndTime >> 1456727009744
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726988153 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178797 , estimatedEndTime >> 1456727006205
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 435617
+Esitmate Time from New-Algo : 245844
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726989158 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 182338 , estimatedEndTime >> 1456727009744
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726989158 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178797 , estimatedEndTime >> 1456727006205
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178627
+Esitmate Time from New-Algo : 180108
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.9109061
+0.9648452668683511
+CPU Intensive
+Task Time : 162713
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726990162 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 180108 , estimatedEndTime >> 1456727007514
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726990162 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178797 , estimatedEndTime >> 1456727006205
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177556
+Esitmate Time from New-Algo : 178886
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.9199907
+0.9551977216628054
+CPU Intensive
+Task Time : 163350
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726991164 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 180108 , estimatedEndTime >> 1456727007514
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726991164 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178886 , estimatedEndTime >> 1456727006294
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 463706
+Esitmate Time from New-Algo : 266709
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726992169 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 180108 , estimatedEndTime >> 1456727007514
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726992169 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178886 , estimatedEndTime >> 1456727006294
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726993173 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 180108 , estimatedEndTime >> 1456727007514
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726993173 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178886 , estimatedEndTime >> 1456727006294
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178105
+Esitmate Time from New-Algo : 179231
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.93083483
+0.9648452668683511
+CPU Intensive
+Task Time : 165787
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 177862
+Esitmate Time from New-Algo : 178927
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.93572307
+0.9551977216628054
+CPU Intensive
+Task Time : 166430
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726994178 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179231 , estimatedEndTime >> 1456727006637
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726994178 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178927 , estimatedEndTime >> 1456727006335
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 491777
+Esitmate Time from New-Algo : 287560
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726995183 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179231 , estimatedEndTime >> 1456727006637
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726995183 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178927 , estimatedEndTime >> 1456727006335
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726996188 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179231 , estimatedEndTime >> 1456727006637
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726996188 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 178927 , estimatedEndTime >> 1456727006335
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178327
+Esitmate Time from New-Algo : 179191
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.9469678
+0.9648452668683511
+CPU Intensive
+Task Time : 168870
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178261
+Esitmate Time from New-Algo : 179080
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.9509318
+0.9551977216628054
+CPU Intensive
+Task Time : 169515
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726997192 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179191 , estimatedEndTime >> 1456727006597
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726997192 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179080 , estimatedEndTime >> 1456727006488
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 519785
+Esitmate Time from New-Algo : 308365
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726998197 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179191 , estimatedEndTime >> 1456727006597
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726998197 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179080 , estimatedEndTime >> 1456727006488
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456726999202 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179191 , estimatedEndTime >> 1456727006597
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456726999202 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179080 , estimatedEndTime >> 1456727006488
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178464
+Esitmate Time from New-Algo : 179068
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.9635351
+0.9648452668683511
+CPU Intensive
+Task Time : 171957
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178537
+Esitmate Time from New-Algo : 179105
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.9667203
+0.9551977216628054
+CPU Intensive
+Task Time : 172596
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727000207 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179068 , estimatedEndTime >> 1456727006474
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727000207 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179105 , estimatedEndTime >> 1456727006513
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 547892
+Esitmate Time from New-Algo : 329243
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727001211 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179068 , estimatedEndTime >> 1456727006474
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727001211 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179105 , estimatedEndTime >> 1456727006513
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727002215 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179068 , estimatedEndTime >> 1456727006474
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727002215 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179105 , estimatedEndTime >> 1456727006513
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178587
+Esitmate Time from New-Algo : 178939
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.98017454
+0.9648452668683511
+CPU Intensive
+Task Time : 175047
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 178965
+Esitmate Time from New-Algo : 179304
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.98161495
+0.9551977216628054
+CPU Intensive
+Task Time : 175675
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727003219 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 178939 , estimatedEndTime >> 1456727006345
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727003219 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179304 , estimatedEndTime >> 1456727006712
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 575864
+Esitmate Time from New-Algo : 350021
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727004223 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 178939 , estimatedEndTime >> 1456727006345
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727004223 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179304 , estimatedEndTime >> 1456727006712
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727005228 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 178939 , estimatedEndTime >> 1456727006345
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727005228 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179304 , estimatedEndTime >> 1456727006712
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179190
+Esitmate Time from New-Algo : 179339
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:0.9940783
+0.9648452668683511
+CPU Intensive
+Task Time : 178129
+========================================
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179661
+Esitmate Time from New-Algo : 179795
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:0.9953053
+0.9551977216628054
+CPU Intensive
+Task Time : 178818
+========================================
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727006232 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179339 , estimatedEndTime >> 1456727006745
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727006232 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179795 , estimatedEndTime >> 1456727007203
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 603863
+Esitmate Time from New-Algo : 370819
+Task ID >> task_1456657321845_0032_m_000001 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000001_0
+Now >> 1456727007234 taskAttemptStartTime >> 1456726827406 , estimatedRunTime >> 179339 , estimatedEndTime >> 1456727006745
+Task ID >> task_1456657321845_0032_m_000000 , runningTaskAttemptID >> attempt_1456657321845_0032_m_000000_0
+Now >> 1456727007234 taskAttemptStartTime >> 1456726827408 , estimatedRunTime >> 179795 , estimatedEndTime >> 1456727007203
+Avg. MAP ratio 0.5933659Avg. MAP runtime 65.275Avg. Map Speed : 0.009090248
+Avg. Sort ratio 0.40663406Avg. sort runtime 44.733Avg. Sort Speed : 0.009090248
+Speed Ratio : 1.4592135
+Esitmate Time from LATE-Algo : 179909
+Esitmate Time from New-Algo : 179973
+Update attemptID:attempt_1456657321845_0032_m_000001_0
+attempt_1456657321845_0032_m_000001_0:MAP:SORT:1.0
+0.9648452668683511
+CPU Intensive
+Task Time : 179909
+========================================
+Successful task time : task_1456657321845_0032_m_000001 : Runtime : 179974 : MapPhaseTime : 115351
+Avg. MAP ratio 0.6171487Avg. MAP runtime 90.313Avg. Map Speed : 0.0068334425
+Avg. Sort ratio 0.3828513Avg. sort runtime 54.678Avg. Sort Speed : 0.0070019257
+Speed Ratio : 1.6119802
+Esitmate Time from LATE-Algo : 180400
+Esitmate Time from New-Algo : 180461
+Update attemptID:attempt_1456657321845_0032_m_000000_0
+attempt_1456657321845_0032_m_000000_0:MAP:SORT:1.0
+0.9551977216628054
+CPU Intensive
+Task Time : 180400
+========================================
+Successful task time : task_1456657321845_0032_m_000000 : Runtime : 180473 : MapPhaseTime : 113916
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 633176
+Esitmate Time from New-Algo : 400312
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 662273
+Esitmate Time from New-Algo : 421677
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 691424
+Esitmate Time from New-Algo : 443080
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 694448
+Esitmate Time from New-Algo : 445301
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 695465
+Esitmate Time from New-Algo : 446047
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 120900
+Esitmate Time from New-Algo : 117315
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 125562
+Esitmate Time from New-Algo : 122318
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 129726
+Esitmate Time from New-Algo : 126881
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 133822
+Esitmate Time from New-Algo : 131305
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 137810
+Esitmate Time from New-Algo : 135609
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 141753
+Esitmate Time from New-Algo : 139859
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 145352
+Esitmate Time from New-Algo : 143742
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 149015
+Esitmate Time from New-Algo : 147679
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 152638
+Esitmate Time from New-Algo : 151563
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 156244
+Esitmate Time from New-Algo : 155419
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 159816
+Esitmate Time from New-Algo : 159230
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 163468
+Esitmate Time from New-Algo : 163115
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 166947
+Esitmate Time from New-Algo : 166810
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 170412
+Esitmate Time from New-Algo : 170483
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 173890
+Esitmate Time from New-Algo : 174161
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 177288
+Esitmate Time from New-Algo : 177747
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 180602
+Esitmate Time from New-Algo : 181237
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 183900
+Esitmate Time from New-Algo : 184702
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 187172
+Esitmate Time from New-Algo : 188134
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 190425
+Esitmate Time from New-Algo : 191538
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 193595
+Esitmate Time from New-Algo : 194848
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 196730
+Esitmate Time from New-Algo : 198114
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 200035
+Esitmate Time from New-Algo : 201557
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 203158
+Esitmate Time from New-Algo : 204800
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 206226
+Esitmate Time from New-Algo : 207978
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 209271
+Esitmate Time from New-Algo : 211126
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 212183
+Esitmate Time from New-Algo : 214128
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 215135
+Esitmate Time from New-Algo : 217166
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 218009
+Esitmate Time from New-Algo : 220116
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 220977
+Esitmate Time from New-Algo : 223165
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 223894
+Esitmate Time from New-Algo : 226153
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 226554
+Esitmate Time from New-Algo : 228860
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 229387
+Esitmate Time from New-Algo : 231752
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 232126
+Esitmate Time from New-Algo : 234538
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 234909
+Esitmate Time from New-Algo : 237370
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 237552
+Esitmate Time from New-Algo : 240044
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 240182
+Esitmate Time from New-Algo : 242703
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 242777
+Esitmate Time from New-Algo : 245322
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 245324
+Esitmate Time from New-Algo : 247886
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 247981
+Esitmate Time from New-Algo : 250567
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 250667
+Esitmate Time from New-Algo : 253277
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 253280
+Esitmate Time from New-Algo : 255907
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 255831
+Esitmate Time from New-Algo : 258466
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 256972
+Esitmate Time from New-Algo : 259490
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 259210
+Esitmate Time from New-Algo : 261705
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 261704
+Esitmate Time from New-Algo : 264197
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 264133
+Esitmate Time from New-Algo : 266617
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 266509
+Esitmate Time from New-Algo : 268977
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 268941
+Esitmate Time from New-Algo : 271396
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 271358
+Esitmate Time from New-Algo : 273799
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 273675
+Esitmate Time from New-Algo : 276089
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 275995
+Esitmate Time from New-Algo : 278383
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 278346
+Esitmate Time from New-Algo : 280709
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 280696
+Esitmate Time from New-Algo : 283031
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 282967
+Esitmate Time from New-Algo : 285269
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 285214
+Esitmate Time from New-Algo : 287478
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 287449
+Esitmate Time from New-Algo : 289672
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 289700
+Esitmate Time from New-Algo : 291885
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 291902
+Esitmate Time from New-Algo : 294042
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 294157
+Esitmate Time from New-Algo : 296255
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 296252
+Esitmate Time from New-Algo : 298296
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 298427
+Esitmate Time from New-Algo : 300421
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 300435
+Esitmate Time from New-Algo : 302366
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 302575
+Esitmate Time from New-Algo : 304452
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 304744
+Esitmate Time from New-Algo : 306569
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 306871
+Esitmate Time from New-Algo : 308640
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 309086
+Esitmate Time from New-Algo : 310806
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 311114
+Esitmate Time from New-Algo : 312768
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 313134
+Esitmate Time from New-Algo : 314722
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 315127
+Esitmate Time from New-Algo : 316646
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 317104
+Esitmate Time from New-Algo : 318552
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 319065
+Esitmate Time from New-Algo : 320442
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 321040
+Esitmate Time from New-Algo : 322345
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 322955
+Esitmate Time from New-Algo : 324183
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 324880
+Esitmate Time from New-Algo : 326032
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 326878
+Esitmate Time from New-Algo : 327959
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 328623
+Esitmate Time from New-Algo : 329614
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 330233
+Esitmate Time from New-Algo : 331124
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 332009
+Esitmate Time from New-Algo : 332812
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 333907
+Esitmate Time from New-Algo : 334630
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 335950
+Esitmate Time from New-Algo : 336604
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 338035
+Esitmate Time from New-Algo : 338622
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 340136
+Esitmate Time from New-Algo : 340658
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 342273
+Esitmate Time from New-Algo : 342732
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 344319
+Esitmate Time from New-Algo : 344707
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 346399
+Esitmate Time from New-Algo : 346719
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 348394
+Esitmate Time from New-Algo : 348641
+Avg. MAP ratio 0.6218352Avg. MAP runtime 98.180664Avg. Map Speed : 0.0063335807
+Avg. Sort ratio 0.37816486Avg. sort runtime 58.63767Avg. Sort Speed : 0.0064491797
+Speed Ratio : 1.6443495
+Esitmate Time from LATE-Algo : 350432
+Esitmate Time from New-Algo : 350606
+serviceStop

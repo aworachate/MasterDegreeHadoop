@@ -3,6 +3,8 @@ import java.util.*;
 public class GraphData {
 	   private List<Double> graphPrgoress = new ArrayList<Double>();
 	   private List<Double> cpuTime = new ArrayList<Double>();
+	   private long firstTimeCap = 0L;
+
 	   GraphData()
      {
   		  for(int i=0;i<10;i++)
@@ -34,4 +36,13 @@ public class GraphData {
 		   int temp_index = (int)((pg*10)%10);
 		   updateVaule(temp_index,cpu);
 	   }
+	   void setFirstCap(long time)
+	   {
+	   		this.firstTimeCap = time;
+	   }
+	   long getFirstCap()
+	   {
+	   		return this.firstTimeCap;
+	   }
+
 }

@@ -432,7 +432,7 @@ public class DefaultSpeculator extends AbstractService implements
     long result = Long.MIN_VALUE;
 
     if (!mayHaveSpeculated.contains(taskID)) {
-      //** Project thresholdRuntime method in SartEndTimesBase.java
+      //** Project thresholdRuntime method in SartEndTimesBase.java if there is no finished task it will return on_schedule
       acceptableRuntime = estimator.thresholdRuntime(taskID);
       if (acceptableRuntime == Long.MAX_VALUE) {
         //** Project
@@ -480,11 +480,14 @@ public class DefaultSpeculator extends AbstractService implements
 
         // Check if run back up task estimate time to end of back up tasl by historical mean in class StartEndTimeBase Class
         //System.out.println(" Backup Task Estimate runtime " + estimator.estimatedNewAttemptRuntime(taskID));
+        //Project EWMA change to use EWMA value
         long estimatedReplacementEndTime
             = now + estimator.estimatedNewAttemptRuntime(taskID);
 
-        //** Project
-        //System.out.println("Backup will end >>" + estimatedReplacementEndTime);
+        //** Project EWMA
+        //System.out.println("Old estimate back up >>" + estimator.estimatedNewAttemptRuntime(taskID));
+        //System.out.println("New estimate back up >>" + (long)(job.getEstimateEMWA()));
+        //long estimatedReplacementEndTime = now + (long)(job.getEstimateEMWA());
 
         //** Project find progress of each attemp
         float progress = taskAttempt.getProgress();
@@ -536,48 +539,50 @@ public class DefaultSpeculator extends AbstractService implements
           return TOO_LATE_TO_SPECULATE;
         }
 
-        //Project worthly of speculate
-        long temp_result = estimatedEndTime - estimatedReplacementEndTime; //Save time
-        long temp_left_exe_time = estimatedEndTime - now;
-        //if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
-        if(temp_result > 0L)
-        {
-          //** Project
-          if(numberOfSpeculativeTask > 0)
-            {
-               int diff_numberOfSpeculativeTask = numberOfSpeculativeTask - lastNumberOfSpeculativeTask;
-               int diff_numberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask()) - lastNumberOfSuccessSpeculativeTask;
-               int diff_numberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask() - lastNumberOfFailSpeculativeTask;
-               now_ramda = now_ramda * (float)(Math.pow(1.75,(diff_numberOfFailSpeculativeTask))) * (float)(Math.pow(0.5,(diff_numberOfSuccessSpeculativeTask)));
-               lastNumberOfSpeculativeTask = numberOfSpeculativeTask;
-               lastNumberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask());
-               lastNumberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask();
-               if (now_ramda > max_ramda)
-                  {
-                      now_ramda = max_ramda;
-                  }  
-               else if (now_ramda < min_ramda)
-                  {
-                      now_ramda = min_ramda;
-                  }                   
-            }
-          //System.out.println("Number of Speculative Task : " + numberOfSpeculativeTask);
-          //System.out.println("Number of Fail Spec Task : " + job.getNumberOfFailSpeculativeTask());
-          System.out.println("Ramda : " + now_ramda + " Save Time : " + temp_result + " Target Bound Time : " + (now_ramda * temp_left_exe_time));
-          if(temp_result < (now_ramda * temp_left_exe_time))
-            {
-              System.out.println("Can save little time !");
-              return TOO_LATE_TO_SPECULATE;
-            }
-          else 
-            {
-              result = temp_result;
-            }
-        }
+        // //Project worthly of speculate
+        // long temp_result = estimatedEndTime - estimatedReplacementEndTime; //Save time
+        // long temp_left_exe_time = estimatedEndTime - now;
+        // //if ((estimatedEndTime - estimatedReplacementEndTime) <  (0.1f * (estimatedEndTime - now))) 
+        // if(temp_result > 0L)
+        // {
+        //   //** Project
+        //   if(numberOfSpeculativeTask > 0)
+        //     {
+        //        int diff_numberOfSpeculativeTask = numberOfSpeculativeTask - lastNumberOfSpeculativeTask;
+        //        int diff_numberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask()) - lastNumberOfSuccessSpeculativeTask;
+        //        int diff_numberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask() - lastNumberOfFailSpeculativeTask;
+        //        //now_ramda = now_ramda * (float)(Math.pow(1.5,(diff_numberOfFailSpeculativeTask))) * (float)(Math.pow(0.5,(diff_numberOfSuccessSpeculativeTask)));
+        //        now_ramda = job.getRamda();
+        //        lastNumberOfSpeculativeTask = numberOfSpeculativeTask;
+        //        lastNumberOfSuccessSpeculativeTask = (numberOfSpeculativeTask - job.getNumberOfFailSpeculativeTask());
+        //        lastNumberOfFailSpeculativeTask = job.getNumberOfFailSpeculativeTask();
+        //        if (now_ramda > max_ramda)
+        //           {
+        //               now_ramda = max_ramda;
+        //           }  
+        //        else if (now_ramda < min_ramda)
+        //           {
+        //               now_ramda = min_ramda;
+        //           }                   
+        //     }
+        //   //System.out.println("Number of Speculative Task : " + numberOfSpeculativeTask);
+        //   //System.out.println("Number of Fail Spec Task : " + job.getNumberOfFailSpeculativeTask());
+        //   now_ramda = job.getRamda();
+        //   System.out.println("Ramda : " + now_ramda + " Save Time : " + temp_result + " Target Bound Time : " + (now_ramda * temp_left_exe_time));
+        //   if(temp_result < (now_ramda * temp_left_exe_time))
+        //     {
+        //       System.out.println("Can save little time !");
+        //       return TOO_LATE_TO_SPECULATE;
+        //     }
+        //   else 
+        //     {
+        //       result = temp_result;
+        //     }
+        // }
 
         //** Project : result = end time of origin job - end time of speculative job >=0
         // if value is much mean if run speculate task can save a lot of time
-        //result = estimatedEndTime - estimatedReplacementEndTime;
+        result = estimatedEndTime - estimatedReplacementEndTime;
         //** Project
         System.out.println(taskID + " will end in " + estimatedEndTime);
         System.out.println("But back up task will end in " + estimatedReplacementEndTime);

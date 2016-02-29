@@ -109,4 +109,6 @@ public interface Job {
   Map<Integer,String> getAllTaskInputSplitLocation();
   Map<Integer,MapTaskTime> getAllFinishedMapTime();
   int getNumberOfFailSpeculativeTask();
+  // float getEstimateEMWA();
+  // float getRamda();
 }

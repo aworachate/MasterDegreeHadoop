@@ -138,17 +138,29 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       //  speculative task attempt if two are already running for this task
       if (start > 0 && timestamp > start) {
         //System.out.println("Number of complete Map Task! " + job.getCompletedMaps());
-        
+        //Project remove first time cap
+        if (attemptGraphData.getFirstCap() == 0L)
+            {
+              attemptGraphData.setFirstCap((long)(timestamp-start));
+            }
+        long firstCap = attemptGraphData.getFirstCap();
+
         boolean isDynamicEnable = false;
         float dynamic_weight = 0.0f;
+        float speed_up = 0.0f;
+        float avg_sort_runtime = 0.0f;
         if (job.getCompletedMaps() > 0)
           {
-              //long temp_sum_totaltime = 0L;
+              long temp_sum_totaltime = 0L;
               //long temp_sum_mapFinishedtime = 0L;
               float temp_sum_map_ratio = 0.0f;
               float temp_sum_sort_ratio = 0.0f;
+              float avg_map_ratio = 0.0f;
+              float avg_sort_ratio = 0.0f;
               float avg_map_runtime = 0.0f;
-              float avg_sort_runtime = 0.0f;
+              avg_sort_runtime = 0.0f;
+              long temp_sum_mapFinishedtime = 0L;
+              long temp_sum_sortFinishedtime = 0L;
               //float avg_runtime2 = 0.0f;
               //float avg_mapfinishedtime2 = 0.0f;
               Map<Integer,MapTaskTime> temp_AllFinishedMapTime = job.getAllFinishedMapTime();
@@ -156,18 +168,25 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   {
                     //System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + " Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())) + " Map Finished Time " + ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())));
                     //System.out.println((e.getValue().getTaskMapFinishedTime()) + " start time " +  (e.getValue().getTaskStartTime()));
-                    //temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
-                    //temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                    temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
+                    temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                    temp_sum_sortFinishedtime += ((((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))) - ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())))));
                     temp_sum_map_ratio += (((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()))) / (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
                     temp_sum_sort_ratio += ((((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))) - ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())))))/ (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
                   }
 
               //avg_runtime = temp_sum_totaltime / (float)job.getCompletedMaps();
               //avg_mapfinishedtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
-              avg_map_runtime = temp_sum_map_ratio / (float)job.getCompletedMaps();
-              avg_sort_runtime = temp_sum_sort_ratio / (float)job.getCompletedMaps();
+              avg_map_ratio = temp_sum_map_ratio / (float)job.getCompletedMaps();
+              avg_sort_ratio = temp_sum_sort_ratio / (float)job.getCompletedMaps();
+              avg_map_runtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
+              avg_sort_runtime = temp_sum_sortFinishedtime / (float)job.getCompletedMaps();
+              //System.out.println("Avg. MAP ratio " + avg_map_ratio + "Avg. MAP runtime " + (avg_map_runtime/(float)1000) + "Avg. Map Speed : " + (avg_map_ratio / (avg_map_runtime/(float)1000)));
+              //System.out.println("Avg. Sort ratio " + avg_sort_ratio + "Avg. sort runtime " + (avg_sort_runtime/(float)1000) +"Avg. Sort Speed : " + (avg_sort_ratio / (avg_sort_runtime/(float)1000)));
+              speed_up = (avg_map_ratio/avg_sort_ratio);
+              //System.out.println("Speed Ratio : " + speed_up);
               //dynamic_weight = avg_mapfinishedtime / avg_runtime;
-              dynamic_weight = avg_map_runtime;
+              dynamic_weight = avg_map_ratio;
               //System.out.println(dynamic_weight + " VS. " + avg_runtime2 + " , " + ((avg_runtime - avg_mapfinishedtime)/avg_runtime) + " VS. " + avg_mapfinishedtime2);
               //System.out.println("Average runtime = " + avg_runtime + " Average MapPhasetime = " + avg_mapfinishedtime + " Dynamic Weight = " + dynamic_weight + ":" + ((avg_runtime - avg_mapfinishedtime)/avg_runtime));   
               isDynamicEnable = true;
@@ -179,6 +198,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         //float new_weight = 0.97f;
         //float new_weight = 0.99f;
         float new_weight = 0.667f;
+        long estimate_new = 0L;
         //If Complete Map Task != 0 , use Dynamic Weight, else use Default 66.7:33.3
         if (isDynamicEnable)
             {
@@ -188,26 +208,51 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             {
               reverse_progress = status.progress * 1.5f;
               //System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = new_weight * reverse_progress;
+              if (isDynamicEnable)
+                {
+                  float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
+                  float cal_speed2 = avg_sort_runtime;
+                  //System.out .println("firstCap "+ firstCap +" Speed 1 : " + cal_speed1 + " Speed 2 : " + cal_speed2);
+                  long next_phase_exe_time = (long)(reverse_progress * (cal_speed1)) + (long)((1-reverse_progress) * cal_speed2);
+                  estimate_new = firstCap + (long)(Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) + next_phase_exe_time;
+                  //System.out.println("Compute time "+ next_phase_exe_time +" AVG Sort time "+(avg_sort_runtime));
+                }
+              else
+                {   
+                  new_progress = new_weight * reverse_progress;
+                  estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
+                }
             } 
         else if (status.progress == 0.667f)
             {
               reverse_progress = 1.0f;
               //System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = new_weight * reverse_progress;
+              if (isDynamicEnable)    
+                {
+                  float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
+                  float cal_speed2 = avg_sort_runtime;
+                  long next_phase_exe_time = (long)(reverse_progress * (cal_speed1)) + (long)((1-reverse_progress) * cal_speed2);
+                  estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) + next_phase_exe_time;
+                }
+              else
+                {
+                  new_progress = new_weight * reverse_progress;
+                  estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
+                }
             }
         else if (status.progress > 0.667f)
-             {
-              reverse_progress = (status.progress - 0.667f)*3.0f ;
+            {
+              reverse_progress = (status.progress - 0.667f)*3.0f;
               //System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
               new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
+              estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
             }         
 
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
         varianceEstimate = (long) (estimate * status.progress / 10);
 
         // Progject dynamic weight
-        long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
+        //long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
         long varianceEstimate_new = (long) (estimate * new_progress / 10);
         System.out.println("Esitmate Time from LATE-Algo : " + estimate);
         System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
