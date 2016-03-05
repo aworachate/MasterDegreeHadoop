@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("/Users/worachate-a/Desktop/temp25.log", "r")
+infile = open("/Users/worachate-a/Desktop/temp17.log", "r")
 #infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(550)]
 cpu_per_time_t0 = [[]for x in xrange(550)]
@@ -37,8 +37,6 @@ est_new = [[]for x in xrange(550)]
 	#print outtxt
 flag = -1
 mapFin = -1
-temp1 = -1
-temp2 = -1
 for line in infile.readlines():
 	if line.find("Esitmate Time from LATE-Algo :") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
@@ -51,15 +49,10 @@ for line in infile.readlines():
 
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
-		#print 
-		if int((line.split("_")[5].strip())[0])==1:
-			temp = 549
 		#print (temp)
 		flag = temp 
 		#print line
 		progress_t0[flag].append(float(line.split(":")[3].strip()))
-		if temp2 > temp1:
-			print flag
 		est_old[flag].append(temp1)
 		est_new[flag].append(temp2)
 		#print float(line.split(":")[3].strip())
@@ -122,49 +115,32 @@ infile.close()
 #plt1.plot(progress_t0,'ro')
 #plt2.xlim([0,1.0])
 
-plt2.ylim([0,2000])
+#plt2.ylim([0,1000])
 #plt2.ylim([0,1.4])
+plt2.ylim([0,500])
 #plt2.xlim(0,150000)
-# for i in xrange(0,121,5):
-# 	plt2.plot(task_time_t0[0+i],progress_t0[0+i],'bo')
-# 	plt2.plot(task_time_t0[1+i],progress_t0[1+i],'go')
-# 	plt2.plot(task_time_t0[2+i],progress_t0[2+i],'yo')
-# 	plt2.plot(task_time_t0[3+i],progress_t0[3+i],'ro')
-# 	plt2.plot(task_time_t0[4+i],progress_t0[4+i],'bx')
+
+# plt2.plot(task_time_t0[0],progress_t0[0],'bo')
+# plt2.plot(task_time_t0[1],progress_t0[1],'go')
+# plt2.plot(task_time_t0[2],progress_t0[2],'yo')
+# plt2.plot(task_time_t0[4],progress_t0[4],'ro')
+# plt2.plot(task_time_t0[5],progress_t0[5],'bx')
 # plt2.plot(task_time_t0[6],progress_t0[6],'gx')
 # plt2.plot(task_time_t0[7],progress_t0[7],'yx')
 # plt2.plot(task_time_t0[80],progress_t0[80],'rx')
 
-#plt2.plot(task_time_t0[107],progress_t0[107],'rx')
+#plt2.plot(task_time_t0[63],progress_t0[63],'rx')
 
 # print len(task_time_t0[35])
 # print len(est_old[35])
 # print len(est_new[35])
 # print (task_time_t0[35])
+# print (est_old[35])
+# print (est_new[35])
 
-for i in xrange(0,23):
-	#print i
-	#print (est_old[i])
-	#if max(est_new[i]) > 900:
-	#	print (i)
-	plt2.plot(task_time_t0[i],est_old[i],'r')
-	plt2.plot(task_time_t0[i],est_new[i],'g')
-	length = len(task_time_t0[i])
-	real = est_new[i][length-1]
-	#print real
-	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0)
-
-# plt2.plot(task_time_t0[67],est_old[67],'r')
-# plt2.plot(task_time_t0[67],est_new[67],'g')
-# plt2.axhline(y=288,xmin=0,xmax=3,c="blue",linewidth=0.5,zorder=0)
-
-# plt2.plot(task_time_t0[1],est_old[1],'r')
-# plt2.plot(task_time_t0[1],est_new[1],'g')
-# plt2.plot(task_time_t0[2],est_old[2],'r')
-# plt2.plot(task_time_t0[2],est_new[2],'g')
-
-
-
+plt2.plot(task_time_t0[48],est_old[48],'r')
+plt2.plot(task_time_t0[48],est_new[48],'g')
+plt2.axhline(y=103,xmin=0,xmax=3,c="blue",linewidth=2.5,zorder=0)
 
 #plt2.plot(progress_t0[1],task_time_t0[1],'ro')
 #plt2.plot(progress_t0[2],task_time_t0[2],'go')

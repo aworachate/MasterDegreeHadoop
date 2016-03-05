@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#EWMA
 import os
 import matplotlib.pyplot as plt1
 import matplotlib.pyplot as plt2

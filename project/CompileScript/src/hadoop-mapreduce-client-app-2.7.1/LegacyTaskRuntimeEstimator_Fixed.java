@@ -133,21 +133,42 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
 
       long estimate = -1;
       long varianceEstimate = -1;
+      boolean isMapType = false;
+      boolean isMapPhase = false;
+      boolean isSortPhase = false;
+      if (task.getType().toString().equals("MAP"))
+        {  
+          isMapType = true;
+          if (taskAttempt.getPhase().toString().equals("SORT"))
+            {
+              isSortPhase = true;
+            }
+          else
+              isMapPhase = true;
+        }
 
       // This code assumes that we'll never consider starting a third
       //  speculative task attempt if two are already running for this task
       if (start > 0 && timestamp > start) {
         //System.out.println("Number of complete Map Task! " + job.getCompletedMaps());
         //Project remove first time cap
-        if (attemptGraphData.getFirstCap() == 0L)
+        if (isMapType && isMapPhase && attemptGraphData.getFirstCap() == 0L)
             {
               attemptGraphData.setFirstCap((long)(timestamp-start));
             }
+        //Project second cap
+        if (isMapType && isSortPhase && status.progress == 0.667f)
+            {
+              attemptGraphData.setSecCap((long)(timestamp-start));
+            }
         long firstCap = attemptGraphData.getFirstCap();
+        long secCap = attemptGraphData.getSecCap();
+        
+        System.out.println("Phase : " + taskAttempt.getPhase().toString() + " Time : " + (long)(timestamp-start));
 
         boolean isDynamicEnable = false;
         float dynamic_weight = 0.0f;
-        float speed_up = 0.0f;
+        float speed_up = 66.7f/33.3f;
         float avg_sort_runtime = 0.0f;
         if (job.getCompletedMaps() > 0)
           {
@@ -204,30 +225,58 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             {
               new_weight = dynamic_weight;
             }
-        if (status.progress < 0.667f)
+        if (isMapPhase && status.progress < 0.667f)
             {
               reverse_progress = status.progress * 1.5f;
-              //System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
+              float cal_speed2 = avg_sort_runtime;
+              long next_phase_exe_time = 0L;
+              System.out .println("firstCap "+ firstCap +" Speed 1 : " + cal_speed1 + " Speed 2 : " + cal_speed2);
               if (isDynamicEnable)
+                {
+                  next_phase_exe_time = (long)(reverse_progress * (cal_speed1)) + (long)((1-reverse_progress) * cal_speed2);
+                }
+              else
+                {
+                  next_phase_exe_time = (long)cal_speed1;
+                }
+              estimate_new = firstCap + (long)(Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) + next_phase_exe_time;
+              System.out.println("Compute time "+ next_phase_exe_time +" AVG Sort time "+(avg_sort_runtime));
+              /*if (isDynamicEnable)
                 {
                   float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
                   float cal_speed2 = avg_sort_runtime;
-                  //System.out .println("firstCap "+ firstCap +" Speed 1 : " + cal_speed1 + " Speed 2 : " + cal_speed2);
+                  System.out .println("firstCap "+ firstCap +" Speed 1 : " + cal_speed1 + " Speed 2 : " + cal_speed2);
                   long next_phase_exe_time = (long)(reverse_progress * (cal_speed1)) + (long)((1-reverse_progress) * cal_speed2);
                   estimate_new = firstCap + (long)(Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) + next_phase_exe_time;
-                  //System.out.println("Compute time "+ next_phase_exe_time +" AVG Sort time "+(avg_sort_runtime));
+                  System.out.println("Compute time "+ next_phase_exe_time +" AVG Sort time "+(avg_sort_runtime));
                 }
               else
                 {   
                   new_progress = new_weight * reverse_progress;
                   estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
-                }
-            } 
-        else if (status.progress == 0.667f)
+                }*/
+            }
+        else if ((isMapPhase   &&  status.progress == 0.667f) || (isSortPhase && status.progress <= 0.667f))
             {
+              // changing phase
               reverse_progress = 1.0f;
-              //System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              if (isDynamicEnable)    
+              System.out.println("T2 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
+              //float cal_speed2 = avg_sort_runtime;
+              long next_phase_exe_time = (long)cal_speed1;
+              // if (isDynamicEnable)
+              //   {
+              //     next_phase_exe_time = (long)(reverse_progress * (cal_speed1)) + (long)((1-reverse_progress) * cal_speed2);
+              //   }
+              // else
+              //   {   
+              //     next_phase_exe_time = (long)cal_speed1;
+              //   } 
+              estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) + next_phase_exe_time;
+              attemptGraphData.setEstSortExeTime(next_phase_exe_time);
+              /*if (isDynamicEnable)    
                 {
                   float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
                   float cal_speed2 = avg_sort_runtime;
@@ -238,14 +287,30 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                 {
                   new_progress = new_weight * reverse_progress;
                   estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
-                }
-            }
-        else if (status.progress > 0.667f)
+                }*/
+            } 
+        // else if (isSortPhase && status.progress <= 0.667f)
+        //     {
+        //       // changing phase
+        //       reverse_progress = 0.0f;
+        //       System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+        //       //new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
+        //       //previous phase finish time 
+        //       System.out.println("secCap : " + secCap);
+        //       estimate_new = secCap + (long) (Math.max((long)(timestamp - start) - secCap,1L) / Math.max(0.0001, reverse_progress));
+        //     }
+        else if (isSortPhase && status.progress > 0.667f)
             {
               reverse_progress = (status.progress - 0.667f)*3.0f;
-              //System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
-              new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
-              estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
+              if (status.progress == 1.0f)
+                reverse_progress = 1.0f; //For last return
+              System.out.println("T4 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              //new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
+              //previous phase finish time 
+              System.out.println("secCap : " + secCap);
+              long est_time = (long)(reverse_progress * (Math.max((long)(timestamp - start) - secCap,1L) / Math.max(0.0001, reverse_progress))) + (long)((1-reverse_progress) * attemptGraphData.getEstSortExeTime());
+              estimate_new = secCap + est_time;
+              //estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
             }         
 
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
@@ -253,11 +318,14 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
 
         // Progject dynamic weight
         //long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
-        long varianceEstimate_new = (long) (estimate * new_progress / 10);
-        System.out.println("Esitmate Time from LATE-Algo : " + estimate);
-        System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
-        estimate = estimate_new;
-        varianceEstimate = varianceEstimate_new;  
+        if (isMapType)
+        {
+            long varianceEstimate_new = (long) (estimate * new_progress / 10);
+            System.out.println("Esitmate Time from LATE-Algo : " + estimate);
+            System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
+            estimate = estimate_new;
+            varianceEstimate = varianceEstimate_new; 
+        } 
 
 
       /*  System.out.println("timestamp >> "+ timestamp +

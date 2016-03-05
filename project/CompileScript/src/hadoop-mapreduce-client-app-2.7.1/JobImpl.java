@@ -2040,7 +2040,8 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
         //long temp_Task_Map_Finish_Time = task.getMapFinishTime(task.getReport().getSuccessfulAttempt());
         long temp_Task_Map_Finish_Time = task.getMapFinishedTime(task.getReport().getSuccessfulAttempt());
         //System.out.println("finish task 1 " + job.succeededMapTaskCount);
-        //System.out.println("finish task 2 " + succeededMapTaskCount);
+        //System.out.println("Start Time " + temp_Task_Start_Time );
+        //System.out.println("Map Finish Time " + temp_Task_Map_Finish_Time );
         job.allFinishedMapTime.put(job.succeededMapTaskCount,new MapTaskTime(temp_Task_Id,temp_Task_Start_Time,temp_Task_Map_Finish_Time,temp_Task_Finish_Time));
         System.out.println("Successful task time : " + temp_Task_Id + " : Runtime : " + (temp_Task_Finish_Time - temp_Task_Start_Time) + " : MapPhaseTime : " + (temp_Task_Map_Finish_Time - temp_Task_Start_Time));
         // //Project implement EWMA
@@ -2057,7 +2058,7 @@ public class JobImpl implements org.apache.hadoop.mapreduce.v2.app.job.Job,
         //Project linear ramda
         //job.ramda = 0.9f - ((0.8f) * (job.succeededMapTaskCount / (float)(job.numMapTasks)));
         //Project save speed
-        
+
         // Check finished task is a speculative task or not
         if((task.getAttempts().size()>1) && (!task.getIsSpeculativeFinishedFirst()))
             {

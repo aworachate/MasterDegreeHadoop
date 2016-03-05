@@ -4,7 +4,8 @@ public class GraphData {
 	   private List<Double> graphPrgoress = new ArrayList<Double>();
 	   private List<Double> cpuTime = new ArrayList<Double>();
 	   private long firstTimeCap = 0L;
-
+	   private long secTimeCap = 0L;
+	   private long estSortExeTime = 0L;
 	   GraphData()
      {
   		  for(int i=0;i<10;i++)
@@ -44,5 +45,20 @@ public class GraphData {
 	   {
 	   		return this.firstTimeCap;
 	   }
-
+	   void setSecCap(long time)
+	   {
+	   		this.secTimeCap = time;
+	   }
+	   long getSecCap()
+	   {
+	   		return this.secTimeCap;
+	   }
+	   void setEstSortExeTime(long time)
+	   {
+	   		this.estSortExeTime = time;
+	   }
+	   long getEstSortExeTime()
+	   {
+	   		return this.estSortExeTime;
+	   }
 }
