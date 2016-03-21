@@ -164,7 +164,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         long firstCap = attemptGraphData.getFirstCap();
         long secCap = attemptGraphData.getSecCap();
         
-        System.out.println("Phase : " + taskAttempt.getPhase().toString() + " Time : " + (long)(timestamp-start));
+        //System.out.println("Phase : " + taskAttempt.getPhase().toString() + " Time : " + (long)(timestamp-start));
 
         boolean isDynamicEnable = false;
         float dynamic_weight = 0.0f;
@@ -202,8 +202,8 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
               avg_sort_ratio = temp_sum_sort_ratio / (float)job.getCompletedMaps();
               avg_map_runtime = temp_sum_mapFinishedtime / (float)job.getCompletedMaps();
               avg_sort_runtime = temp_sum_sortFinishedtime / (float)job.getCompletedMaps();
-              //System.out.println("Avg. MAP ratio " + avg_map_ratio + "Avg. MAP runtime " + (avg_map_runtime/(float)1000) + "Avg. Map Speed : " + (avg_map_ratio / (avg_map_runtime/(float)1000)));
-              //System.out.println("Avg. Sort ratio " + avg_sort_ratio + "Avg. sort runtime " + (avg_sort_runtime/(float)1000) +"Avg. Sort Speed : " + (avg_sort_ratio / (avg_sort_runtime/(float)1000)));
+              System.out.println("Avg. MAP ratio " + avg_map_ratio + "Avg. MAP runtime " + (avg_map_runtime/(float)1000) + "Avg. Map Speed : " + (avg_map_ratio / (avg_map_runtime/(float)1000)));
+              System.out.println("Avg. Sort ratio " + avg_sort_ratio + "Avg. sort runtime " + (avg_sort_runtime/(float)1000) +"Avg. Sort Speed : " + (avg_sort_ratio / (avg_sort_runtime/(float)1000)));
               speed_up = (avg_map_ratio/avg_sort_ratio);
               //System.out.println("Speed Ratio : " + speed_up);
               //dynamic_weight = avg_mapfinishedtime / avg_runtime;
@@ -229,6 +229,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             {
               reverse_progress = status.progress * 1.5f;
               System.out.println("T1 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+            //  System.out.println("Cal Speed 1 " + (float)(Math.max((timestamp - start) - firstCap,1L)));
               float cal_speed1 = (float)(Math.max((timestamp - start) - firstCap,1L) / Math.max(0.0001, reverse_progress)) / speed_up;
               float cal_speed2 = avg_sort_runtime;
               long next_phase_exe_time = 0L;
@@ -257,6 +258,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   new_progress = new_weight * reverse_progress;
                   estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
                 }*/
+              attemptGraphData.setEstSortExeTime(next_phase_exe_time);
             }
         else if ((isMapPhase   &&  status.progress == 0.667f) || (isSortPhase && status.progress <= 0.667f))
             {
@@ -368,7 +370,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             // Call method classifyType()
             // TaskIntensive 0 : I/O intensive
             // TaskIntensive 1 : CPU intensive
-            if (Double.compare(attemptGraphData.getSlope(), 3.0) >= 0)
+            /*if (Double.compare(attemptGraphData.getSlope(), 3.0) >= 0)
               {
                 System.out.println("CPU Intensive");
                 // Calculate estimated time  for CPU Intensive Task
@@ -379,7 +381,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                 System.out.println("I/O Intensive");
                 // Calculate estimated time  for CPU Intensive Task
               }
-
+            */
             //long now = clock.getTime();
             long run_time = (long)(timestamp-start);
             System.out.println("Task Time : "+run_time);

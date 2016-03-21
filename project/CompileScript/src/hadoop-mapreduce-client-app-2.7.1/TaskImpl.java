@@ -975,6 +975,7 @@ public abstract class TaskImpl implements Task, EventHandler<TaskEvent> {
 
       //Project check Speculative win original or not
       // success ful id is task.successfulAttempt
+      /*
       TaskAttemptId taskAttemptOriginalId = null;
       long originalTaskStartTime = Long.MAX_VALUE;
       for(TaskAttempt attempt : task.attempts.values()){
@@ -991,7 +992,7 @@ public abstract class TaskImpl implements Task, EventHandler<TaskEvent> {
       else
           {
             task.isSpeculativeFinishedFirst = false;
-          }
+          }*/
     }
   }
 

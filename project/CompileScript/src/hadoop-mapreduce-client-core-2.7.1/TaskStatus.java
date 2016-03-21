@@ -304,7 +304,7 @@ public abstract class TaskStatus implements Writable, Cloneable {
       if (phase == TaskStatus.Phase.SORT){
         if (oldPhase == TaskStatus.Phase.MAP) {
           //Project
-          //System.out.println("TaskStatus Class " + System.currentTimeMillis());
+          //System.out.println(taskid+"TaskStatus Class " + System.currentTimeMillis());
           setMapFinishTime(System.currentTimeMillis());
         }
         else {

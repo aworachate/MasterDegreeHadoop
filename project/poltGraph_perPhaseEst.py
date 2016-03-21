@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("/Users/worachate-a/Desktop/temp/temp25.log", "r")
+infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/Wordcount16GB.log", "r")
 #infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(550)]
 cpu_per_time_t0 = [[]for x in xrange(550)]
@@ -58,7 +58,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==1:
+		if int((line.split("_")[5].strip())[0])==0:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -96,7 +96,7 @@ for line in infile.readlines():
 		write_per_done_t0[flag].append(line.split(":")[1].strip())
 	elif line.find("Task Time") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
-		task_time_t0[flag].append(line.split(":")[1].strip())
+		task_time_t0[flag].append(float(line.split(":")[1].strip())/1000)
 		#if mapFin == 1:
 		#	fin_map_time_t0[flag].append(line.split(":")[1].strip())
 	else:
@@ -129,7 +129,9 @@ infile.close()
 #plt1.plot(progress_t0,'ro')
 #plt2.xlim([0,1.0])
 
-plt2.ylim([0,20000])
+plt2.ylim([0,1000])
+plt2.ylabel("Estimated Exe. Time (Sec.)")
+plt2.xlabel("Task Exe. Time (Sec.)")
 #plt2.ylim([0,1.4])
 #plt2.xlim(0,150000)
 # for i in xrange(0,121,5):
@@ -142,31 +144,24 @@ plt2.ylim([0,20000])
 # plt2.plot(task_time_t0[7],progress_t0[7],'yx')
 # plt2.plot(task_time_t0[80],progress_t0[80],'rx')
 
-#plt2.plot(task_time_t0[196],progress_t0[196],'rx')
-#plt2.plot(task_time_t0[27],real_progress[27],'rx')
+#plt2.plot(task_time_t0[107],real_progress[107],'rx')
 
 # print len(task_time_t0[35])
-#print (est_old)
-#print (est_new)
+# print len(est_old[35])
+# print len(est_new[35])
 # print (task_time_t0[35])
 
-#KMean
-#77 => Worst
-#93 => Average
-#24 spec task->Best
-#=====================
-
-for i in xrange(0,1):
+for i in xrange(20,21):
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:
 	#	print (i)
-	plt2.plot(task_time_t0[i],est_new[i],'go')
-	plt2.plot(task_time_t0[i],est_old[i],'rx')
+	plt2.plot(task_time_t0[i],est_old[i],'ro')
+	plt2.plot(task_time_t0[i],est_new[i],'gx')
 	length = len(task_time_t0[i])
 	real = est_new[i][length-1]
 	#print real
-	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0)
+	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0,linestyle=":")
 
 # plt2.plot(task_time_t0[67],est_old[67],'r')
 # plt2.plot(task_time_t0[67],est_new[67],'g')
