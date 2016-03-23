@@ -150,13 +150,8 @@ plt2.ylim([0,20000])
 #print (est_new)
 # print (task_time_t0[35])
 
-#KMean
-#77 => Worst
-#93 => Average
-#24 spec task->Best
-#=====================
 
-for i in xrange(0,1):
+for i in xrange(2,3):
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:

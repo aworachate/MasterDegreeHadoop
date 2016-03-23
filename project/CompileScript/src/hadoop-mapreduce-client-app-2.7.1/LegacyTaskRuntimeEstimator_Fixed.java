@@ -324,6 +324,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         {
             long varianceEstimate_new = (long) (estimate * new_progress / 10);
             System.out.println("Esitmate Time from LATE-Algo : " + estimate);
+            System.out.println("Esitmate Time from SLM-Algo : " + estimate_slm);
             System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
             estimate = estimate_new;
             varianceEstimate = varianceEstimate_new; 

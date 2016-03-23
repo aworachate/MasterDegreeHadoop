@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/Wordcount16GB.log", "r")
+infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/HP/Wordcount16GB.log", "r")
 #infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(550)]
 cpu_per_time_t0 = [[]for x in xrange(550)]
@@ -58,7 +58,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==0:
+		if int((line.split("_")[5].strip())[0])==1:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -133,7 +133,9 @@ plt2.ylim([0,1000])
 plt2.ylabel("Estimated Exe. Time (Sec.)")
 plt2.xlabel("Task Exe. Time (Sec.)")
 #plt2.ylim([0,1.4])
-#plt2.xlim(0,150000)
+#plt2.axis([0,160,0,1000])
+plt2.xlim([0,300])
+#plt2.xlim(xmin=0)
 # for i in xrange(0,121,5):
 # 	plt2.plot(task_time_t0[0+i],progress_t0[0+i],'bo')
 # 	plt2.plot(task_time_t0[1+i],progress_t0[1+i],'go')
@@ -151,17 +153,18 @@ plt2.xlabel("Task Exe. Time (Sec.)")
 # print len(est_new[35])
 # print (task_time_t0[35])
 
-for i in xrange(20,21):
+for i in xrange(82,83):
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:
 	#	print (i)
-	plt2.plot(task_time_t0[i],est_old[i],'ro')
 	plt2.plot(task_time_t0[i],est_new[i],'gx')
+	plt2.plot(task_time_t0[i],est_old[i],'ro')
 	length = len(task_time_t0[i])
 	real = est_new[i][length-1]
 	#print real
 	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0,linestyle=":")
+	plt2.axvline(x=148,c="black",linewidth=1.5,linestyle="-.")
 
 # plt2.plot(task_time_t0[67],est_old[67],'r')
 # plt2.plot(task_time_t0[67],est_new[67],'g')
