@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/HP/Wordcount16GB.log", "r")
+infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/HP/3-Algo/InvertedIndex.log", "r")
 #infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(550)]
 cpu_per_time_t0 = [[]for x in xrange(550)]
@@ -26,6 +26,7 @@ byte_write = [[]for x in xrange(550)]
 byte_write_per_read = [[]for x in xrange(550)]
 est_old = [[]for x in xrange(550)]
 est_new = [[]for x in xrange(550)]
+est_slm = [[]for x in xrange(550)]
 real_progress = [[]for x in xrange(550)]
 # cpu_per_time_t1 = []
 # write_per_time_t1 = []
@@ -40,11 +41,16 @@ flag = -1
 mapFin = -1
 temp1 = -1
 temp2 = -1
+temp = -1
 for line in infile.readlines():
 	if line.find("Esitmate Time from LATE-Algo :") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
 		#est_old[flag].append((float)(line.split(":")[1].strip())/(1000))
 		temp1 = (float)(line.split(":")[1].strip())/(1000)
+	if line.find("Esitmate Time from SLM-Algo :") >= 0:
+		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
+		#est_old[flag].append((float)(line.split(":")[1].strip())/(1000))
+		temp3 = (float)(line.split(":")[1].strip())/(1000)
 	if line.find("Esitmate Time from New-Algo :") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
 		#est_new[flag].append((float)(line.split(":")[1].strip())/(1000))
@@ -58,7 +64,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==1:
+		if int((line.split("_")[5].strip())[0])==0:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -68,6 +74,7 @@ for line in infile.readlines():
 			print flag
 		est_old[flag].append(temp1)
 		est_new[flag].append(temp2)
+		est_slm[flag].append(temp3)
 		real_progress[flag].append(temp_real_progress)
 		#print float(line.split(":")[3].strip())
 		#if float_eq(float(line.split(":")[3].strip()),0.667):
@@ -134,7 +141,7 @@ plt2.ylabel("Estimated Exe. Time (Sec.)")
 plt2.xlabel("Task Exe. Time (Sec.)")
 #plt2.ylim([0,1.4])
 #plt2.axis([0,160,0,1000])
-plt2.xlim([0,300])
+plt2.xlim([0,360])
 #plt2.xlim(xmin=0)
 # for i in xrange(0,121,5):
 # 	plt2.plot(task_time_t0[0+i],progress_t0[0+i],'bo')
@@ -153,18 +160,19 @@ plt2.xlim([0,300])
 # print len(est_new[35])
 # print (task_time_t0[35])
 
-for i in xrange(82,83):
+for i in xrange(5,6):
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:
 	#	print (i)
-	plt2.plot(task_time_t0[i],est_new[i],'gx')
-	plt2.plot(task_time_t0[i],est_old[i],'ro')
+	plt2.plot(task_time_t0[i],est_new[i],'rx')
+	plt2.plot(task_time_t0[i],est_slm[i],'bo')
+	plt2.plot(task_time_t0[i],est_old[i],'g*')
 	length = len(task_time_t0[i])
 	real = est_new[i][length-1]
 	#print real
 	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0,linestyle=":")
-	plt2.axvline(x=148,c="black",linewidth=1.5,linestyle="-.")
+	#plt2.axvline(x=202,c="black",linewidth=1.5,linestyle="-.")
 
 # plt2.plot(task_time_t0[67],est_old[67],'r')
 # plt2.plot(task_time_t0[67],est_new[67],'g')

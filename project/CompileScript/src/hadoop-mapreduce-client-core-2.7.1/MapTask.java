@@ -319,6 +319,7 @@ public class MapTask extends Task {
       //System.out.println("Run Map Task");
       if (conf.getNumReduceTasks() == 0) {
         //Project
+        // If not have reduce phase, it will not sort.
         //System.out.println("No Reduce Task");
         mapPhase = getProgress().addPhase("map", 1.0f);
       } else {

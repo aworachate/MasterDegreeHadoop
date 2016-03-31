@@ -129,16 +129,16 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
       }
 
 
-
-
       long estimate = -1;
       long varianceEstimate = -1;
       boolean isMapType = false;
       boolean isMapPhase = false;
       boolean isSortPhase = false;
+      //Check is Map task or not
       if (task.getType().toString().equals("MAP"))
         {  
           isMapType = true;
+          // Check is Map Phase or not ; Phase which return from Hadoop framework is trustable.
           if (taskAttempt.getPhase().toString().equals("SORT"))
             {
               isSortPhase = true;
@@ -157,7 +157,10 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
               attemptGraphData.setFirstCap((long)(timestamp-start));
             }
         //Project second cap
-        if (isMapType && isSortPhase && status.progress == 0.667f)
+        //if (isMapType && isSortPhase && attemptGraphData.getSecCap() == 0L)
+        // Cap only first time  evenif it may have the same progress and make mis-calculation -> Check 13-03-2016
+        if((isMapType && isSortPhase && status.progress == 0.667f) || (isMapType && isSortPhase && attemptGraphData.getSecCap() == 0L)) //This way is keep first time and also update when progress is stuck at 0.667
+        //if (isMapType && isSortPhase && attemptGraphData.getSecCap() == 0L)
             {
               attemptGraphData.setSecCap((long)(timestamp-start));
             }
@@ -170,7 +173,12 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         float dynamic_weight = 0.0f;
         float speed_up = 66.7f/33.3f;
         float avg_sort_runtime = 0.0f;
-        if (job.getCompletedMaps() > 0)
+
+        //Projectt SLM
+        float slm_progress = 0.0f;
+
+        // Check is there is any complete job or not.
+        if (job.getCompletedMaps() > 0 && isMapType)
           {
               long temp_sum_totaltime = 0L;
               //long temp_sum_mapFinishedtime = 0L;
@@ -212,19 +220,67 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
               //System.out.println("Average runtime = " + avg_runtime + " Average MapPhasetime = " + avg_mapfinishedtime + " Dynamic Weight = " + dynamic_weight + ":" + ((avg_runtime - avg_mapfinishedtime)/avg_runtime));   
               isDynamicEnable = true;
           }
+        //Projectt SLM
+        boolean isDynamicEnable_slm = false;
+        float geo_mean_map = 0.667f;
+        float geo_mean_sort  = 0.333f;
+        if (job.getCompletedMaps() > 5 && isMapType)
+        {
+              int round = 0; 
+              float mul_result = 1.0f;
+              Map<Integer,MapTaskTime> slm_temp_AllFinishedMapTime = job.getAllFinishedMapTime();
+              for (Map.Entry<Integer, MapTaskTime> e : slm_temp_AllFinishedMapTime.entrySet())
+                  {
+                    if (round >=5)
+                        break;
+                    //System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + " Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())) + " Map Finished Time " + ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())));
+                    //System.out.println((e.getValue().getTaskMapFinishedTime()) + " start time " +  (e.getValue().getTaskStartTime()));
+                    //System.out.println("Test : " + ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()))) / (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())))));
+                    mul_result = mul_result *  ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()))) / (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))));
+                    // temp_sum_totaltime += ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()));
+                    // temp_sum_mapFinishedtime += ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()));
+                    // temp_sum_sortFinishedtime += ((((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))) - ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())))));
+                    // temp_sum_map_ratio += (((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime()))) / (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
+                    // temp_sum_sort_ratio += ((((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime()))) - ((((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())))))/ (float)(((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())));
+                    round++;
+                  }
+              //System.out.println("Test : " + mul_result + (Math.pow(mul_result,0.2f)));
+              geo_mean_map = (float)(Math.pow(mul_result,0.2f));
+              geo_mean_sort = 1.0f - geo_mean_map;
+              isDynamicEnable_slm = true;
+              System.out.println("Geo Map Ratio : " + geo_mean_map);
+              System.out.println("Geo Sort Ratio : " + geo_mean_sort);
+        }
+
         // Progject dynamic weight
         float reverse_progress = 0.0f;
         float new_progress = 0.0f;
         //float new_weight = 0.995f;
         //float new_weight = 0.97f;
         //float new_weight = 0.99f;
-        float new_weight = 0.667f;
-        long estimate_new = 0L;
+        //float new_weight = 0.667f;
+        long estimate_new = -1L;
+        long varianceEstimate_new = -1L;
         //If Complete Map Task != 0 , use Dynamic Weight, else use Default 66.7:33.3
-        if (isDynamicEnable)
-            {
-              new_weight = dynamic_weight;
-            }
+        // if (isDynamicEnable)
+        //     {
+        //       new_weight = dynamic_weight;
+        //     }
+
+        // Project per-phase estimation
+        /*****************************************************************************************************************************************************************
+         *     Case 1 : Task is in MapPhase and progress is less than 0.667f                                                                                             *
+         *              There is a possibility that task in Map phase has progress 0.667                                                                                 *
+         *              If phase is Map but progress is more than 0.667 ->  Found only 1 possibility taht is numofReduce is 0 no sort and Hadoop set weight to 1000      *
+         *              If phase is Map but progress is equal to 0.667 ->  phase changing -> Case 2                                                                      *
+         *     Case 2 : Phase changing cases                                                                                                                             *
+         *              There are 2 possibilities for this case                                                                                                          *
+         *              1. If phase is Map but progress is equal to 0.667 ->  phase changing -> Case 2                                                                   *
+         *              2. Hadoop commit to change phase by using the same progress when change phase so it possible that phase is change to SORT but progress <= 0.667  *
+         *     Case 3 : Task is in Sort Phase                                                                                                                            *
+         *              This case we check is SORT phase ot not and just for sure to check progress score > 0.667                                                        *
+         *****************************************************************************************************************************************************************/ 
+        //Case 1 :
         if (isMapPhase && status.progress < 0.667f)
             {
               reverse_progress = status.progress * 1.5f;
@@ -259,7 +315,12 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
                 }*/
               attemptGraphData.setEstSortExeTime(next_phase_exe_time);
+              //Projectt SLM
+              slm_progress = reverse_progress * geo_mean_map;
+              System.out.println("T1 SLM Progress : " +  slm_progress);
             }
+        //End-of-Case 1
+        //Case 2 :
         else if ((isMapPhase   &&  status.progress == 0.667f) || (isSortPhase && status.progress <= 0.667f))
             {
               // changing phase
@@ -290,6 +351,9 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   new_progress = new_weight * reverse_progress;
                   estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
                 }*/
+              //Projectt SLM
+              slm_progress = geo_mean_map; 
+              System.out.println("T2 SLM Progress : " +  slm_progress);
             } 
         // else if (isSortPhase && status.progress <= 0.667f)
         //     {
@@ -301,41 +365,61 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         //       System.out.println("secCap : " + secCap);
         //       estimate_new = secCap + (long) (Math.max((long)(timestamp - start) - secCap,1L) / Math.max(0.0001, reverse_progress));
         //     }
-        else if (isSortPhase && status.progress > 0.667f)
+          //End-of-case 2
+          //Case 3 :  
+          else if (isSortPhase && status.progress > 0.667f)
             {
               reverse_progress = (status.progress - 0.667f)*3.0f;
               if (status.progress == 1.0f)
                 reverse_progress = 1.0f; //For last return
-              System.out.println("T4 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
+              System.out.println("T3 Old Progress : " + status.progress + " , Real progress : " +  reverse_progress);
               //new_progress = new_weight + (1.0f - new_weight)*(reverse_progress);
               //previous phase finish time 
               System.out.println("secCap : " + secCap);
               long est_time = (long)(reverse_progress * (Math.max((long)(timestamp - start) - secCap,1L) / Math.max(0.0001, reverse_progress))) + (long)((1-reverse_progress) * attemptGraphData.getEstSortExeTime());
               estimate_new = secCap + est_time;
               //estimate_new = firstCap + (long) (Math.max((long)(timestamp - start) - firstCap,1L) / Math.max(0.0001, new_progress));
-            }         
+              //Projectt SLM
+              slm_progress = geo_mean_map  + (reverse_progress * geo_mean_sort);
+              if (slm_progress > 1.0f)
+                 slm_progress= 1.0f;
+              System.out.println("T3 SLM Progress : " +  slm_progress);
+            }
+          //End-of-Case 3
 
+        // SLM Project
+        long estimate_slm = (long) ((timestamp - start) / Math.max(0.0001, slm_progress));
+        long varianceEstimate_slm = (long) (estimate * slm_progress / 10);
+
+        //In case of no reduce number, Hadoop set default weight to 1, so it can trust !
+        if (job.getTotalReduces() == 0)
+            {
+                System.out.println("Num of Reduce Task is " + job.getTotalReduces());
+                estimate_new = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
+                varianceEstimate_new  = (long) (estimate * status.progress / 10);
+                // SLM Project
+                estimate_slm = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
+                varianceEstimate_slm = (long) (estimate * status.progress / 10);
+            }             
+
+
+        // This is old LATE algorithm estimation, Computer by default LATE algoorithm equation.
         estimate = (long) ((timestamp - start) / Math.max(0.0001, status.progress));
         varianceEstimate = (long) (estimate * status.progress / 10);
 
-        // Progject dynamic weight
-        //long estimate_new = (long) ((timestamp - start) / Math.max(0.0001, new_progress));
+        // Our per-phase estimation project will use only in Map Task
         if (isMapType)
         {
-            long varianceEstimate_new = (long) (estimate * new_progress / 10);
+            varianceEstimate_new = (long) (estimate * new_progress / 10);
             System.out.println("Esitmate Time from LATE-Algo : " + estimate);
             System.out.println("Esitmate Time from SLM-Algo : " + estimate_slm);
             System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
+            //Project SLM
+            //estimate = estimate_slm;
+            //varianceEstimate = varianceEstimate_slm;
             estimate = estimate_new;
             varianceEstimate = varianceEstimate_new; 
         } 
-
-
-      /*  System.out.println("timestamp >> "+ timestamp +
-                           " start >> " + start +
-                           " , status.progress >> " + status.progress+
-                           " , estimate >> " +   estimate);
-      */
 
         //**Project : 06-12-2015 **
         //System.out.println("esitmateTime:"+estimate+"varianceEstimate:"+varianceEstimate);

@@ -26,6 +26,7 @@ byte_write = [[]for x in xrange(550)]
 byte_write_per_read = [[]for x in xrange(550)]
 est_old = [[]for x in xrange(550)]
 est_new = [[]for x in xrange(550)]
+est_slm = [[]for x in xrange(550)]
 real_progress = [[]for x in xrange(550)]
 # cpu_per_time_t1 = []
 # write_per_time_t1 = []
@@ -40,11 +41,16 @@ flag = -1
 mapFin = -1
 temp1 = -1
 temp2 = -1
+temp3 = -1
 for line in infile.readlines():
 	if line.find("Esitmate Time from LATE-Algo :") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
 		#est_old[flag].append((float)(line.split(":")[1].strip())/(1000))
 		temp1 = (float)(line.split(":")[1].strip())/(1000)
+	if line.find("Esitmate Time from SLM-Algo :") >= 0:
+		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
+		#est_old[flag].append((float)(line.split(":")[1].strip())/(1000))
+		temp3 = (float)(line.split(":")[1].strip())/(1000)
 	if line.find("Esitmate Time from New-Algo :") >= 0:
 		#print ">> ["+ str(flag) +"]" + line.split(":")[1].strip()
 		#est_new[flag].append((float)(line.split(":")[1].strip())/(1000))
@@ -58,7 +64,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==1:
+		if int((line.split("_")[5].strip())[0])==0:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -68,6 +74,7 @@ for line in infile.readlines():
 			print flag
 		est_old[flag].append(temp1)
 		est_new[flag].append(temp2)
+		est_slm[flag].append(temp3)
 		real_progress[flag].append(temp_real_progress)
 		#print float(line.split(":")[3].strip())
 		#if float_eq(float(line.split(":")[3].strip()),0.667):
@@ -129,7 +136,7 @@ infile.close()
 #plt1.plot(progress_t0,'ro')
 #plt2.xlim([0,1.0])
 
-plt2.ylim([0,20000])
+plt2.ylim([0,1000])
 #plt2.ylim([0,1.4])
 #plt2.xlim(0,150000)
 # for i in xrange(0,121,5):
@@ -142,7 +149,7 @@ plt2.ylim([0,20000])
 # plt2.plot(task_time_t0[7],progress_t0[7],'yx')
 # plt2.plot(task_time_t0[80],progress_t0[80],'rx')
 
-#plt2.plot(task_time_t0[196],progress_t0[196],'rx')
+#plt2.plot(task_time_t0[8],progress_t0[8],'rx')
 #plt2.plot(task_time_t0[27],real_progress[27],'rx')
 
 # print len(task_time_t0[35])
@@ -150,14 +157,36 @@ plt2.ylim([0,20000])
 #print (est_new)
 # print (task_time_t0[35])
 
+# temp_fin_time = []
+# for i in xrange(0,120):
+# 	length = len(task_time_t0[i])
+# 	temp_fin_time.append(est_new[i][length-1])
+# 	#print sort_index
 
-for i in xrange(2,3):
+# sort_index = np.argsort(temp_fin_time)
+# print sort_index
+
+#WordCount
+#1459210762206_0004
+#86,14,28
+
+#KMean clustering
+#1459134891135_0038
+#57,24,64
+
+#Inverted Index
+#1459297814761_0014
+#90,35,5
+
+for i in xrange(8,9):
+#for i in sort_index[115:120]:
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:
 	#	print (i)
 	plt2.plot(task_time_t0[i],est_new[i],'go')
-	plt2.plot(task_time_t0[i],est_old[i],'rx')
+	plt2.plot(task_time_t0[i],est_slm[i],'bx')
+	plt2.plot(task_time_t0[i],est_old[i],'r*')
 	length = len(task_time_t0[i])
 	real = est_new[i][length-1]
 	#print real
