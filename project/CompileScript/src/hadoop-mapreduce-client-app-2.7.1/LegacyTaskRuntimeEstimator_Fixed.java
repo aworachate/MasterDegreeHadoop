@@ -224,7 +224,7 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         boolean isDynamicEnable_slm = false;
         float geo_mean_map = 0.667f;
         float geo_mean_sort  = 0.333f;
-        if (job.getCompletedMaps() > 5 && isMapType)
+        if (job.getCompletedMaps() > 10 && isMapType)
         {
               int round = 0; 
               float mul_result = 1.0f;
@@ -415,10 +415,11 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             System.out.println("Esitmate Time from SLM-Algo : " + estimate_slm);
             System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
             //Project SLM
-            //estimate = estimate_slm;
-            //varianceEstimate = varianceEstimate_slm;
-            estimate = estimate_new;
-            varianceEstimate = varianceEstimate_new; 
+            estimate = estimate_slm;
+            varianceEstimate = varianceEstimate_slm;
+            //Project Per-phase
+            //estimate = estimate_new;
+            //varianceEstimate = varianceEstimate_new; 
         } 
 
         //**Project : 06-12-2015 **

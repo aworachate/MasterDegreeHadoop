@@ -64,13 +64,13 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==0:
+		if int((line.split("_")[5].strip())[0])==1:
 			temp = 549
 		#print (temp)
 		flag = temp 
 		#print line
 		progress_t0[flag].append(float(line.split(":")[3].strip()))
-		if temp2 > temp1:
+		if temp2 > temp1 or temp2 > temp3:
 			print flag
 		est_old[flag].append(temp1)
 		est_new[flag].append(temp2)
@@ -136,7 +136,7 @@ infile.close()
 #plt1.plot(progress_t0,'ro')
 #plt2.xlim([0,1.0])
 
-plt2.ylim([0,1000])
+plt2.ylim([0,2000])
 #plt2.ylim([0,1.4])
 #plt2.xlim(0,150000)
 # for i in xrange(0,121,5):
@@ -167,18 +167,22 @@ plt2.ylim([0,1000])
 # print sort_index
 
 #WordCount
-#1459210762206_0004
-#86,14,28
+#1459744385479_0023
+#97,70,13
 
 #KMean clustering
-#1459134891135_0038
-#57,24,64
+#1459785769194_0019
+#57,45,67
 
 #Inverted Index
-#1459297814761_0014
-#90,35,5
+#1459744385479_0034
+#110,10,5
 
-for i in xrange(8,9):
+#PageRank
+#1459785769194_0063
+#140,70,3
+
+for i in xrange(70,71):
 #for i in sort_index[115:120]:
 	#print i
 	#print (est_old[i])
@@ -211,7 +215,7 @@ for i in xrange(8,9):
 # plt2.plot(progress_t0[5],'ko')
 # plt2.plot(progress_t0[6],'co')
 # plt2.plot(progress_t0[7],'rx')
-# plt2.plot(progress_t0[8],'bo')
+# plt2.plot(progress_t0[8],'bo')1459785769194_0063
 # plt2.plot(progress_t0[9],'ro')
 # plt2.plot(progress_t0[10],'go')
 # plt2.plot(progress_t0[11],'yo')
