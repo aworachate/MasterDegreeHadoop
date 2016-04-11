@@ -64,7 +64,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==1:
+		if int((line.split("_")[5].strip())[0])==0:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -167,22 +167,23 @@ plt2.ylim([0,2000])
 # print sort_index
 
 #WordCount
-#1459744385479_0023
-#97,70,13
+#1460117989167_0033
+#90,70,21
 
 #KMean clustering
-#1459785769194_0019
-#57,45,67
-
-#Inverted Index
-#1459744385479_0034
-#110,10,5
+#1460117989167_0
+#77,25,46
 
 #PageRank
-#1459785769194_0063
-#140,70,3
+#1460117989167_0159
+#161,64,12
 
-for i in xrange(70,71):
+#Inverted Index
+#1460117989167_0019
+#93,56,47
+
+
+for i in xrange(47,48):
 #for i in sort_index[115:120]:
 	#print i
 	#print (est_old[i])
