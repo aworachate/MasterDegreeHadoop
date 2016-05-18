@@ -64,7 +64,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==0:
+		if int((line.split("_")[5].strip())[0])==1:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -182,8 +182,11 @@ plt2.ylim([0,2000])
 #1460117989167_0019
 #93,56,47
 
+#KMean 128 block sieze
+#1460793032663_0001
+#19,83,23
 
-for i in xrange(47,48):
+for i in xrange(19,20):
 #for i in sort_index[115:120]:
 	#print i
 	#print (est_old[i])

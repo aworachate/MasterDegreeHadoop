@@ -224,13 +224,13 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
         boolean isDynamicEnable_slm = false;
         float geo_mean_map = 0.667f;
         float geo_mean_sort  = 0.333f;
-        int slm_k = 15;
+        int slm_k = 5;
         float mul_result =1.0f;
-        float mul_result_5 = 1.0f;
-        float mul_result_10 = 1.0f;
-        float mul_result_15 = 1.0f;
+        //float mul_result_5 = 1.0f;
+        //float mul_result_10 = 1.0f;
+        //float mul_result_15 = 1.0f;
         boolean isComputed = false;
-        if (job.getCompletedMaps() >= slm_k && isMapType && !isComputed)
+      /*  if (job.getCompletedMaps() >= slm_k && isMapType && !isComputed)
         {
               int round = 0; 
               Map<Integer,MapTaskTime> slm_temp_AllFinishedMapTime = job.getAllFinishedMapTime();
@@ -238,17 +238,17 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   {
                     if (round >=slm_k)
                         {
-                          mul_result_15 = mul_result;
+                          //mul_result_15 = mul_result;
                           break;
                         }
-                    if (round == 5)
-                        {
-                          mul_result_5 = mul_result;
-                        }
-                    if (round == 10)
-                       {
-                          mul_result_10 = mul_result;
-                        }
+                    //if (round == 5)
+                    //    {
+                    //      mul_result_5 = mul_result;
+                    //    }
+                    //if (round == 10)
+                    //   {
+                    //      mul_result_10 = mul_result;
+                    //    }
                      
                     //System.out.println(e.getValue().getTaskIdFinishMapTime() + " : " + e.getValue().getTaskFinishedAllTime() + " Running time : " + ((e.getValue().getTaskFinishedAllTime()) - (e.getValue().getTaskStartTime())) + " Map Finished Time " + ((e.getValue().getTaskMapFinishedTime()) - (e.getValue().getTaskStartTime())));
                     //System.out.println((e.getValue().getTaskMapFinishedTime()) + " start time " +  (e.getValue().getTaskStartTime()));
@@ -264,20 +264,20 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
                   }
               //System.out.println("Test : " + mul_result + (Math.pow(mul_result,0.2f)));
               //System.out.println("Mul15 : " + mul_result_15 +  "Mulresult : " +  mul_result);
-              mul_result_15 = mul_result; // incase of it equally to 15 and exit loop
+              //mul_result_15 = mul_result; // incase of it equally to 15 and exit loop
               geo_mean_map = (float)(Math.pow(mul_result,(1.0/slm_k)));
               geo_mean_sort = 1.0f - geo_mean_map;
               isDynamicEnable_slm = true;
-              float temp1_geo_mean_map = (float)(Math.pow(mul_result_5,(1.0/5.0)));
-              float temp2_geo_mean_map = (float)(Math.pow(mul_result_10,(1.0/10.0)));
-              System.out.println("Geo Map5 Ratio : " + temp1_geo_mean_map);
-              System.out.println("Geo Sort5 Ratio : " + (1.0f - temp1_geo_mean_map));
-              System.out.println("Geo Map10 Ratio : " + temp2_geo_mean_map);
-              System.out.println("Geo Sort10 Ratio : " + (1.0f - temp2_geo_mean_map));
-              System.out.println("Geo Map15 Ratio : " + geo_mean_map);
-              System.out.println("Geo Sort15 Ratio : " + geo_mean_sort);              
+              //float temp1_geo_mean_map = (float)(Math.pow(mul_result_5,(1.0/5.0)));
+              //float temp2_geo_mean_map = (float)(Math.pow(mul_result_10,(1.0/10.0)));
+              //System.out.println("Geo Map5 Ratio : " + temp1_geo_mean_map);
+              //System.out.println("Geo Sort5 Ratio : " + (1.0f - temp1_geo_mean_map));
+              //System.out.println("Geo Map10 Ratio : " + temp2_geo_mean_map);
+              //System.out.println("Geo Sort10 Ratio : " + (1.0f - temp2_geo_mean_map));
+              System.out.println("Geo Map Ratio : " + geo_mean_map);
+              System.out.println("Geo Sort Ratio : " + geo_mean_sort);              
               isComputed = true;
-        } 
+        } */
         
 
         // Progject dynamic weight
@@ -444,12 +444,12 @@ public class LegacyTaskRuntimeEstimator_Fixed extends StartEndTimesBase {
             System.out.println("Esitmate Time from New-Algo : " + estimate_new);  
 
             //Project SLM
-            estimate = estimate_slm;
-            varianceEstimate = varianceEstimate_slm;
+            //estimate = estimate_slm;
+            //varianceEstimate = varianceEstimate_slm;
 
             //Project Per-phase
-            //estimate = estimate_new;
-            //varianceEstimate = varianceEstimate_new; 
+            estimate = estimate_new;
+            varianceEstimate = varianceEstimate_new; 
         } 
 
         //**Project : 06-12-2015 **

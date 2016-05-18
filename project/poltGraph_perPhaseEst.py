@@ -12,7 +12,7 @@ import numpy as np
 def float_eq(a, b, epsilon=0.00000001):
     return abs(a - b) < epsilon
 
-infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/HP/3-Algo/Fix_Bug/Fix_Bug_Geomean/Pagerank.log", "r")
+infile = open("/Users/worachate-a/Desktop/NAIST/Thesis/PerPhaseEstimationResult/HP/3-Algo/Fix_Bug/Fix_Bug_Geomean/InvertedIndex.log", "r")
 #infile = open("pi/bay1.log", "r")
 progress_t0 = [[]for x in xrange(550)]
 cpu_per_time_t0 = [[]for x in xrange(550)]
@@ -64,7 +64,7 @@ for line in infile.readlines():
 	if line.find(":MAP:") >=0:
 		temp = int(line.split("_")[4].strip())
 		#print 
-		if int((line.split("_")[5].strip())[0])==1:
+		if int((line.split("_")[5].strip())[0])==0:
 			temp = 549
 		#print (temp)
 		flag = temp 
@@ -141,7 +141,7 @@ plt2.ylabel("Estimated Exe. Time (Sec.)")
 plt2.xlabel("Task Exe. Time (Sec.)")
 #plt2.ylim([0,1.4])
 #plt2.axis([0,160,0,1000])
-plt2.xlim([0,400])
+plt2.xlim([0,300])
 #plt2.xlim(xmin=0)
 # for i in xrange(0,121,5):
 # 	plt2.plot(task_time_t0[0+i],progress_t0[0+i],'bo')
@@ -177,19 +177,23 @@ plt2.xlim([0,400])
 #1460117989167_0019
 #93,56,47
 
-for i in xrange(64,65):
+#KMean 128 block sieze
+#1460793032663_0001
+#19,83,23
+
+for i in xrange(47,48):
 	#print i
 	#print (est_old[i])
 	#if max(est_new[i]) > 900:
 	#	print (i)
 	plt2.plot(task_time_t0[i],est_new[i],'rx')
-	#plt2.plot(task_time_t0[i],est_slm[i],'bo')
+	plt2.plot(task_time_t0[i],est_slm[i],'bo')
 	plt2.plot(task_time_t0[i],est_old[i],'g*')
 	length = len(task_time_t0[i])
 	real = est_new[i][length-1]
 	#print real
 	plt2.axhline(y=real,xmin=0,xmax=3,c="blue",linewidth=1.5,zorder=0,linestyle=":")
-	plt2.axvline(x=148,c="black",linewidth=1.5,linestyle="-.")
+	#plt2.axvline(x=221,c="black",linewidth=1.5,linestyle="-.")
 
 # plt2.plot(task_time_t0[67],est_old[67],'r')
 # plt2.plot(task_time_t0[67],est_new[67],'g')
@@ -234,7 +238,11 @@ for i in xrange(64,65):
 #plt.plot(write_per_time,'go')
 #plt.axis([0, 6, 0, 20])
 #plt1.show()
+
+plt2.subplots_adjust(left=0.09, right=0.97, top=0.97, bottom=0.09)
+plt2.savefig('/Users/worachate-a/Desktop/NAIST/Thesis/Publication Working Space/picture/invertedindex_bestcase.pdf')
 plt2.show()
+
 #plt3.show()
 #plt4.show()
 #plt5.show()

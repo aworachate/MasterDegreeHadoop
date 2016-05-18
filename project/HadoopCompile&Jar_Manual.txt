@@ -15,8 +15,10 @@ Step1 Make Class
       /home/zilliconbaby/Desktop/compile/MaxTemperature.java /home/zilliconbaby/Desktop/compile/MaxTemperatureMapper.java /home/	zilliconbaby/Desktop/compile/MaxTemperatureReducer.java => Java File for compile to class
 
 Ex. javac -classpath /home/zilliconbaby/Desktop/hadoop-2.7.1//share/hadoop/common/hadoop-common-2.7.1.jar:/home/zilliconbaby/Desktop/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.1.jar:/home/zilliconbaby/Desktop/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.1.jar -d /home/zilliconbaby/Desktop/temp_classes/ /home/zilliconbaby/Desktop/compile/MaxTemperature.java /home/zilliconbaby/Desktop/compile/MaxTemperatureMapper.java /home/zilliconbaby/Desktop/compile/MaxTemperatureReducer.java 
+
 Or
 	javac -cp `hadoop classpath` -d /home/zilliconbaby/Desktop/temp_classes/ Hadoop_test/ch09-mr-features/src/main/java/MaxTemperatureWithCounters.java compile/MaxTemperatureReducer.java
+
 Step2 make .jar file
  jar -cvf /home/zilliconbaby/Desktop/t.jar -C /home/zilliconbaby/Desktop/temp_classes/ .
 		[target jar file name]			[classes sources]
